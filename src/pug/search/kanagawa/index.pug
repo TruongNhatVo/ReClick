@@ -1,0 +1,171 @@
+extend /_template/_two-column
+append variables
+  //- 変更可能
+  - const pageTitle= "神奈川県の葬儀場一覧";
+  - const pageDescription= site.description;
+  //- - const pageKeywords= site.keywords; キーワードは必要なし。
+  //- 任意
+  - const pageOgpTitle= pageTitle;
+  - const pageOgpImage= site.ogpImage;
+  - const pageOgpType= "article";
+
+block header
+  .p-page-mv.p-page-mv--kanagawa.js-bgcheck-image
+    .p-page-mv__inner
+      h1.p-page-mv__ttl.js-bgcheck-target 神奈川県の葬儀場を選ぶ
+  nav.p-breadcrumb(aria-label="Breadcrumb")
+    .l-container
+      +breadcrumb([
+        ["信頼の葬儀社セレモア", "/"],
+        ["葬儀場を選ぶ", "/search/"],
+        ["神奈川県", ""]
+      ])
+  +heading-large('神奈川県内の<br class="u-brSp">葬儀場所在地一覧')
+
+block main
+
+  .l-main__section
+    .p-region-header.p-region-header--kanagawa
+      p.p-region-header__ttl
+        span 神奈川県のお葬儀
+        | は、
+        br
+        | セレモアにおまかせください。
+      p.p-region-header__lead
+        span 創業50年・年間お葬儀実績首都圏No.1
+        | のセレモアが、大切なお葬儀を心を込めてお手伝いいたします。
+      img.p-region-header__medal(src='/images/search/region_ttl_medal.png', srcset='/images/search/region_ttl_medal@2x.png 2x', alt='お葬儀ご依頼実績首都圏No.1')
+
+    //- 使用するかわからないので一旦インラインで記述
+    .u-hide-sm(style='margin-top: 3em;')
+      +picture('/images/search/kanagawa/img_map.png', '')
+        +source(sm, '/images/search/kanagawa/img_map_sp.png')
+
+  section.l-main__section
+    h2.p-heading-01 神奈川県のエリア名から葬儀場を選ぶ
+    p ご希望のエリア名を選択すると、当該エリアの葬儀場一覧が表示されます。
+    .p-search-by-area
+      section.p-search-by-area__block.p-search-by-area__block--kanagawa
+        h3.p-search-by-area__ttl.js-accordion-btn.is-active(data-accordion='#accordion-03', data-mq='sm')
+          span 神奈川県
+          | の葬儀場
+          span.p-search-by-area__toggle
+        #accordion-03.js-accordion-body.is-open(data-mq='sm')
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 神奈川県・横浜市
+            ul.p-search-by-area__list
+              li
+                a(href='') 旭区
+              li
+                a(href='') 青葉区
+              li
+                a(href='') 泉区
+              li
+                a(href='') 磯子区
+              li
+                a(href='') 神奈川区
+              li
+                a(href='') 金沢区
+              li
+                a(href='') 港北区
+              li
+                a(href='') 港南区
+              li
+                a(href='') 都筑区
+              li
+                a(href='') 鶴見区
+              li
+                a(href='') 戸塚区
+              li
+                a(href='') 西区
+              li
+                a(href='') 南区
+              li
+                a(href='') 緑区
+              li
+                a(href='') 中区
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 神奈川県・川崎市
+            ul.p-search-by-area__list
+              li
+                a(href='') 麻生区
+              li
+                a(href='') 川崎区
+              li
+                a(href='') 幸区
+              li
+                a(href='') 多摩区
+              li
+                a(href='') 高津区
+              li
+                a(href='') 中原区
+              li
+                a(href='') 宮前区
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 神奈川県・その他の市区郡
+            ul.p-search-by-area__list
+              li
+                a(href='') 厚木市
+              li
+                a(href='') 愛甲郡
+              li
+                a(href='') 伊勢原市
+              li
+                a(href='') 海老名市
+              li
+                a(href='') 鎌倉市
+              li
+                a(href='') 座間市
+              li
+                a(href='') 相模原市
+              li
+                a(href='') 逗子市
+              li
+                a(href='') 茅ヶ崎市
+              li
+                a(href='') 中郡
+              li
+                a(href='') 平塚市
+              li
+                a(href='') 藤沢市
+              li
+                a(href='') 大和市
+              li
+                a(href='') 横須賀市
+              li
+                a(href='') 小田原市
+              li
+                a(href='') 秦野市
+
+  aside.l-main__section.p-common-content-area
+
+    +common-content-counter('神奈川県の葬儀場について', '火葬場を併設した斎場や、市区で運営している公営斎場などがあります。これらをお選びの際には宗教・宗派や規模に応じた式場など、色々考え合わせる必要がありますが、ご不明な事がございましたらセレモアの専門スタッフがいつでもご相談を承ります。<br>また、諸事情によりご自宅にお帰りになれない場合は、ご安置場所のご相談も承ります。')
+
+    +common-content-contact()
+
+    +common-content-area()
+
+    +common-content-history()
+            
+    +common-content-plan(2)
+
+block side
+  .p-side-area
+    include /_partial/_side-search-by-condition
+    include /_partial/_side-search-by-area
+    section.p-side-area__block
+      h2.p-side-area__ttl.js-accordion-btn(data-accordion='#side-links-sm', data-mq='sm') 葬儀場を選ぶ
+      #side-links-sm.js-accordion-body.p-side-area__accordion(data-mq='sm')
+        .p-side-area-links
+          ul.p-side-area-links__list
+            li
+              a(href='') 葬儀場検索
+            li
+              a(href='') セレモアの直営式場一覧
+            li
+              a(href='') ご安置所の一覧
+          section.p-side-area-links__block
+            h3.p-side-area-links__ttl よくあるご質問
+            ul.p-side-area-links__list
+              li
+                a(href='') 式場についてのご質問

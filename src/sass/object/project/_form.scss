@@ -1,0 +1,22 @@
+.p-form-block {
+  display: flex;
+  align-items: baseline;
+  &__ttl {
+    flex: none;
+    font-weight: bold;
+    width: 6em;
+    padding-right: 1em;
+  }
+  &__body {
+    flex: 1;
+  }
+}
+
+.p-form-block--sm-vertical {
+  @include mqSm {
+    display: block;
+    .p-form-block__ttl {
+      margin-bottom: 1em;
+    }
+  }
+}

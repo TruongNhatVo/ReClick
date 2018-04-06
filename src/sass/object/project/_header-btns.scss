@@ -1,0 +1,19 @@
+.p-header-btns {
+  display: flex;
+  > * ~ * {
+    margin-left: 10px;
+  }
+  a {
+    font-weight: bold;
+    line-height: 1.2;
+    @include fontSize(1.8);
+    width: 96px;
+    height: 83px;
+    letter-spacing: -0.05em;
+    @include mqMd {
+      width: 70px;
+      height: 60px;
+      @include fontSize(1.4);
+    }
+  }
+}

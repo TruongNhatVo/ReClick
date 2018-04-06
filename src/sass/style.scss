@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* =========================================================
+ Foundation
+========================================================= */
+
+@import 'foundation/variables'; // 環境変数等
+@import 'foundation/mixin'; // mixin
+@import 'foundation/animation'; // アニメーション￥
+@import 'foundation/reset'; // reset css (html5 doctor)
+@import 'foundation/icomoon'; // アイコンフォント
+// @import 'foundation/vendor'; // ライブラリ等のcss
+// @import 'foundation/vendor-mod'; // ライブラリ等のcssの上書き用
+@import 'foundation/base'; // ベーススタイル（html, body等）
+
+/* =========================================================
+ Layout
+========================================================= */
+@import 'layout/wrapper';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/main';
+@import 'layout/side';
+@import 'layout/container';
+
+/* =========================================================
+ Object
+========================================================= */
+
+/* ---------------------------------------------------------
+ Component
+--------------------------------------------------------- */
+// 複数ページに渡って使いまわす、粒度の小さいコンポーネントを追加していく
+@import 'object/component/btn'; // ボタン関連
+@import 'object/component/list'; // リスト関連
+@import 'object/component/tel-link'; // PC幅のときにhref="tel:"のイベントを無効
+@import 'object/component/form'; // フォーム関連（input, textareaなど）
+@import 'object/component/js-accordion'; // アコーディオン関連
+
+/* ---------------------------------------------------------
+ Project
+--------------------------------------------------------- */
+// コンポーネントより粒度の大きいもの（とあるページでしか使わないものなど）を追加していく
+@import 'object/project/header-btns'; // ヘッダーのお見積り等のボタン
+@import 'object/project/header-urgent'; // ヘッダーのお急ぎの方エリア（SP幅のみ表示）
+@import 'object/project/gnavi'; //グローバルナビ
+@import 'object/project/megamenu'; // メガメニュー
+@import 'object/project/form'; // フォーム関連（input等を収めるボックス）
+@import 'object/project/footer-contact'; // フッターの相談窓口エリア
+@import 'object/project/footer-quality'; // フッターのセレモア品質
+@import 'object/project/footer-map'; // フッターのサイトマップ
+@import 'object/project/footer-banner'; // フッターのバナー群
+@import 'object/project/footer-copy'; // フッターのコピーライト
+@import 'object/project/contact-block'; // どのような事でも、お気軽にセレモアへご相談くださいもモジュール
+@import 'object/project/floating-area'; // スクロール追従のバナーエリア
+
+// 下層ページ共通
+@import 'object/project/page-mv'; // 下層ページのメインビジュアル
+@import 'object/project/breadcrumb'; // パンくずリスト
+@import 'object/project/headings'; // 見出し
+@import 'object/project/common-content-area'; // mainエリア下部の共通コンテンツ関連
+@import 'object/project/side-area'; // sideエリア関連
+@import 'object/project/side-price'; // sideエリア関連
+@import 'object/project/pagination'; // ページネーション
+@import 'object/project/chapel-list'; // 葬儀場の履歴等で使っているリスト
+@import 'object/project/basic-plan'; // 葬儀プラン
+@import 'object/project/plan-price'; // 葬儀プラン
+
+// 葬儀場を探す
+@import 'object/project/search-by-map'; // 都道府県から葬儀場を選ぶ
+@import 'object/project/search-by-conditions'; // 条件を設定して葬儀場を選ぶ
+@import 'object/project/search-by-area'; // エリア名から葬儀場を選ぶ
+@import 'object/project/region-header'; // ○○区のお葬儀はのヘッダー（背景地図とタイトルの部分）
+@import 'object/project/search-result'; // 検索結果一覧
+@import 'object/project/chapel-card'; // 検索結果一覧の葬儀場カード
+@import 'object/project/chapel-tag'; // 葬儀場の特徴タグ
+
+// 葬儀場詳細
+@import 'object/project/chapel-detail-header'; // 葬儀場詳細ページのヘッダー
+@import 'object/project/chapel-detail'; // 葬儀場詳細ページのコンテンツエリア関連
+// @import 'object/project/chapel-detail-prices'; // 葬儀場詳細の値段（非表示指示）
+@import 'object/project/chapel-detail-contact'; // 葬儀場詳細ページのお問合せエリア
+@import 'object/project/chapel-detail-pics'; // 葬儀場詳細ページの特徴・写真エリア
+@import 'object/project/chapel-detail-map'; // 葬儀場詳細ページの地図エリア
+
+/* ---------------------------------------------------------
+ Utility
+--------------------------------------------------------- */
+
+@import 'object/utility/align'; // text-align
+// @import 'object/utility/clearfix'; // clearfix
+// @import 'object/utility/float'; // float
+@import 'object/utility/font'; // font-weight等
+@import 'object/utility/margin'; // margin
+@import 'object/utility/blink'; // hover時にblinkアニメーションを付与
+@import 'object/utility/br'; // レスポンシブ対応の改行
+@import 'object/utility/hide'; // レスポンシブ対応のdisplay: none

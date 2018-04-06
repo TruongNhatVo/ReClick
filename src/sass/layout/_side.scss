@@ -1,0 +1,13 @@
+.l-side {
+  width: 280px;
+  margin-left: 50px;
+  flex: none;
+  @include mqMd {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 50px;
+  }
+  @include mqSm {
+    margin-top: calcVw(100);
+  }
+}

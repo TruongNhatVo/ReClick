@@ -1,0 +1,95 @@
+extend /_template/_two-column
+append variables
+  //- 変更可能
+  - const pageTitle= "一日葬［パック葬］";
+  - const pageDescription= site.description;
+  //- - const pageKeywords= site.keywords; キーワードは必要なし。
+  //- 任意
+  - const pageOgpTitle= pageTitle;
+  - const pageOgpImage= site.ogpImage;
+  - const pageOgpType= "article";
+
+block header
+  //- modifierで背景画像を変える。
+      scss: object/project/_page-mv.scss
+  .p-page-mv.js-bgcheck-image.p-page-mv--example
+    .p-page-mv__inner
+      h1.p-page-mv__ttl.js-bgcheck-target 一日葬［パック葬］
+      
+  //- パンくずリスト（"ラベル", "path"）
+  nav.p-breadcrumb(aria-label="Breadcrumb")
+    .l-container
+      +breadcrumb([
+        ["信頼の葬儀社セレモア", "/"],
+        ["葬儀プランと費用", ""],
+        ["セレモアの葬儀プラン", ""],
+        ["一日葬", ""]
+      ])
+
+  +heading-large('セレモアの一日葬・プラン内容')
+
+block main
+
+  //- main直下の小要素は”l-main__section”で構成する。
+
+  section.l-main__section
+    //- コンテンツの親に”l-main__content”を指定する。
+        小要素 ～ 小要素にmargin-topを設定しています。
+    .l-main__content
+      div 「葬儀と告別式を。」のブロック
+      div 「葬儀費用に関する特記事項」のブロック
+
+  section.l-main__section
+    h2.p-heading-01 一日葬［パック葬］の詳細
+    p セレモアの一日葬の各プランの詳細をご紹介します。
+    .l-main__content
+      div 「各プランの詳細」などのブロック
+
+    //- セクションの入れ子は”l-main__section-child”で構成する。
+    section.l-main__section-child
+      h3.p-heading-04 各プランの主な違い
+      p 「一日葬」プランは、主にお花・ご寝棺・遺影写真・骨壺の種類に基づく3つのグレードをご用意しております。
+      .l-main__content
+        div テーブル
+        div ベタ塗りブロック
+
+    section.l-main__section-child
+      h3.p-heading-04 一日葬［パック葬］に含まれるもの
+      p お葬儀の流れと、それに伴い一日葬［パック葬］でご用意させていただくものをご確認ください。
+      .l-main__content
+        div コンテンツ
+
+  section.l-main__section
+    h2.p-heading-01 選べるオプション
+    p 基本プランに下記のオプションを組み合わせる事で、ご希望に応じたお葬儀の組み立てが可能です。また、下記以外のご希望につきましても、セレモアにご相談ください。
+
+  section.l-main__section
+    h2.p-heading-01 その他のお葬儀プラン
+    p 一日葬のほか、様々なご要望に応じられるよう、各種プランをご用意しております。
+    .l-main__content
+      +basicPlan(2)
+
+
+block side
+  .p-side-area
+    include /_partial/_side-search-by-condition
+    include /_partial/_side-search-by-area
+    section.p-side-area__block
+      h2.p-side-area__ttl.js-accordion-btn(data-accordion='#side-links-sm', data-mq='sm') 葬儀プランと費用
+      #side-links-sm.js-accordion-body.p-side-area__accordion(data-mq='sm')
+        .p-side-area-links
+          section.p-side-area-links__block
+            h3.p-side-area-links__ttl セレモアの葬儀プラン
+            ul.p-side-area-links__list
+              li
+                a(href='') 家族葬
+              li
+                a(href='') 一般葬
+
+          section.p-side-area-links__block
+            h3.p-side-area-links__ttl お葬儀費用
+            ul.p-side-area-links__list
+              li
+                a(href='') オプション費用
+              li
+                a(href='') お布施について

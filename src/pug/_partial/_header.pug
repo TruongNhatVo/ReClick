@@ -1,0 +1,285 @@
+header.l-header
+  .l-header__inner
+    h1.l-header__logo
+      a.u-blink(href='/')
+        img(src='/images/common/logo.svg', alt='セレモアホールディングス株式会社')
+    p.l-header__quality
+      a(href='')
+        img(src='/images/common/ceremore_quality.png', alt='セレモア品質　サービス品質の追求とおもてなしの教育を徹底しております。')
+    p.l-header__freedial
+      a(href='tel:0120-470-470')
+        img(src='/images/common/freedial.png', alt='ご安心ください。24時間365日承ります。0120-470-470')
+    .l-header__btns.p-header-btns
+      p
+        a.c-btn.c-btn--default.u-blink(href='')
+          | お見積り
+          br
+          | 資料請求
+      p
+        a.c-btn.c-btn--default.u-blink(href='') 無料相談
+      p
+        a.c-btn.c-btn--danger.u-blink(href='') お急ぎの方
+    #js-gnavi-hamburger.l-header__hamburger
+      img(src='/images/common/btn_hamburger.png', alt='')
+  .p-header-urgent
+    p.p-header-urgent__header.js-accordion-btn(data-accordion='#header-urgent', data-mq='md')
+      span
+        img(src='/images/common/urgent_txt.png', alt='')
+    #header-urgent.p-header-urgent__body.js-scrollbar.js-accordion-body(data-mq='md')
+      div
+        img(src='/images/dummy_urgent.jpg', alt='')
+  #js-gnavi-body.l-header__navi.p-gnavi
+    nav
+      ul.p-gnavi__body.js-scrollbar
+        li.p-gnavi__item
+          p
+            a.p-gnavi__btn(href='#')
+              i.icon-home
+              | ホーム
+        li.p-gnavi__item.js-megamenu-toggle
+          p.js-accordion-btn(data-accordion='#megamenu01', data-mq='md')
+            a.p-gnavi__btn(href='#')
+              i.icon-lotus
+              | セレモアの葬儀
+            span.js-accordion-btn__toggle
+          #megamenu01.js-accordion-body.js-megamenu-body(data-mq='md')
+            .p-megamenu.p-megamenu--funeral.p-gnavi__megamenu
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box-md
+                    div
+                      img(src='/images/common/navi_funeral_img_ceremore.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl セレモアの葬儀
+                      p.p-megamenu__txt 一度きりのセレモニーを最高の品質でお届けします。
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box-md
+                    div
+                      img(src='/images/common/navi_funeral_img_staff.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl 経験豊富な葬祭スタッフ
+                      p.p-megamenu__txt 厳格な社内基準をクリアした葬祭スタッフがご対応します。
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box-md
+                    div
+                      img(src='/images/common/navi_funeral_img_contact.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl 対面型の無料相談窓口
+                      p.p-megamenu__txt いつでも・何度でも・どなたでもご利用可能な窓口です。
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box
+                    div
+                      img(src='/images/common/navi_funeral_img_local_services.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl 周辺サービスとの連携
+                      p.p-megamenu__txt お葬儀のことならなんでもセレモアで。
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box
+                    div
+                      img(src='/images/common/navi_funeral_img_record.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl 創業50年の葬儀実績
+                      p.p-megamenu__txt 2,700の提携団体と数々の第三者認証。
+        li.p-gnavi__item.js-megamenu-toggle
+          p.js-accordion-btn(data-accordion='#megamenu02', data-mq='md')
+            a.p-gnavi__btn(href='#')
+              i.icon-magnifier
+              | 葬儀プランと費用
+            span.js-accordion-btn__toggle
+          #megamenu02.js-accordion-body.js-megamenu-body(data-mq='md')
+            .p-megamenu.p-megamenu--plan.p-gnavi__megamenu
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box-md
+                    div
+                      img(src='/images/common/navi_plan_img_plan.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl 葬儀プランと費用
+                      p.p-megamenu__txt ひとりひとりが望むお別れの形で大切な方をお見送りします。
+              .p-megamenu__block
+                a.align-center(href='')
+                  .p-megamenu__plan-detail
+                    div
+                      img(src='/images/common/navi_plan_img_family.jpg', alt='')
+                    div
+                      p.ttl 家族葬
+                      p.txt ご家族様でお見送り。
+                      p.price 会員価格：486,000円～
+              .p-megamenu__block
+                a.align-center(href='')
+                  .p-megamenu__plan-detail
+                    div
+                      img(src='/images/common/navi_plan_img_general.jpg', alt='')
+                    div
+                      p.ttl 一般葬
+                      p.price 会員価格：636,000円～
+              .p-megamenu__block
+                a.align-center(href='')
+                  .p-megamenu__plan-detail
+                    div
+                      img(src='/images/common/navi_plan_img_oneday.jpg', alt='')
+                    div
+                      p.ttl 一日葬
+                      p.price 会員価格：336,000円～
+              .p-megamenu__block
+                a.align-center(href='')
+                  .p-megamenu__plan-detail
+                    div
+                      img(src='/images/common/navi_plan_img_fire.jpg', alt='')
+                    div
+                      p.ttl 火葬式
+                      p.price 会員価格：186,000円～
+              .p-megamenu__block
+                a.align-center(href='')
+                  .p-megamenu__plan-detail
+                    div
+                      img(src='/images/common/navi_plan_img_company.jpg', alt='')
+                    div
+                      p.ttl 社葬・団体葬
+              .p-megamenu__block
+                a.align-center(href='')
+                  .p-megamenu__plan-detail
+                    div
+                      img(src='/images/common/navi_plan_img_others.jpg', alt='')
+                    div
+                      p.ttl その他のお葬儀
+              .p-megamenu__block
+                a.align-center(href='')
+                  .p-megamenu__plan-detail
+                    div
+                      img(src='/images/common/navi_plan_img_remember.jpg', alt='')
+                    div
+                      p.ttl お別れの会・偲ぶ会
+              .p-megamenu__block
+                a.align-center(href='')
+                  .p-megamenu__plan-detail
+                    div
+                      img(src='/images/common/navi_plan_img_ocean.jpg', alt='')
+                    div
+                      p.ttl 葬礼・葬送
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box
+                    div
+                      img(src='/images/common/navi_plan_img_fee.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl お葬儀費用
+                      p.p-megamenu__txt 事前に正確な金額のお見積りを行います。
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box
+                    div
+                      img(src='/images/common/navi_plan_img_flow.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl お葬儀の流れ
+                      p.p-megamenu__txt ご逝去からお葬儀後までの流れをご説明。
+        li.p-gnavi__item.js-megamenu-toggle
+          p.js-accordion-btn(data-accordion='#megamenu03', data-mq='md')
+            a.p-gnavi__btn(href='#')
+              i.icon-tree
+              | 葬儀場を選ぶ
+            span.js-accordion-btn__toggle
+          #megamenu03.js-megamenu-body.js-accordion-body(data-mq='md')
+            .p-megamenu.p-megamenu--search.p-gnavi__megamenu
+              .p-megamenu__search-header.p-megamenu__block
+                p.p-megamenu__ttl 葬儀場を選ぶ
+                p.p-megamenu__txt 首都圏の葬儀場・斎場の中からご希望の式場をお選びいただけます。
+                ul.p-megamenu__search-feature
+                  li 自社直営葬儀場11ヶ所
+                  li ご紹介可能な葬儀場多数
+              ul.p-megamenu__search-area.p-megamenu__block
+                li
+                  a(href='') >東京都の葬儀場
+                li
+                  a(href='') >神奈川県の葬儀場
+                li
+                  a(href='') >千葉県の葬儀場
+                li
+                  a(href='') >埼玉県の葬儀場
+                li
+                  a(href='') >山梨県の葬儀場
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box
+                    div
+                      img(src='/images/common/navi_search_img_chapel.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl.p-megamenu__ttl--center
+                        | セレモアの
+                        br.u-brPc
+                        | 直営葬儀場
+                      p.p-megamenu__txt
+                        | あらゆるお葬儀に
+                        br
+                        | 安らぎの空間を。
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box
+                    div
+                      img(src='/images/common/navi_search_img_mortuary.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl.p-megamenu__ttl--center ご安置所
+                      p.p-megamenu__txt 24時間、ご安置所のご相談を承ります。
+        li.p-gnavi__item
+          p
+            a.p-gnavi__btn(href='#')
+              i.icon-book
+              | お客様の声
+        li.p-gnavi__item.js-megamenu-toggle
+          p.js-accordion-btn(data-accordion='#megamenu04', data-mq='md')
+            a.p-gnavi__btn(href='#')
+              i.icon-handshake
+              | セレモアのサポート
+            span.js-accordion-btn__toggle
+          #megamenu04.js-megamenu-body.js-accordion-body(data-mq='md')
+            .p-megamenu.p-megamenu--support.p-gnavi__megamenu
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box-md
+                    div
+                      img(src='/images/common/navi_support_img_support.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl セレモアのサポート
+                      p.p-megamenu__txt お葬儀の施行だけでなく様々なサポートをご提供します。
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box-md
+                    div
+                      img(src='/images/common/navi_support_img_living.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl お葬儀の生前予約
+                      p.p-megamenu__txt ご生前にお葬儀の形を決める生前信託プランをご提供します。
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box-md
+                    div
+                      img(src='/images/common/navi_support_img_members.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl 会員割引制度
+                      p.p-megamenu__txt お葬儀の基本費用が最大50%割引となる会員制度を提供しております。
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box
+                    div
+                      img(src='/images/common/navi_support_img_abroad.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl 海外からの故人搬送
+                      p.p-megamenu__txt 海外でご逝去された方を日本へご搬送。
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box
+                    div
+                      img(src='/images/common/navi_support_img_host.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl.p-megamenu__ttl--child 喪主となる皆様へ
+              .p-megamenu__block
+                a(href='')
+                  .p-megamenu__flex-box
+                    div
+                      img(src='/images/common/navi_support_img_faq.jpg', alt='')
+                    div
+                      p.p-megamenu__ttl.p-megamenu__ttl--child よくある御質問

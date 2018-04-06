@@ -1,0 +1,46 @@
+.p-footer-quality {
+  background: #fff;
+  padding: 4em 0 5em;
+  @include mqSm {
+    padding: calcVw(100) 0;
+  }
+  &__ttl {
+    text-align: center;
+    margin-bottom: 2em;
+    @include mqSm {
+      margin-bottom: 1.5em;
+    }
+  }
+  &__lead {
+    text-align: center;
+    @include fontSize(1.8);
+    line-height: $lineHeight-default;
+    margin-bottom: 3em;
+    @include mqSm {
+      @include fontSize(1.5, sp);
+      margin-bottom: 2em;
+      text-align: left;
+    }
+  }
+  &__banners {
+    display: flex;
+    margin-right: -10px;
+    @include mqSm {
+      display: block;
+      margin-right: 0;
+    }
+    > * {
+      flex: 1;
+      margin-right: 10px;
+      display: block;
+      @include mqSm {
+        margin-right: 0;
+      }
+    }
+    > * ~ * {
+      @include mqSm {
+        margin-top: calcVw(30);
+      }
+    }
+  }
+}

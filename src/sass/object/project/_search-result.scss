@@ -1,0 +1,32 @@
+.p-search-result {
+  &__lead {
+    margin-bottom: 3em;
+    @include mqSm {
+      margin-bottom: 2em;
+    }
+    span {
+      font-weight: bold;
+      color: $color-red;
+      span {
+        @include fontSize(2.6);
+        @include mqSm {
+          @include fontSize(2.5, sp);
+        }
+      }
+    }
+  }
+  &__body {
+    > * ~ * {
+      margin-top: 30px;
+      @include mqSm {
+        margin-top: calcVw(50);
+      }
+    }
+  }
+  &__pagination {
+    margin-top: 40px;
+    @include mqSm {
+      margin-top: calcVw(100);
+    }
+  }
+}

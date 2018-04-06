@@ -1,0 +1,21 @@
+//- メインエリアの「他の都道府県から選ぶ」のモジュールです。
+    Pug：+common-content-area()
+
+mixin common-content-area()
+  section.p-common-content-area__block
+    h2.p-heading-02 他の都道府県から選ぶ
+    p.p-common-content-area__txt セレモアでは首都圏全域で数多くの葬儀場をご紹介することができます。
+    .p-common-content-map
+      .p-common-content-map__img
+        img(src='/images/common/map_img.png', alt='')
+      ul.p-common-content-map__btns
+        li
+          a.c-btn.c-btn--color.c-btn--color--tokyo.u-blink(href='') 東京都の葬儀場
+        li
+          a.c-btn.c-btn--color.c-btn--color--kanagawa.u-blink(href='') 神奈川県の葬儀場
+        li
+          a.c-btn.c-btn--color.c-btn--color--chiba.u-blink(href='') 千葉県の葬儀場
+        li
+          a.c-btn.c-btn--color.c-btn--color--saitama.u-blink(href='') 埼玉県の葬儀場
+        li
+          a.c-btn.c-btn--color.c-btn--color--yamanashi.u-blink(href='') 山梨県の葬儀場

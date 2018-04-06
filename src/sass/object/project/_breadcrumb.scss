@@ -1,0 +1,47 @@
+.p-breadcrumb {
+  background: $color-theme;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.8em 0;
+
+    @include mqSm {
+      padding: 0.9em $gutter-default-sm;
+      margin: 0 -#{$gutter-default-sm};
+      overflow-x: scroll;
+      flex-wrap: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+    li {
+      @include fontSize(1.4);
+      color: #fff;
+      flex: none;
+      line-height: 1.5;
+      @include mqSm {
+        @include fontSize(1.2, sp);
+        line-height: 1.5;
+        &:last-child {
+          padding-right: $gutter-default-sm;
+        }
+      }
+    }
+    li ~ li {
+      &:before {
+        content: '>';
+        margin: 0 0.3em;
+      }
+    }
+    a {
+      color: #fff;
+      &:hover {
+        color: $font-color;
+      }
+    }
+  }
+  [aria-current='page'] {
+    text-decoration: none;
+    cursor: text;
+    pointer-events: none;
+  }
+}

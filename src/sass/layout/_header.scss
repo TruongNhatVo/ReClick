@@ -1,0 +1,121 @@
+.l-header {
+  height: $header-height;
+  background: #fff;
+  @include mqMd {
+    // width: 100%;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    position: relative;
+    z-index: 100;
+  }
+  @include mqSm {
+    height: calcVw(120);
+    margin-bottom: calcVw(120);
+  }
+  &__inner {
+    @include maxWidth($width-default);
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    width: 68px;
+    margin-right: 53px;
+    @include mqSm {
+      width: calcVw(86);
+      margin-right: calcVw(38);
+      margin-left: -#{$gutter-default-sm / 2};
+    }
+  }
+  &__quality {
+    margin-right: 100px;
+    @include mqMd {
+      display: none;
+    }
+  }
+  &__freedial {
+    margin-right: 20px;
+    @include mqSm {
+      width: calcVw(400);
+    }
+  }
+  &__btns {
+    margin-left: auto;
+    @include mqMd {
+      display: none;
+    }
+  }
+  &__hamburger {
+    display: none;
+    @include mqMd {
+      display: block;
+      margin-left: auto;
+      width: 40px;
+      height: 45px;
+    }
+    @include mqSm {
+      width: calcVw(74);
+      // margin-left: 0;
+      margin-right: -1.6vw;
+    }
+  }
+  &__navi {
+    margin-top: 12px;
+    @include transition(background);
+
+    &.is-fixed {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      margin-top: 0;
+      background: $color-beige;
+      box-shadow: 0 2px 4px rgba(#000, 0.1);
+      @include mqMd {
+        top: $header-height;
+        box-shadow: none;
+        background: none;
+      }
+      @include mqSm {
+        top: calcVw(120);
+      }
+    }
+    @include mqMd {
+      // display: none;
+      position: absolute;
+      top: $header-height;
+      left: 0;
+      width: 100%;
+      margin-top: 0;
+
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.6s $ease-easeOut, visibility 0s $ease-easeOut 1s;
+      pointer-events: none;
+
+      &.is-show {
+        transition-delay: 0s;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: fill;
+      }
+    }
+
+    @include mqSm {
+      top: calcVw(120);
+    }
+  }
+}
+
+.l-header__hamburger {
+  &.is-active {
+    img {
+      opacity: 0;
+    }
+    background: url(/images/common/btn_hamburger_off.png) no-repeat left top /
+      contain;
+  }
+}

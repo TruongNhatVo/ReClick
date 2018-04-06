@@ -1,0 +1,253 @@
+footer.l-footer
+  section.p-footer-contact
+    .l-container
+      h2.p-footer-contact__ttl
+        svg.p-footer-contact__grass.left
+          use(xlink:href='#icon-grass')
+        span
+          | お葬儀の事前
+          br.u-brSp
+          | 無料相談窓口
+        svg.p-footer-contact__grass
+          use(xlink:href='#icon-grass')
+      p.p-footer-contact__lead
+        | お客様にご都合の良い相談の方法を
+        br.u-brSp
+        | お選びいただけます。
+      ul.p-footer-contact__list
+        li
+          a.u-blink(href='')
+            +picture('/images/common/footer_contact_ceremopian.png', '好きな時に相談したい方に　セレモピアン')
+              +source(sm, '/images/common/footer_contact_ceremopian_sp.png')
+        li
+          a.u-blink(href='')
+            +picture('/images/common/footer_contact_visiting.png', 'お家や近くまで来てほしい方に　訪問相談')
+              +source(sm, '/images/common/footer_contact_visiting_sp.png')
+        li
+          a.u-blink(href='tel:0120-470-470')
+            +picture('/images/common/footer_contact_tel.png', '今すぐ聞きたいことがある方に　電話相談')
+              +source(sm, '/images/common/footer_contact_tel_sp.png')
+        li
+          a.u-blink(href='')
+            +picture('/images/common/footer_contact_email.png', '忙しい、時間をかけてじっくり考えたい方に　メール相談')
+              +source(sm, '/images/common/footer_contact_email_sp.png')
+  section.p-footer-quality
+    .l-container
+      h2.p-footer-quality__ttl
+        img(src='/images/common/footer_quality_ttl.png', srcset='/images/common/footer_quality_ttl@2x.png 2x', alt='セレモア品質')
+      p.p-footer-quality__lead セレモアはサービス品質の追求とおもてなしの教育を徹底しており、その品質は第三者機関にも広く認証されています。
+      .p-footer-quality__banners
+        a.u-blink(href='https://www.jqa.jp/service_list/management/service/iso9001/', target='_blank')
+          +picture('/images/common/footer_quality_iso9001.png', '品質保証の国際規格ISO9001認証取得（葬祭サービス）')
+            +source(sm, '/images/common/footer_quality_iso9001_sp.png')
+        a.u-blink(href='https://www.service-design.jp/beni/', target='_blank')
+          +picture('/images/common/footer_quality_omotenashi.png', '経済産業省認定おもてなし規格認証2017')
+            +source(sm, '/images/common/footer_quality_omotenashi_sp.png')
+        a.u-blink(href='http://www.jecia.co.jp/', target='_blank')
+          +picture('/images/common/footer_quality_jecia.png', '一般社団法人日本儀礼文化調査協会（JECIA）五つ星認定')
+            +source(sm, '/images/common/footer_quality_jecia_sp.png')
+  section.p-footer-map
+    .l-container
+      h2.p-footer-map__ttl 創業50年・信頼の葬儀社セレモア
+      .p-footer-map__inner
+        .p-footer-map__col
+          dl.p-footer-map__item
+            dt.p-footer-map__lead.js-accordion-btn(data-accordion='#footer-map-funeral', data-mq='sm')
+              a(href='') セレモアの葬儀
+              span.js-accordion-btn__toggle
+            dd#footer-map-funeral.p-footer-map__body.js-accordion-body(data-mq='sm')
+              ul.p-footer-map__list
+                li
+                  a(href='') 経験豊富な葬祭スタッフ
+                li
+                  a(href='') 対面型の無料ご相談窓口
+                li
+                  a(href='') 周辺サービスとの連携
+                li
+                  a(href='') 創業50年の葬儀実績
+          p.p-footer-map__lead
+            a(href='') お客様の声
+          dl.p-footer-map__item
+            dt.p-footer-map__lead.js-accordion-btn(data-accordion='#footer-map-support', data-mq='sm')
+              a(href='') セレモアのサポート
+              span.js-accordion-btn__toggle
+            dd#footer-map-support.p-footer-map__body.js-accordion-body(data-mq='sm')
+              ul.p-footer-map__list
+                li
+                  a(href='') お葬儀の生前予約
+                li
+                  a(href='') 海外からの故人搬送
+                li
+                  a(href='') 会員割引制度
+          dl.p-footer-map__item
+            dt.p-footer-map__lead.js-accordion-btn(data-accordion='#footer-map-contact', data-mq='sm')
+              a(href='') お問い合わせ
+              span.js-accordion-btn__toggle
+            dd#footer-map-contact.p-footer-map__body.js-accordion-body(data-mq='sm')
+              ul.p-footer-map__list
+                li
+                  a(href='') お急ぎの方へ
+                li
+                  a(href='') お問い合わせ・資料請求
+                li
+                  a(href='') お葬儀のお見積もり
+        .p-footer-map__col
+          dl.p-footer-map__item
+            dt.p-footer-map__lead.js-accordion-btn(data-accordion='#footer-map-plan', data-mq='sm')
+              a(href='') 葬儀プランと費用
+              span.js-accordion-btn__toggle
+            dd#footer-map-plan.p-footer-map__body.js-accordion-body(data-mq='sm')
+              ul.p-footer-map__list
+                li.p-footer-map__lead-child
+                  a(href='')
+                    b セレモアの葬儀プラン
+                  ul.p-footer-map__list.p-footer-map__list-child
+                    li
+                      a(href='') 家族葬
+                    li
+                      a(href='') 一般葬
+                    li
+                      a(href='') 一日葬［パック葬］
+                    li
+                      a(href='') 火葬式［パック葬］
+                    li
+                      a(href='') その他のお葬儀
+                    li
+                      a(href='') 葬礼・葬送
+                    li
+                      a(href='') 社葬・団体葬
+                    li
+                      a(href='') お別れの会・偲ぶ会
+                li.p-footer-map__lead-child
+                  a(href='')
+                    b お葬儀費用
+                  ul.p-footer-map__list.p-footer-map__list-child
+                    li
+                      a(href='') オプション費用
+                    li
+                      a(href='') お布施について
+                    li
+                      a(href='') お支払い方法
+                    li
+                      a(href='') お葬儀費用の割引制度
+        .p-footer-map__col
+          dl.p-footer-map__item
+            dt.p-footer-map__lead.js-accordion-btn(data-accordion='#footer-map-search', data-mq='sm')
+              a(href='') 葬儀場を選ぶ
+              span.js-accordion-btn__toggle
+            dd#footer-map-search.p-footer-map__body.js-accordion-body(data-mq='sm')
+              ul.p-footer-map__list
+                li
+                  a(href='') セレモアの直営式場一覧
+                li
+                  a(href='') 東京都の葬儀場一覧
+                li
+                  a(href='') 神奈川県の葬儀場一覧
+                li
+                  a(href='') 埼玉県の葬儀場一覧
+                li
+                  a(href='') 千葉県の葬儀場一覧
+                li
+                  a(href='') 山梨県の葬儀場一覧
+                li
+                  a(href='') ご安置所一覧
+          dl.p-footer-map__item
+            dt.p-footer-map__lead.js-accordion-btn(data-accordion='#footer-map-manner', data-mq='sm')
+              a(href='') お葬儀の知識・マナー
+              span.js-accordion-btn__toggle
+            dd#footer-map-manner.p-footer-map__body.js-accordion-body(data-mq='sm')
+              ul.p-footer-map__list
+                li
+                  a(href='') 神道（神式）の葬儀について
+                li
+                  a(href='') 葬儀の時に飾る花 供花について
+                li
+                  a(href='') 香典・弔電・供物について
+                li
+                  a(href='') 香典（表書き）の書き方
+                li
+                  a(href='') 喪中はがき・寒中見舞いはがき
+        .p-footer-map__col
+          dl.p-footer-map__item
+            dt.p-footer-map__lead.js-accordion-btn(data-accordion='#footer-map-knowledge', data-mq='sm')
+              a(href='') 喪主となる皆様へ
+              span.js-accordion-btn__toggle
+            dd#footer-map-knowledge.p-footer-map__body.js-accordion-body(data-mq='sm')
+              ul.p-footer-map__list
+                li
+                  a(href='') お葬儀の形式・宗派のご確認
+                li
+                  a(href='') 安置場所と葬儀場のご検討
+                li
+                  a(href='') ご臨終直後の届出・手続き
+                li
+                  a(href='') お葬儀の進め方
+                li
+                  a(href='') お葬儀後の手続き
+          dl.p-footer-map__item
+            dt.p-footer-map__lead.js-accordion-btn(data-accordion='#footer-map-faq', data-mq='sm')
+              a(href='') よくあるご質問
+              span.js-accordion-btn__toggle
+            dd#footer-map-faq.p-footer-map__body.js-accordion-body(data-mq='sm')
+              ul.p-footer-map__list
+                li
+                  a(href='') 葬儀場について
+                li
+                  a(href='') 家族葬について
+                li
+                  a(href='') 一般葬について
+                li
+                  a(href='') 火葬式について
+                li
+                  a(href='') 一日葬について
+                li
+                  a(href='') その他のお葬儀について
+                li
+                  a(href='') お布施・戒名・マナーについて
+                li
+                  a(href='') 香典返し・礼状・欠礼状について
+                li
+                  a(href='') 仏壇・仏具・位牌等について
+                li
+                  a(href='') その他のご質問
+    .p-footer-map__bottom
+      p.p-footer-map__bottom-ttl.js-accordion-btn(data-accordion='#footer-map-company', data-mq='sm')
+        a(href='') 企業情報
+        span.js-accordion-btn__toggle
+      ul#footer-map-company.p-footer-map__bottom-body.js-accordion-body(data-mq='sm')
+        li
+          a(href='') 個人情報保護方針
+        li
+          a(href='') 特定商取引法の表示
+        li
+          a(href='') 利用規約/免責事項
+        li
+          a(href='') 反社会的勢力に対する基本方針
+  .p-footer-banner
+    .p-footer-banner__inner
+      .p-footer-banner__body
+        a.u-blink(href='https://www.ceremore.co.jp/')
+          img(src='/images/common/banner_ceremore.png', alt='セレモアの葬儀')
+        a.u-blink(href='http://www.syasou.jp/', target='_blank')
+          img(src='/images/common/banner_ceremore_company_funeral.png', alt='セレモアの社葬')
+        a.u-blink(href='http://soudan.ceremore.jp/', target='_blank')
+          img(src='/images/common/banner_ceremopian.png', alt='セレモピアン')
+        a.u-blink(href='http://b.ceremore.jp/', target='_blank')
+          img(src='/images/common/banner_ceremore_butsudan.png', alt='お仏壇のセレモア')
+        a.u-blink(href='http://flc.ceremore.jp/', target='_blank')
+          img(src='/images/common/banner_family_life_club.png', alt='ファミリーライフクラブ')
+        a.u-blink(href='http://sala.ceremore.jp/', target='_blank')
+          img(src='/images/common/banner_sara.png', alt='壺ギャラリー沙羅')
+        a.u-blink(href='')
+          img(src='/images/common/banner_hanatsukasa.png', alt='花つかさ')
+        a.u-blink(href='http://minkyu.ceremore.jp/', target='_blank')
+          img(src='/images/common/banner_touminkyu.png', alt='東民急')
+        a.u-blink(href='http://care.ceremore.jp/', target='_blank')
+          img(src='/images/common/banner_kenkoukan.png', alt='健康館')
+        a.u-blink(href='http://rh.ceremore.jp/', target='_blank')
+          img(src='/images/common/banner_royal_happiness.png', alt='ロイヤルハピネス')
+      a.u-blink(href='http://www.ntv.co.jp/burari/', target='_blank')
+        img(src='/images/common/banner_tochugesha.png', alt='ぶらり途中下車の旅')
+  .p-footer-copy
+    p.p-footer-copy__en Copyright © 2018 CEREMORE,INC.All right reserved.
+    p.p-footer-copy__jp 「セレモア」は商標登録されております。

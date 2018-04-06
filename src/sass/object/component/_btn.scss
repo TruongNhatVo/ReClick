@@ -1,0 +1,145 @@
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.c-btn--primary {
+  @include fontSize(1.8);
+  background: linear-gradient(to bottom, #2cb074, #0e9e69);
+  box-shadow: inset 1px 1px 2px rgba(#fff, 0.53),
+    inset -1px -1px 2px rgba(#000, 0.35);
+  color: #fff;
+  position: relative;
+  padding: 0 44px;
+  &:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 7px);
+  }
+  &:after {
+    content: '';
+    border: solid transparent;
+    border-width: 3px 0 3px 5px;
+    position: absolute;
+    right: 23px;
+    top: calc(50% - 3px);
+    border-left-color: #2fb174;
+  }
+  &:hover {
+    color: #fff;
+    // &:visited {
+    //   color: #fff;
+    // }
+  }
+}
+.c-btn--primary-small {
+  @extend .c-btn--primary;
+  @include fontSize(1.6);
+  padding: 0 41px;
+  &:before {
+    right: 10px;
+  }
+  &:after {
+    right: 13px;
+  }
+}
+
+.c-btn--default {
+  color: #fff;
+  background: linear-gradient(to bottom, #969b9d 0%, #767a7c 100%);
+  box-shadow: 0 0 4px rgba(#000, 0.15), inset 1px 1px 0 1px rgba(#fff, 0.38),
+    1px 1px 1px rgba(#000, 0.2);
+  &:visited {
+    color: #fff;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+
+.c-btn--danger {
+  color: #fff;
+  background: linear-gradient(to bottom, #d51237 0%, #ac0323 100%);
+  box-shadow: 0 0 4px rgba(#000, 0.15), inset 1px 1px 0 1px rgba(#fff, 0.38),
+    1px 1px 1px rgba(#000, 0.2);
+  &:visited {
+    color: #fff;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+
+.c-btn--color {
+  @include fontSize(1.8);
+  color: #fff;
+  position: relative;
+  padding: 0 34px;
+  &:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 7px);
+  }
+  &:after {
+    content: '';
+    border: solid transparent;
+    border-width: 3px 0 3px 5px;
+    position: absolute;
+    right: 13px;
+    top: calc(50% - 3px);
+  }
+  &--tokyo {
+    $color: #1a6b4a;
+    background: linear-gradient(to bottom, #17784b, #175d48);
+    &:after {
+      border-left-color: $color;
+    }
+  }
+  &--kanagawa {
+    $color: #728333;
+    background: linear-gradient(to bottom, #90a737, #6a8b2c);
+    &:after {
+      border-left-color: $color;
+    }
+  }
+  &--chiba {
+    $color: #9a7a2d;
+    background: linear-gradient(to bottom, #c4982d, #b18329);
+    &:after {
+      border-left-color: $color;
+    }
+  }
+  &--saitama {
+    $color: #8f4d33;
+    background: linear-gradient(to bottom, #b75a36, #b6402c);
+    &:after {
+      border-left-color: $color;
+    }
+  }
+  &--yamanashi {
+    $color: #1d5c6e;
+    background: linear-gradient(to bottom, #1e748d, #14638c);
+    &:after {
+      border-left-color: $color;
+    }
+  }
+  &:hover {
+    color: #fff;
+    // &:visited {
+    //   color: #fff;
+    // }
+  }
+}

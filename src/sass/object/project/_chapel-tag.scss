@@ -1,0 +1,38 @@
+.p-chapel-tag {
+  background: #ebe7db;
+  border-radius: 5px;
+  padding: 20px 0px 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  @include mqSm {
+    padding: calcVw(30) calcVw(18) calcVw(18) calcVw(30);
+  }
+  > li {
+    @include fontSize(1.4);
+    background: #fff;
+    text-align: center;
+    border: 1px solid #b0b0b0;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 126px;
+    padding: 0.6em 0.5em;
+    @include mqSm {
+      @include fontSize(1.1, sp);
+      width: calc(33.333% - #{calcVw(12)});
+      margin-right: calcVw(12);
+      margin-bottom: calcVw(12);
+    }
+    &.disabled {
+      opacity: 0.4;
+    }
+  }
+  &--large {
+    > li {
+      width: 155px;
+      @include mqSm {
+        width: calc(50% - #{calcVw(12)});
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+extend /_template/_chapel-detail
+append variables
+  //- 変更可能
+  - const pageTitle= "葬儀場詳細";
+  - const pageDescription= site.description;
+  //- - const pageKeywords= site.keywords; キーワードは必要なし。
+  //- 任意
+  - const pageOgpTitle= pageTitle;
+  - const pageOgpImage= site.ogpImage;
+  - const pageOgpType= "article";
+
+block header
+  header.p-chapel-detail-header
+    .p-chapel-detail-header__inner
+      .p-chapel-detail-header__logo
+        a.u-blink(href='/')
+          img(src='/images/common/logo.png', alt='セレモアホールディングス株式会社')
+      .p-chapel-detail-header__txts
+        h1.p-chapel-detail-header__ttl セレモア立川会館　白峯殿
+        p.p-chapel-detail-header__region 東京都 立川市の葬儀場
+      .p-chapel-detail-header__tel
+        a(href='tel:0120-470-470')
+          +picture('/images/common/freedial_02.png', 'お葬儀無料相談ダイヤル 0120-470-470')
+            +source(sm, '/images/common/freedial_02_sp.png')
+  nav.p-breadcrumb(aria-label="Breadcrumb")
+    .l-container
+      +breadcrumb([
+        ["信頼の葬儀社セレモア", "/"],
+        ["葬儀場を選ぶ", "/search/"],
+        ["立川市（東京都）の葬儀場", "/search/area.html"],
+        ["セレモア立川会館 白峯殿 第1式場", ""]
+      ])
+
+block main
+  .l-main__section.p-chapel-detail
+    .p-chapel-detail__mv
+      img(src='/images/dummy_detail_01.jpg', alt='')
+    .p-chapel-detail__body
+      p.p-chapel-detail__copy 多摩エリア最大の葬儀式場 “白峯殿”
+      p.p-chapel-detail__lead
+        | セレモア立川会館 白峯殿は昭和記念公園の東、すずかけ通りに面した多摩エリア最大の葬儀式場です。家族葬や一般葬から2,000名規模の社葬・団体葬・お別れの会まで、あらゆるお葬儀に対応可能な、大規模葬儀式場です。
+      .p-chapel-detail__info.p-chapel-detail__info--horizontal
+        dl.p-chapel-detail__data
+          dt 第一式場
+          dd 180席
+        dl.p-chapel-detail__data
+          dt 第二式場
+          dd 24席
+        dl.p-chapel-detail__data
+          dt 駐車場
+          dd 180台
+      .p-chapel-detail__access-block
+        ul.p-chapel-tag.p-chapel-tag--large
+          li セレモア直営
+          li 火葬場併設
+          li 駐車場有
+          li 仮眠施設有
+          li.disabled 安置施設有
+          li.disabled 駅に近い
+          li.disabled バリアフリー
+          li.disabled 社葬可
+        p.p-chapel-detail__access-btn
+          a.c-btn.u-blink(href='#access') 式場へのアクセス
+      p.p-chapel-detail__access-txt
+        +picture('/images/search/detail_access_txt_01.png', '無料送迎車でご指定場所まで送迎いたします。')
+          +source(sm, '/images/search/detail_access_txt_01_sp.png')
+    
+      section.p-chapel-detail__block
+        .p-chapel-detail-contact
+          h2.p-chapel-detail-contact__ttl
+            span セレモア立川会館 白峯殿
+            | に関するお問合せ
+          .p-chapel-detail-contact__body
+            div
+              a(href='tel:0120-470-470')
+                +picture('/images/common/contact_btn_tel_02.png', '24時間365日ただいま受付中 0120-470-470')
+                  +source(sm, '/images/common/contact_btn_tel_02_sp.png')
+            div
+              a.u-blink(href='')
+                +picture('/images/common/contact_btn_urgent_02.png', 'お急ぎの方はこちら')
+                  +source(sm, '/images/common/contact_btn_urgent_02_sp.png')
+                  
+      section.p-chapel-detail__block
+        h2.p-heading-03.p-chapel-detail__block-ttl セレモア立川会館 白峯殿 の特徴
+        p.p-chapel-detail__lead
+          | 第1式場は180席の椅子席をご用意しております。 ご会葬の多いお葬儀でも安心してご利用いただけます。
+          br
+          | 第2式場は24席をご用意しており、家族葬などの小規模なお葬儀にもご利用いただけます。
+          br
+          | いずれの式場も入浴施設や寝具等を完備しております。また、ご自宅でのご安置が難しい場合もご安心ください。ご家族の皆様が落ち着いてご面会いただけるご安置室を完備いたしております。
+        .p-chapel-detail-pics
+          div
+            div
+              img(src='https://placehold.jp/316x200.png', alt='')
+            p 式場の外観
+          div
+            div
+              img(src='https://placehold.jp/316x200.png', alt='')
+            p 第一式場
+          div
+            div
+              img(src='https://placehold.jp/316x200.png', alt='')
+            p 第二式場
+          div
+            div
+              img(src='https://placehold.jp/316x200.png', alt='')
+            p ご遺族様・ご親族様控室
+          div
+            div
+              img(src='https://placehold.jp/316x200.png', alt='')
+            p ご安置所
+          div
+            div
+              img(src='https://placehold.jp/316x200.png', alt='')
+            p ロビー
+      section#access.p-chapel-detail__block
+        h2.p-heading-03.p-chapel-detail__block-ttl 基本情報・アクセス
+        p.p-chapel-detail__lead 昭和記念公園の東、すずかけ通り沿いに徒歩10分。
+        .p-chapel-detail-map
+        .p-chapel-detail__info
+          dl.p-chapel-detail__data
+            dt 第一式場
+            dd 東京都立川市柏町1-26-4
+          dl.p-chapel-detail__data
+            dt アクセス
+            dd
+              | 多摩都市モノレール
+              span 「泉体育館駅」下車、すずかけ通り「幸町1丁目」交差点から西へ徒歩約10分。
+          dl.p-chapel-detail__data
+            dt 駐車場
+            dd 180台
+          dl.p-chapel-detail__data
+            dt 駐車場
+            dd 180台
+          dl.p-chapel-detail__data
+            dt 席数
+            dd
+              | 第一式場：180席、
+              br.u-brSp
+              | 第二式場：24席
+              br.u-brSp
+              | 第一～第二式場の全館使用も承ります。
+          dl.p-chapel-detail__data
+            dt その他
+            dd
+              | 入浴設備完備、音響設備完備、仮眠用寝具等もご用意可能です。
+              br
+              | 全館バリアフリー仕様。
+          dl.p-chapel-detail__data
+            dt 備考
+            dd
+              | 立川駅からはタクシーで10分で斎場にお越しになれます。
+              br
+              | 駐車場は、お通夜の時には斎場北側駐車場で15台がご利用になれるほか、隣接する立川聖苑の駐車場30台程度が借りられます。また告別式の時は斎場北側駐車場の15台分がご利用になれます。
+              br
+              | アクセスも便利で知名度も高く、家族葬から社葬まで幅広いお葬儀に対応しています。
+
+
+  aside.l-main__section.p-common-content-area
+    +common-content-nearby()
+
+    +common-content-counter('葬儀場に関するご相談窓口', '葬儀場に関するご質問・ご相談は下記の窓口よりお気軽にお問合せください。', 'center')
+
+    +common-content-contact('large')
+
+    +common-content-plan(4)

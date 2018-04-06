@@ -1,0 +1,220 @@
+extend /_template/_two-column
+append variables
+  //- 変更可能
+  - const pageTitle= "○○区の葬儀場一覧";
+  - const pageDescription= site.description;
+  //- - const pageKeywords= site.keywords; キーワードは必要なし。
+  //- 任意
+  - const pageOgpTitle= pageTitle;
+  - const pageOgpImage= site.ogpImage;
+  - const pageOgpType= "article";
+
+block header
+  .p-page-mv.js-bgcheck-image
+    .p-page-mv__inner
+      h1.p-page-mv__ttl.js-bgcheck-target 川崎区の葬儀場を選ぶ
+  nav.p-breadcrumb(aria-label="Breadcrumb")
+    .l-container
+      +breadcrumb([
+        ["信頼の葬儀社セレモア", "/"],
+        ["葬儀場を選ぶ", "/search/"],
+        ["神奈川県", "/search/kanagawa/"],
+        ["川崎区（神奈川県）の葬儀場一覧", ""]
+      ])
+
+  +heading-large('川崎区（神奈川県）の<br class="p-brSp">葬儀場一覧')
+
+block main
+  section.l-main__section
+    .p-region-header.p-region-header--kanagawa
+      p.p-region-header__ttl
+        span 川崎区のお葬儀
+        | は、
+        br
+        | セレモアにおまかせください。
+      p.p-region-header__lead
+        span 創業50年・年間お葬儀実績首都圏No.1
+        | のセレモアが、大切なお葬儀を心を込めてお手伝いいたします。
+      img.p-region-header__medal(src='/images/search/region_ttl_medal.png', srcset='/images/search/region_ttl_medal@2x.png 2x', alt='お葬儀ご依頼実績首都圏No.1')
+    .p-contact-block
+      p.p-contact-block__lead
+        +picture('/images/common/contact_txt_02.png', 'お寺・集会所・ご自宅での葬儀まで、幅広くご対応します。')
+          +source(sm, '/images/common/contact_txt_02_sp.png')
+      .p-contact-block__btns
+        p
+          a(href='tel:0120-470-470')
+            img(src='/images/common/contact_btn_tel.png', srcset='/images/common/contact_btn_tel@2x.png 2x', alt='セレモア電話ご相談窓口　24時間365日受付中　0120-470-470')
+        p
+          a.u-blink(href='#')
+            +picture('/images/common/contact_btn_estimate.png', '24時間365日ネットで見積　お見積はこちら')
+              +source(sm, '/images/common/contact_btn_estimate_sp.png')
+        p
+          a.u-blink(href='#')
+            +picture('/images/common/contact_btn_urgent.png', '24時間365日ネットで見積　お急ぎの方はこちら')
+              +source(sm, '/images/common/contact_btn_urgent_sp.png')
+  section.l-main__section
+    h2.p-heading-01 検索結果一覧
+    .p-search-result
+      p.p-search-result__lead
+        span
+          span 4
+          | 件
+        | の葬儀場が該当しました。
+      .p-search-result__body
+        section.p-chapel-card
+          .p-chapel-card__header
+            h3.p-chapel-card__ttl.p-heading-03
+              a(href='detail.html') 立川会館 白峯殿 第一式場
+            p.p-chapel-card__btn
+              a.c-btn.c-btn--primary.c-btn--primary-small.u-blink(href='detail.html') 詳細を見る
+          ul.p-chapel-card__tag.p-chapel-tag
+            li セレモア直営
+            li 火葬場併設
+            li 駐車場有
+            li 仮眠施設有
+            li.disabled 安置施設有
+            li.disabled 駅に近い
+            li.disabled バリアフリー
+            li.disabled 社葬可
+          .p-chapel-card__body
+            .p-chapel-card__img
+              a.u-blink(href='detail.html')
+                img(src='/images/dummy_chapel_02.jpg', alt='')
+            .p-chapel-card__detail
+              p.p-chapel-card__txt
+                | 第1式場は180席の椅子席をご用意しております。ご会葬の多いお葬儀でも安心してご利用いただけます。
+                br
+                | ご自宅でのご安置が難しい場合もご安心ください。ご家族の皆様が落ち着いてご面会いただけるご安置室を完備いたしております。
+              dl.p-chapel-card__data.p-chapel-card__data--no-border-pc
+                dt 席数
+                dd 180席
+          dl.p-chapel-card__data
+            dt 所在地
+            dd 東京都立川市柏町1-26-4
+          dl.p-chapel-card__data
+            dt アクセス
+            dd
+              | 多摩都市モノレール
+              br
+              | 「泉体育館駅」下車、すずかけ通り「幸町1丁目」交差点から西へ徒歩約10分。
+        section.p-chapel-card
+          .p-chapel-card__header
+            h3.p-chapel-card__ttl.p-heading-03
+              a(href='') かわさき南部斎苑
+            p.p-chapel-card__btn
+              a.c-btn.c-btn--primary.c-btn--primary-small.u-blink(href='') 詳細を見る
+          ul.p-chapel-card__tag.p-chapel-tag
+            li セレモア直営
+            li 火葬場併設
+            li 駐車場有
+            li 仮眠施設有
+            li.disabled 安置施設有
+            li.disabled 駅に近い
+            li.disabled バリアフリー
+            li.disabled 社葬可
+          .p-chapel-card__body
+            .p-chapel-card__img
+              a.u-blink(href='')
+                img(src='/images/dummy_chapel_01.jpg', alt='')
+            .p-chapel-card__detail
+              p.p-chapel-card__txt
+                | 第1式場は180席の椅子席をご用意しております。ご会葬の多いお葬儀でも安心してご利用いただけます。
+                br
+                | ご自宅でのご安置が難しい場合もご安心ください。ご家族の皆様が落ち着いてご面会いただけるご安置室を完備いたしております。
+              dl.p-chapel-card__data.p-chapel-card__data--no-border-pc
+                dt 席数
+                dd 180席
+          dl.p-chapel-card__data
+            dt 所在地
+            dd 東京都立川市柏町1-26-4
+          dl.p-chapel-card__data
+            dt アクセス
+            dd
+              | 多摩都市モノレール
+              br
+              | 「泉体育館駅」下車、すずかけ通り「幸町1丁目」交差点から西へ徒歩約10分。
+  section.l-main__section
+    h2.p-heading-01 近隣の葬儀場
+    .p-search-result
+      p.p-search-result__lead ご希望のエリアの近隣にある葬儀場です。
+      .p-search-result__body
+        section.p-chapel-card
+          .p-chapel-card__header
+            h3.p-chapel-card__ttl.p-heading-03
+              a(href='') かわさき南部斎苑
+            p.p-chapel-card__btn
+              a.c-btn.c-btn--primary.c-btn--primary-small.u-blink(href='') 詳細を見る
+          ul.p-chapel-card__tag.p-chapel-tag
+            li セレモア直営
+            li 火葬場併設
+            li 駐車場有
+            li 仮眠施設有
+            li.disabled 安置施設有
+            li.disabled 駅に近い
+            li.disabled バリアフリー
+            li.disabled 社葬可
+          .p-chapel-card__body
+            .p-chapel-card__img
+              a.u-blink(href='')
+                img(src='/images/dummy_chapel_01.jpg', alt='')
+            .p-chapel-card__detail
+              p.p-chapel-card__txt
+                | 第1式場は180席の椅子席をご用意しております。ご会葬の多いお葬儀でも安心してご利用いただけます。
+                br
+                | ご自宅でのご安置が難しい場合もご安心ください。ご家族の皆様が落ち着いてご面会いただけるご安置室を完備いたしております。
+              dl.p-chapel-card__data.p-chapel-card__data--no-border-pc
+                dt 席数
+                dd 180席
+          dl.p-chapel-card__data
+            dt 所在地
+            dd 東京都立川市柏町1-26-4
+          dl.p-chapel-card__data
+            dt アクセス
+            dd
+              | 多摩都市モノレール
+              br
+              | 「泉体育館駅」下車、すずかけ通り「幸町1丁目」交差点から西へ徒歩約10分。
+      ol.p-pagination.p-search-result__pagination
+        li.prev
+          a(href='') <
+        li.is-current
+          a(href='') 1
+        li
+          a(href='') 2
+        li
+          a(href='') 3
+        li
+          a(href='') 4
+        li
+          a(href='') 5
+        li.next
+          a(href='') >
+  aside.l-main__section.p-common-content-area
+    +common-content-counter('川崎区の葬儀場について', '川崎区内の葬儀式場は一覧以外にも、川崎区内のお寺（菩提寺）での葬儀、集会所・ご自宅での葬儀、及び川崎区周辺隣接地域の式場など、幅広くご対応いたします。<br>また、諸事情によりご自宅にお帰りになれない場合は、ご安置場所のご相談も承ります。')
+
+    +common-content-contact()
+
+    +common-content-history()
+
+    +common-content-plan(2)
+
+block side
+  .p-side-area
+    include /_partial/_side-search-by-condition
+    include /_partial/_side-search-by-area
+    section.p-side-area__block
+      h2.p-side-area__ttl.js-accordion-btn(data-accordion='#side-links-sm', data-mq='sm') 葬儀場を選ぶ
+      #side-links-sm.js-accordion-body.p-side-area__accordion(data-mq='sm')
+        .p-side-area-links
+          ul.p-side-area-links__list
+            li
+              a(href='') 葬儀場検索
+            li
+              a(href='') セレモアの直営式場一覧
+            li
+              a(href='') ご安置所の一覧
+          section.p-side-area-links__block
+            h3.p-side-area-links__ttl よくあるご質問
+            ul.p-side-area-links__list
+              li
+                a(href='') 式場についてのご質問

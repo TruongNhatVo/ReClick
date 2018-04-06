@@ -1,0 +1,69 @@
+//- 4つの葬儀プランのモジュールです。
+    引数に列数を指定してください。2列x2行なら”2”、4列x1行なら”4”
+    Pug： +basicPlan(2)
+
+mixin basicPlan(column)
+  .p-basic-plan(class='p-basic-plan--col' + column)
+    .p-basic-plan__body
+      section.p-basic-plan__item.p-basic-plan__item--family
+        a.u-blink(href='')
+          h3.p-basic-plan__ttl
+            | ご家族様でお見送り。
+            span 家族葬
+          .p-basic-plan__img
+            img(src='/images/common/plan_family_img.jpg', alt='')
+          dl.p-basic-plan__txt
+            dt.p-basic-plan__label 会員価格
+            dd.p-basic-plan__price
+              span
+                span.number 486,000
+                |円より
+                span.tax （税込）
+            
+      section.p-basic-plan__item.p-basic-plan__item--general
+        a.u-blink(href='')
+          h3.p-basic-plan__ttl
+            | 共に過ごした方々と。
+            span 一般葬
+          .p-basic-plan__img
+            img(src='/images/common/plan_general_img.jpg', alt='')
+          dl.p-basic-plan__txt
+            dt.p-basic-plan__label 会員価格
+            dd.p-basic-plan__price
+              span
+                span.number 636,000
+                |円より
+                span.tax （税込）
+
+      section.p-basic-plan__item.p-basic-plan__item--oneday
+        a.u-blink(href='')
+          h3.p-basic-plan__ttl
+            | 葬儀と告別式を。
+            span 一日葬
+          .p-basic-plan__img
+            img(src='/images/common/plan_oneday_img.jpg', alt='')
+          dl.p-basic-plan__txt
+            dt.p-basic-plan__label パック葬
+            dd.p-basic-plan__price
+              span
+                span.number 336,000
+                |円より
+                span.tax （税込）
+
+      section.p-basic-plan__item.p-basic-plan__item--committal
+        a.u-blink(href='')
+          h3.p-basic-plan__ttl
+            | ご出棺～火葬まで。
+            span 火葬のみ
+          .p-basic-plan__img
+            img(src='/images/common/plan_committal_img.jpg', alt='')
+          dl.p-basic-plan__txt
+            dt.p-basic-plan__label パック葬
+            dd.p-basic-plan__price
+              span
+                span.number 186,000
+                |円より
+                span.tax （税込）
+
+    p.p-basic-plan__btn
+      a.c-btn.u-blink(href='#') プラン一覧を見る

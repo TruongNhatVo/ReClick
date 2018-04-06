@@ -1,0 +1,53 @@
+.p-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > li {
+    @include fontSize(2);
+    font-weight: bold;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    @include mqSm {
+      @include fontSize(1.3, sp);
+    }
+    &.prev,
+    &.next {
+      @include fontSize(1.6);
+      background: none;
+      border: none;
+      @include mqSm {
+        @include fontSize(1.4, sp);
+      }
+      a {
+        color: $font-color;
+        text-decoration: none;
+      }
+    }
+    &.is-current {
+      a {
+        color: $color-theme;
+      }
+    }
+  }
+  > li ~ li {
+    margin-left: 10px;
+    @include mqSm {
+      margin-left: calcVw(10);
+    }
+  }
+  a {
+    color: #c7c7c7;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mqSm {
+      width: calcVw(70);
+      height: calcVw(70);
+    }
+    &:hover {
+      color: $color-theme;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+/*
+  色の変数は foundation/variables に入っています。
+  【よく使う色】
+  $color-theme　⇒　メインの緑色
+  $color-theme-light　⇒　メインの緑色の薄い版
+  $color-secondary　⇒　見出し等に使われている黄緑色
+  $color-beige　⇒　背景のベージュ
+  $color-russet　⇒　メガメニュー内のタイトルなどに使われているくすんだ赤
+  $color-vermilion　⇒　葬儀プランの値段等に使われている金赤
+  $color-gray　⇒　灰色
+  $color-gray-light　⇒　薄い灰色（背景によく使う）
+*/
+
+/*
+  【フォントサイズ】
+  font-sizeはmixinで指定してください。
+*/
+.hoge {
+  // 1.6remを指定する場合は
+  @include fontSize(1.6);
+}
+
+/*
+  【メディアクエリ】
+  メディアクエリはmixinで指定してください。
+  デスクトップファーストで、Md、Smと大きい順に記述します。
+  @include mqMd{
+    md幅
+  }
+  @include mqSm{
+    sm幅
+  }
+
+  break-pointは
+  $widthLg: 1280;
+  $widthMd: 960;
+  $widthSm: 600;
+  です。
+*/
+.hoge {
+  @include fontSize(1.6);
+  @include mqMd {
+    // md幅で1.4remにする場合は
+    @include fontSize(1.4);
+  }
+  @include mqSm {
+    // sm幅で1.2remにする場合は
+    @include fontSize(1.2, sp);
+    // ※※※sm幅の時は、必ず第2引数に'sp'を指定してください。※※※
+  }
+}
+
+/*
+  【マージン、パディング】
+  マージンとパディングは基本的に'em'で指定してください。（文字サイズ変更時に崩れにくくするため）
+  sm幅の時は'em'または'vw'で指定してください。
+
+  vwの計算には
+  calcVw()
+  を使用してください。
+*/
+.hoge {
+  margin: 3em 0;
+  @include mqSm {
+    // デバイス幅750pxでのデザイン時、40pxのマージンを取るにはcalcVw(40)を指定します。
+    margin: calcVw(40) 0;
+
+    // 100pxの時はcalcVw(100)を指定します。
+    padding-top: calcVw(100);
+  }
+}
+
+/*
+  【明朝体】
+  明朝体を指定する場合は
+  @include mincho
+  を指定してください。
+*/
+.hoge {
+  @include mincho;
+}
+
+/*
+  【Helvetica】
+  目立たせたい数字（値段など）はHelveticaを使用してください。
+  @include helvetica
+*/
+.hoge {
+  @include helvetica;
+}
+
+/*
+  【トランジション】
+  トランジションは下記のmixinを使用してください。
+  引数にプロパティを指定します。
+  @include transition()
+*/
+.hoge {
+  // bakcgroundに指定する場合
+  @include transition(background);
+
+  // 複数も指定できます。
+  @include transition(background, color);
+
+  @include mqSm {
+    // extend的には使えないので、その時使いたいプロパティを全て指定してください。
+
+    // ✕ メディアクエリ外のbackground, colorは引き継がない。box-shadowだけで上書きされる。
+    @include transition(box-shadow);
+
+    // ○ 全部書く。
+    @include transition(background, color, box-shadow);
+  }
+}

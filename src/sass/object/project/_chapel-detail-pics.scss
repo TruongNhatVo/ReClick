@@ -1,0 +1,23 @@
+.p-chapel-detail-pics {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -26px;
+  margin-bottom: -26px;
+  @include mqSm {
+    margin-right: -#{calcVw(30)};
+    margin-bottom: -#{calcVw(30)};
+    img {
+      margin-bottom: 0.5em;
+    }
+  }
+  > * {
+    width: calc(33.333% - 26px);
+    margin-right: 26px;
+    margin-bottom: 26px;
+    @include mqSm {
+      width: calc(50% - #{calcVw(30)});
+      margin-right: calcVw(30);
+      margin-bottom: calcVw(30);
+    }
+  }
+}

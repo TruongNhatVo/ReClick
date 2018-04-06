@@ -1,0 +1,14 @@
+.l-wrapper {
+  @include maxWidth($width-default);
+  margin: 0 auto;
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  @include mqMd {
+    display: block;
+  }
+  @include mqSm {
+    padding-top: calcVw(50);
+    padding-bottom: 0;
+  }
+}

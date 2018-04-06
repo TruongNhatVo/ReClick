@@ -1,0 +1,10 @@
+//- 大きな見出しです。
+    引数にタイトルを入力します。
+
+mixin heading-large(ttl)
+  p.p-heading-large
+    svg.p-heading-large__icon.left
+      use(xlink:href='#icon-grass')
+    span!= ttl
+    svg.p-heading-large__icon
+      use(xlink:href='#icon-grass')

@@ -1,0 +1,96 @@
+.p-chapel-detail-prices {
+  display: flex;
+  margin-bottom: 36px;
+  @include mqMd {
+    flex-wrap: wrap;
+    margin-right: -23px;
+    margin-bottom: calc(-23px + 36px);
+  }
+  @include mqSm {
+    margin-right: -#{calcVw(20)};
+    margin-bottom: calc(-#{calcVw(40) + #{calcVw(60)}});
+  }
+  &__item {
+    flex: 1;
+    text-align: center;
+    @include mqMd {
+      width: calc(50% - 23px);
+      margin-right: 23px;
+      margin-bottom: 23px;
+    }
+    @include mqSm {
+      width: calc(50% - #{calcVw(20)});
+      margin-right: calcVw(20);
+      margin-bottom: calcVw(40);
+      flex: none;
+    }
+    & ~ & {
+      margin-left: 23px;
+      @include mqMd {
+        margin-left: 0;
+      }
+    }
+  }
+  &__name {
+    color: #fff;
+    @include fontSize(2.2);
+    @include mincho;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    border-radius: 5px 5px 0 0;
+    padding: 15px;
+    @include mqSm {
+      @include fontSize(1.5, sp);
+      letter-spacing: 0.15em;
+      padding: calcVw(15);
+    }
+  }
+  &__body {
+    border: 1px solid #e4e4e4;
+    padding: 20px 15px 30px;
+    @include mqSm {
+      padding: calcVw(25);
+    }
+  }
+  &__amount {
+    @include fontSize(2);
+    font-weight: bold;
+    color: $color-red;
+    border-bottom: 5px solid $color-red;
+    line-height: 1.25;
+    @include mqSm {
+      @include fontSize(1.3, sp);
+      border-bottom-width: 2px;
+    }
+    span {
+      @include fontSize(4.1);
+      font-weight: bold;
+      letter-spacing: -0.015em;
+      @include helvetica;
+      @include mqSm {
+        @include fontSize(2.5, sp);
+      }
+    }
+  }
+}
+
+@mixin detail-prices($bg, $color) {
+  .p-chapel-detail-prices__name {
+    background-image: url('/images/common/bg_paper' + $bg + '.jpg');
+  }
+  .p-chapel-detail-prices__body {
+    background: $color;
+  }
+}
+.p-chapel-detail-prices__item.family {
+  @include detail-prices(_purple, #f6f4f8);
+}
+.p-chapel-detail-prices__item.general {
+  @include detail-prices(_yellow, #fcfaf5);
+}
+.p-chapel-detail-prices__item.oneday {
+  @include detail-prices(_red, #faf3f4);
+}
+.p-chapel-detail-prices__item.committal {
+  @include detail-prices(_blue, #f4f7f8);
+}

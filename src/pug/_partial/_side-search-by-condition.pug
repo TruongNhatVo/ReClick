@@ -1,0 +1,52 @@
+section.p-side-area__block
+  h2.p-side-area__ttl.js-accordion-btn(data-accordion='#side-condition-sm', data-mq='sm') 葬儀場検索
+  #side-condition-sm.js-accordion-body.p-side-area__accordion(data-mq='sm')
+    .p-side-area-condition-search
+      .p-side-area-condition-search__block
+        p.p-side-area-condition-search__ttl エリアを設定する
+        .p-side-area-condition-search__body
+          label.c-select
+            select.c-select__body
+              option(disabled='', selected='') 都道府県を選択
+              option 1
+              option 2
+          label.c-select
+            select.c-select__body
+              option(disabled='', selected='') 市区町村を選択
+              option 1
+              option 2
+      .p-side-area-condition-search__block
+        p.p-side-area-condition-search__ttl.js-accordion-btn.is-active(data-accordion='#side-condition', data-mq='sm')
+          | 条件を追加する
+          span.js-accordion-btn__toggle
+        #side-condition.p-side-area-condition-search__body.js-accordion-body.is-open(data-mq='sm')
+          ul.c-checkbox-list.p-side-area-condition-search__list
+            li
+              input(type='checkbox', id='')
+              label.c-checkbox(for='') 民営斎場
+            li
+              input(type='checkbox', id='')
+              label.c-checkbox(for='') 公営斎場
+            li
+              input(type='checkbox', id='')
+              label.c-checkbox(for='') セレモア直営斎場
+            li
+              input(type='checkbox', id='')
+              label.c-checkbox(for='') 故人の安置可能
+            li
+              input(type='checkbox', id='')
+              label.c-checkbox(for='') 火葬場併設
+            li
+              input#hoge(type='checkbox')
+              label.c-checkbox(for='hoge') 駐車場あり
+            li
+              input(type='checkbox', id='')
+              label.c-checkbox(for='') 駅に近い
+            li
+              input(type='checkbox', id='')
+              label.c-checkbox(for='') 仮眠施設あり
+            li
+              input(type='checkbox', id='')
+              label.c-checkbox(for='') バリアフリー対応
+      .p-side-area-condition-search__btn
+        a.c-btn.c-btn--primary.u-blink(href='#') 検索する

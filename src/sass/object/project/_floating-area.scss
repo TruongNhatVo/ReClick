@@ -1,0 +1,60 @@
+.p-floating-area {
+  position: fixed;
+  width: 100%;
+  background: rgba(#012b17, 0.8);
+  left: 0;
+  bottom: 0;
+  padding: 15px 0;
+  // border-top: 2px solid $color-theme;
+  z-index: 10;
+  box-shadow: 0 -2px 4px rgba(#000, 0.15);
+  @include mqSm {
+    padding: calcVw(20) 0;
+  }
+  &__inner {
+    @include maxWidth($width-default);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__txt {
+    margin: 0 30px;
+    @include mqSm {
+      // width: calcVw(114);
+      // margin: 0 0 0 calcVw(30);
+      display: none;
+    }
+  }
+  &__btns {
+    display: flex;
+    flex: none;
+    @include mqSm {
+      display: none;
+    }
+    > * {
+      display: flex;
+    }
+    a {
+      font-weight: bold;
+      line-height: 1.2;
+      padding: 1.2em 1em;
+      @include mqMd {
+        @include fontSize(1.4);
+      }
+    }
+    > * ~ * {
+      margin-left: 10px;
+    }
+  }
+}
+
+//表示非表示の処理
+.p-floating-area {
+  transform: translateY(100%);
+  @include transition(transform);
+  &.is-show {
+    transform: translateY(0);
+  }
+}

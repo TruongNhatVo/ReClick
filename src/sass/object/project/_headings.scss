@@ -1,0 +1,107 @@
+.p-heading-large {
+  @include fontSize(3);
+  @include mincho;
+  font-weight: bold;
+  color: $color-theme;
+  letter-spacing: 0.1em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 0;
+  box-shadow: 0 2px 4px rgba(#e2dac8, 0.69);
+  background: #fff;
+  @include mqSm {
+    @include fontSize(2.1, sp);
+    justify-content: space-between;
+    padding: 0.86em $gutter-default-sm;
+    letter-spacing: 0.03em;
+  }
+  &__icon {
+    width: 81px;
+    height: 52px;
+    fill: #7fc8ab;
+    @include mqSm {
+      width: calcVw(80);
+      height: calcVw(52);
+    }
+    &.left {
+      transform: rotateY(180deg);
+    }
+  }
+  span {
+    margin: 0 80px;
+    font-weight: bold;
+    @include mqSm {
+      margin: 0;
+    }
+  }
+}
+
+.p-heading-01 {
+  color: $color-yellow-green;
+  @include fontSize(2.6);
+  @include mincho;
+  letter-spacing: 0.1em;
+  background: #fff;
+  border-top: 3px double rgba($color-yellow-green, 0.5);
+  border-bottom: 3px double rgba($color-yellow-green, 0.5);
+  padding: 0.39em 0.8em;
+  margin-bottom: 1em;
+  @include mqSm {
+    @include fontSize(1.8, sp);
+    letter-spacing: 0.05em;
+    padding: 0.45em 0.6em;
+  }
+}
+
+.p-heading-02 {
+  color: $color-russet;
+  @include fontSize(2.6);
+  @include mincho;
+  letter-spacing: 0.1em;
+  text-align: center;
+  background: #fff;
+  border-top: 3px double rgba($color-russet, 0.5);
+  border-bottom: 3px double rgba($color-russet, 0.5);
+  padding: 0.39em 0.8em;
+  margin-bottom: 1em;
+  @include mqSm {
+    text-align: left;
+    @include fontSize(1.8, sp);
+    letter-spacing: 0.05em;
+    padding: 0.45em 0.6em;
+  }
+}
+
+.p-heading-03 {
+  color: $color-yellow-green;
+  border-left: 5px solid $color-yellow-green;
+  border-bottom: 1px dotted $color-yellow-green;
+  flex: 1;
+  padding: 0.1em 0 0.4em 0.5em;
+  font-weight: bold;
+  @include fontSize(1.8);
+  a {
+    color: $color-yellow-green;
+    font-weight: bold;
+    &:hover {
+      color: darken($color-yellow-green, 15%);
+    }
+  }
+  @include mqSm {
+    @include fontSize(1.4, sp);
+    padding: 0.5em 0.7em 0.3em;
+  }
+}
+
+.p-heading-04 {
+  @include fontSize(2);
+  letter-spacing: 0.05em;
+  color: $color-yellow-green;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  @include mqSm {
+    @include fontSize(1.4, sp);
+  }
+}

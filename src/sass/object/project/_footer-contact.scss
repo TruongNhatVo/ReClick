@@ -1,0 +1,77 @@
+.p-footer-contact {
+  background: url(/images/common/bg_paper_green_dark.jpg);
+  padding: 4em 0 5em;
+  @include mqSm {
+    padding: calcVw(100) 0;
+  }
+  &__ttl {
+    color: #fff;
+    @include fontSize(4.6);
+    @include mincho;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.3em;
+    @include mqMd {
+      @include fontSize(3.6);
+    }
+    @include mqSm {
+      @include fontSize(2.5, sp);
+      justify-content: space-between;
+      letter-spacing: 0.03em;
+      line-height: 1.4;
+      margin-bottom: 0.8em;
+    }
+    span {
+      margin: 0 20px;
+      @include mqSm {
+        margin: 0;
+      }
+    }
+  }
+  &__grass {
+    width: 81px;
+    height: 52px;
+    fill: #7fc8ab;
+    @include mqSm {
+      width: calcVw(80);
+      height: calcVw(52);
+    }
+    &.left {
+      transform: rotateY(180deg);
+    }
+  }
+  &__lead {
+    text-align: center;
+    color: #fff;
+    @include fontSize(1.8);
+    margin-bottom: 3em;
+    @include mqSm {
+      @include fontSize(1.5, sp);
+      margin-bottom: 2em;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: -10px;
+    @include mqSm {
+      flex-wrap: wrap;
+      margin-right: -(calcVw(30));
+      margin-bottom: -(calcVw(30));
+    }
+    li {
+      margin-right: 10px;
+      flex: 1;
+      @include mqSm {
+        flex: none;
+        width: calc(50% - #{calcVw(30)});
+        margin-right: calcVw(30);
+        margin-bottom: calcVw(30);
+      }
+    }
+  }
+}

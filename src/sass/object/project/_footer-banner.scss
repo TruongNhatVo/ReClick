@@ -1,0 +1,29 @@
+.p-footer-banner {
+  background: #faf8f2;
+  padding: 2.5em 0;
+  @include mqSm {
+    display: none;
+  }
+
+  &__inner {
+    @include maxWidth($width-default);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > *:last-child {
+      flex: none;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -11px;
+    margin-bottom: -11px;
+    > * {
+      margin-right: 11px;
+      margin-bottom: 11px;
+    }
+  }
+}

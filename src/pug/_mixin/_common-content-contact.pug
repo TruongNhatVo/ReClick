@@ -1,0 +1,35 @@
+//- メインエリアの「どのような事でも、お気軽にセレモアへご相談ください」のモジュールです。
+    第1引数が”large”だと、各ボタンに大型の画像を適用します。
+    Pug：+common-content-contact('large')
+
+mixin common-content-contact(type)
+  section.p-common-content-area__block
+    .p-contact-block.p-common-content-area__fit
+      h2.p-contact-block__lead
+        img(src='/images/common/contact_txt_01.png', alt='どのような事でも、お気軽にセレモアへご相談ください。')
+      .p-contact-block__btns
+        if type === 'large'
+          p
+            a(href='tel:0120-470-470')
+              +picture('/images/common/contact_btn_tel_03.png', 'セレモア電話ご相談窓口　24時間365日受付中　0120-470-470')
+                +source(sm, '/images/common/contact_btn_tel_03_sp.png')
+          p
+            a.u-blink(href='#')
+              +picture('/images/common/contact_btn_estimate_02.png', '24時間365日ネットで見積　お見積はこちら')
+                +source(sm, '/images/common/contact_btn_estimate_sp.png')
+          p
+            a.u-blink(href='#')
+              +picture('/images/common/contact_btn_urgent_03.png', '24時間365日ネットで見積　お急ぎの方はこちら')
+                +source(sm, '/images/common/contact_btn_urgent_sp.png')
+        else
+          p
+            a(href='tel:0120-470-470')
+              img(src='/images/common/contact_btn_tel.png', srcset='/images/common/contact_btn_tel@2x.png 2x', alt='セレモア電話ご相談窓口　24時間365日受付中　0120-470-470')
+          p
+            a.u-blink(href='#')
+              +picture('/images/common/contact_btn_estimate.png', '24時間365日ネットで見積　お見積はこちら')
+                +source(sm, '/images/common/contact_btn_estimate_sp.png')
+          p
+            a.u-blink(href='#')
+              +picture('/images/common/contact_btn_urgent.png', '24時間365日ネットで見積　お急ぎの方はこちら')
+                +source(sm, '/images/common/contact_btn_urgent_sp.png')

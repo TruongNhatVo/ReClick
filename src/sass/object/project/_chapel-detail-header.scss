@@ -1,0 +1,65 @@
+.p-chapel-detail-header {
+  background: #fff;
+  &__logo {
+    margin-right: 1.5em;
+    flex: none;
+    @include mqSm {
+      width: calcVw(120);
+      margin-right: calcVw(20);
+      padding-left: calcVw(25);
+    }
+  }
+  &__inner {
+    @include maxWidth($width-default);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include mqSm {
+      flex-wrap: wrap;
+      // padding: calcVw(20) calcVw(25);
+      padding: calcVw(20) 0 0;
+    }
+  }
+  &__txts {
+    @include mqSm {
+      flex: 1;
+      padding-right: calcVw(25);
+    }
+  }
+  &__ttl {
+    @include fontSize(3.2);
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    @include mincho;
+    margin-right: 1em;
+    line-height: 1.2;
+    @include mqSm {
+      @include fontSize(1.9, sp);
+      margin-right: 0;
+      letter-spacing: 0;
+    }
+  }
+  &__region {
+    @include fontSize(1.4);
+    color: $font-color-light;
+    @include mqSm {
+      @include fontSize(1.1, sp);
+    }
+  }
+  &__tel {
+    margin-left: auto;
+    flex: none;
+    @include mqSm {
+      width: 100%;
+      background: linear-gradient(to bottom, #f0f0f0, #cbcbcb);
+      box-shadow: inset 1px 1px 2px rgba(#fff, 0.38),
+        inset -1px -1px 2px rgba(#000, 0.2);
+      // margin: 0 -#{calcVw(25)};
+      padding: calcVw(22) $gutter-default-sm;
+      margin-top: calcVw(20);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+//- メインエリアの「葬儀場をもう一度見る」のモジュールです。
+    Pug：+common-content-history()
+
+mixin common-content-history()
+  section.p-common-content-area__block
+    h2.p-heading-02 葬儀場をもう一度見る
+    p.p-common-content-area__txt.p-common-content-area__txt--center 最近見た葬儀場の履歴です。
+    ul.p-chapel-list
+      li.p-chapel-list__item
+        a.u-blink(href='')
+          img(src='/images/dummy_history_01.jpg', alt='')
+          span 立川会館 白峯殿
+      li.p-chapel-list__item
+        a.u-blink(href='')
+          img(src='/images/dummy_history_02.jpg', alt='')
+          span 立川会館 沙羅堂
+      li.p-chapel-list__item
+        a.u-blink(href='')
+          img(src='/images/dummy_history_03.jpg', alt='')
+          span 東大和会館
+      li.p-chapel-list__item
+        a.u-blink(href='')
+          img(src='/images/dummy_history_04.jpg', alt='')
+          span 八王子大横町会館

@@ -1,0 +1,26 @@
+//- メインエリアの「近隣の葬儀場」のモジュールです。
+    Pug：+common-content-nearby()
+
+mixin common-content-nearby()
+  section.p-common-content-area__block
+    h2.p-heading-02 近隣の葬儀場
+    p.p-common-content-area__txt.p-common-content-area__txt--center セレモアでは自社直営式場をはじめ、提携式場も多数ご紹介が可能です。近隣の葬儀場もぜひご検討ください。
+    ul.p-chapel-list
+      li.p-chapel-list__item
+        a.u-blink(href='')
+          img(src='/images/dummy_nearby_01.jpg', alt='')
+          span 立川会館 白峯殿
+      li.p-chapel-list__item
+        a.u-blink(href='')
+          img(src='/images/dummy_nearby_02.jpg', alt='')
+          span 立川会館 沙羅堂
+      li.p-chapel-list__item
+        a.u-blink(href='')
+          img(src='/images/dummy_nearby_03.jpg', alt='')
+          span 東大和会館
+      li.p-chapel-list__item
+        a.u-blink(href='')
+          img(src='/images/dummy_nearby_04.jpg', alt='')
+          span 八王子大横町会館
+    p.p-common-content-area__btn
+      a.c-btn.c-btn--primary.u-blink(href='') 式場一覧に戻る

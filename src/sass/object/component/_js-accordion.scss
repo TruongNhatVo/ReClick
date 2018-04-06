@@ -1,0 +1,28 @@
+.js-accordion-body {
+  // display: none;
+  &[data-mq='lg'] {
+    display: none;
+  }
+  &[data-mq='md'] {
+    @include mqMd {
+      display: none;
+    }
+  }
+  &[data-mq='sm'] {
+    @include mqSm {
+      display: none;
+    }
+  }
+}
+
+// .js-accordion-body-md {
+//   @include mqMd {
+//     display: none;
+//   }
+// }
+
+// .js-accordion-body-sm {
+//   @include mqSm {
+//     display: none;
+//   }
+// }

@@ -1,0 +1,56 @@
+extend /_template/_two-column
+append variables
+  //- 変更可能
+  - const pageTitle= "葬儀場を選ぶ";
+  - const pageDescription= site.description;
+  //- - const pageKeywords= site.keywords; キーワードは必要なし。
+  //- 任意
+  - const pageOgpTitle= pageTitle;
+  - const pageOgpImage= site.ogpImage;
+  - const pageOgpType= "article";
+
+block header
+  .p-page-mv.js-bgcheck-image
+    .p-page-mv__inner
+      h1.p-page-mv__ttl.js-bgcheck-target 葬儀場を選ぶ
+      
+  nav.p-breadcrumb(aria-label="Breadcrumb")
+    .l-container
+      +breadcrumb([
+        ["信頼の葬儀社セレモア", "/"],
+        ["葬儀場を選ぶ", ""]
+      ])
+
+  +heading-large('お葬儀基本プラン一覧')
+
+block main
+  section.l-main__section
+    .p-plan-top__notify
+      h2.p-plan-top__heading 基本プランとして以下のお葬儀をご用意しております。
+        br
+        | ご希望の条件に応じた、自由なお葬儀の形にすることも可能です。  
+      p.p-plan-top-content ※表示価格は全て税抜となります。
+        br
+        | ※「会員価格」の表記がある場合、事前のお申込みによる会員特別価格となります。
+        
+  section.l-main__section
+    .p-plan-group
+      figure.p-plan-item
+        figcaption.p-plan-item__description
+          h3 ご家族様でお見送り。
+          h4 家族葬
+          p 故人様と縁の深かった方のみでお見送りするお葬儀です。
+            br 
+            | セレモアではご家族の思いを形にし、その人らしさを大切にした家族葬をご提案します。
+        .p-plan-item__thumb
+          img(src="/images/plan_and_price/thumb_01.png", alt="")
+        .p-plan-news
+
+block side
+  .p-side-price
+    include /_partial/_side_search_by_price.pug
+  .p_side_price
+    .p_side_price_block
+      a(href="#",tel="tel:0120-470-470")
+        img(src="/images/plan_and_price/number_contact.png", alt="0120-470-470") 
+    

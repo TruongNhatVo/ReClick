@@ -1,0 +1,10 @@
+//- メインエリアの「セレモアのお葬儀基本プラン」のモジュールです。
+    引数に列数を指定してください。2列x2行なら”2”、4列x1行なら”4”
+    Pug：+common-content-plan(2)
+
+mixin common-content-plan(col)
+  section.p-common-content-area__block
+    h2.p-heading-02 セレモアのお葬儀基本プラン
+    p.p-common-content-area__txt.p-common-content-area__txt--center 基本プランのほか、ご要望に応じたお葬儀へのカスタマイズも可能です。
+
+    +basicPlan(col)

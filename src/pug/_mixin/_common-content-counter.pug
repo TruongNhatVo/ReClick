@@ -1,0 +1,22 @@
+//- メインエリアの「葬儀場に関するご相談窓口」のモジュールです。
+    第1引数にタイトル、第2引数にテキスト、第3引数がtrueだとテキストが中央揃えになります。
+    Pug：+common-content-counter('葬儀場に関するご相談窓口', '葬儀場に関するご質問・ご相談は下記の窓口よりお気軽にお問合せください。', 'center')
+
+mixin common-content-counter(ttl, txt, txtAlign)
+  section.p-common-content-area__block
+    h2.p-heading-02= ttl
+    p.p-common-content-area__txt(class=typeof txtAlign === "undefined" ? "" : "p-common-content-area__txt--center")!= txt
+    .p-common-content-contact
+      ul.p-common-content-contact__list.p-common-content-area__fit
+        li
+          | 自宅・お寺・葬儀場の
+          br.u-brSp
+          | どこで葬儀を行えばいい？
+        li
+          | 身内だけの家族葬に
+          br.u-brSp
+          | 適した式場はある？
+        li
+          | 駅から近くて、弔問いただくのに
+          br.u-brSp
+          | 便利な式場はどこ？

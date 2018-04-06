@@ -1,0 +1,249 @@
+input[type='checkbox'] {
+  display: none;
+}
+
+.c-input {
+  min-height: 42px;
+  background: #ebe7db;
+  padding: 0 1.3em;
+  width: 100%;
+  border-radius: 5px;
+  @include transition(box-shadow);
+  @include mqSm {
+    min-height: calcVw(80);
+  }
+  &:focus {
+    box-shadow: 0 0 1px rgba(#000, 1);
+  }
+}
+
+.c-textarea {
+  @extend .c-input;
+  height: 320px;
+  resize: none;
+  padding: 1.5em;
+  @include mqSm {
+    height: 50vw;
+  }
+}
+
+.c-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background: #ebe7db;
+  border-radius: 5px;
+  &:before {
+    content: '';
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(to bottom, #2cb074, #0e9e69);
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 5px;
+    pointer-events: none;
+    box-shadow: inset 1px 1px 2px rgba(#fff, 0.53),
+      inset -1px -1px 2px rgba(#000, 0.35);
+    z-index: 1;
+    @include mqSm {
+      width: calcVw(80);
+      height: calcVw(80);
+    }
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 18px;
+    top: calc(50% - 3px);
+    border: solid transparent;
+    border-width: 6px 3px 0 3px;
+    border-top-color: #fff;
+    pointer-events: none;
+    z-index: 2;
+    @include mqSm {
+      right: 4.5vw;
+    }
+  }
+  &__body {
+    @extend .c-input;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    height: 42px;
+    &::-ms-expand {
+      display: none;
+    }
+    &:focus {
+      // font-size: 16px;
+      box-shadow: none;
+    }
+    @include mqSm {
+      font-size: 16px;
+      transform: scale(0.8);
+      transform-origin: left center;
+
+      min-height: 0;
+      height: calcVw(80);
+    }
+  }
+}
+
+.c-checkbox {
+  color: #737373;
+  transition: background-color 0.2s $ease-easeOut;
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 30px;
+  vertical-align: middle;
+  cursor: pointer;
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  @include mqSm {
+    padding-left: calcVw(50);
+    min-height: calcVw(38);
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 11px);
+    border: 1px solid #b0b0b0;
+    border-radius: 2px;
+    @include mqSm {
+      width: calcVw(38);
+      height: calcVw(38);
+      top: calc(50% - (calcVw(38) / 2));
+    }
+  }
+  &:before {
+    content: '\02713';
+    color: $color-theme;
+    @include fontSize(1.8);
+    position: absolute;
+    z-index: 1;
+    left: 4px;
+    top: 2px;
+    opacity: 0;
+    @include transition(opacity);
+    input[type='checkbox']:checked + & {
+      opacity: 1;
+    }
+    @include mqSm {
+      left: 0.5vw;
+      top: calc(50% - 3.2vw);
+    }
+  }
+  // &--itself {
+  //   padding: 0;
+  //   width: 20px;
+  // }
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.c-checkbox-list {
+  > * ~ * {
+    margin-top: 1em;
+    @include mqSm {
+      margin-top: calcVw(32);
+    }
+  }
+}
+
+$form-gutter: 37px;
+$form-gutter-sm: 5vw;
+.c-form-name {
+  display: flex;
+  &__block {
+    @include mqMd {
+      flex: 1;
+    }
+    & ~ & {
+      margin-left: $form-gutter;
+      @include mqSm {
+        margin-left: $form-gutter-sm;
+      }
+    }
+  }
+  input {
+    width: 12em;
+    @include mqMd {
+      width: 100%;
+    }
+  }
+}
+
+.c-form-tel {
+  display: flex;
+  &__block {
+    flex: 1;
+    & ~ & {
+      margin-left: $form-gutter;
+      position: relative;
+      @include mqSm {
+        margin-left: $form-gutter-sm;
+      }
+      &:before {
+        content: '-';
+        font-weight: bold;
+        position: absolute;
+        left: calc(-#{$form-gutter / 2} - 0.2em);
+        top: calc(50% - 0.5em);
+        @include mqSm {
+          left: calc(-#{$form-gutter-sm / 2} - 0.2em);
+        }
+      }
+    }
+  }
+}
+
+.c-form-zip {
+  display: flex;
+  &__block {
+    & ~ & {
+      margin-left: $form-gutter;
+      position: relative;
+      @include mqSm {
+        margin-left: $form-gutter-sm;
+      }
+      &:before {
+        content: '-';
+        font-weight: bold;
+        position: absolute;
+        left: calc(-#{$form-gutter / 2} - 0.2em);
+        top: calc(50% - 0.5em);
+        @include mqSm {
+          left: calc(-#{$form-gutter-sm / 2} - 0.2em);
+        }
+      }
+    }
+    &:nth-child(1) {
+      input {
+        width: 5em;
+      }
+    }
+    &:nth-child(2) {
+      input {
+        width: 6em;
+      }
+    }
+  }
+  &__btn {
+    height: 50px;
+    border-radius: 5px;
+    letter-spacing: 0;
+    padding: 0 2em;
+    margin-left: 20px;
+    @include mqSm {
+      height: 4em;
+    }
+  }
+}

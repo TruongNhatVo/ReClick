@@ -1,0 +1,55 @@
+.p-plan {
+	&-top {
+		&__notify {
+			flex-direction: column;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding: 47px 0;
+			background: url('/images/plan_and_price/bg_top_01_pc.png') center center no-repeat;
+			background-position: cover;
+		}
+		&__heading {
+			font-weight: bold;
+			@include fontSize(1.6);
+		 	line-height: 2.25;
+		 	font-family: "HiraginoSans";
+		 	padding-bottom: 10px;	
+		}
+		&__content {
+			font-weight: bold;
+			line-height: 1.846;
+			@include fontSize(1.3);
+		}
+	}
+	&-group {
+		background: #fff;
+		padding: 40px 0;
+	}
+	&-item {
+		display: flex;
+		padding: 0 40px;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			background: url('/images/common/bg_paper_purple.jpg') left 0 repeat-y;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 10px;
+			height: 100%;
+		}
+		&__description {
+			width: 70%;
+			padding-right: 25px;
+			h3 {
+				@include fontSize(1.8);
+			}
+			h4 {
+				@include fontSize(4);
+			}
+		}
+	}
+}

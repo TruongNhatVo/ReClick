@@ -1,0 +1,197 @@
+.p-chapel-detail {
+  @include mqSm {
+    margin: -#{$gutter-default-sm} -#{$gutter-default-sm} 0;
+  }
+  &__mv {
+  }
+  &__body {
+    background: #fff;
+    padding: 50px;
+    border: 1px solid #e4e4e4;
+    @include mqSm {
+      padding: $gutter-default-sm;
+    }
+  }
+  &__copy {
+    color: $color-theme;
+    @include fontSize(2.4);
+    @include mincho;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5em;
+    @include mqSm {
+      @include fontSize(2.1, sp);
+      margin-bottom: 0.8em;
+    }
+  }
+  &__lead {
+    margin-bottom: 1.5em;
+    @include mqSm {
+      text-align: justify;
+      text-justify: inter-ideograph;
+    }
+  }
+  &__info {
+    border-top: 1px dotted #c8c8c8;
+    border-bottom: 1px dotted #c8c8c8;
+    padding: 20px 0;
+    @include mqSm {
+      padding: calcVw(20) 0;
+    }
+    > * ~ * {
+      border-top: 1px dotted #c8c8c8;
+      padding-top: 20px;
+      margin-top: 20px;
+      @include mqSm {
+        padding-top: calcVw(20);
+        margin-top: calcVw(20);
+      }
+    }
+    &--horizontal {
+      display: flex;
+      @include mqSm {
+        display: block;
+        > * ~ * {
+          border-top: 1px dotted #c8c8c8;
+          padding-top: calcVw(20);
+          margin-top: calcVw(20);
+        }
+      }
+      > * {
+        flex: 1;
+      }
+      > * ~ * {
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+  &__data {
+    display: flex;
+    align-items: baseline;
+    dt {
+      width: 100px;
+      flex: none;
+      margin-right: 20px;
+      background: #ebe7db;
+      text-align: center;
+      padding: 0.4em;
+      @include mqSm {
+        width: calcVw(190);
+      }
+    }
+    dd {
+      line-height: $lineHeight-default;
+      span {
+        @include fontSize(1.4);
+        display: block;
+        margin-top: 0.5em;
+        @include mqSm {
+          @include fontSize(1.3, sp);
+        }
+      }
+    }
+  }
+  &__access-block {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    @include mqSm {
+      margin-top: calcVw(50);
+      margin-bottom: calcVw(43);
+    }
+  }
+  &__access-btn {
+    flex: none;
+    margin-left: 30px;
+    display: flex;
+    width: 280px;
+    @include mqMd {
+      width: 36%;
+    }
+    @include mqSm {
+      width: calcVw(170);
+      margin-left: calcVw(30);
+    }
+    > a {
+      @include fontSize(2.2);
+      color: #fff;
+      flex: 1;
+      background: linear-gradient(to bottom, #90a737, #6a8b2c);
+      position: relative;
+      padding: 0 60px 0 30px;
+      box-shadow: inset 2px 2px 2px rgba(#fff, 0.53),
+        inset -2px -2px 2px rgba(#000, 0.35);
+      background: url(/images/search/detail_img_car.png),
+        linear-gradient(to bottom, #90a737, #6a8b2c);
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      @include mqMd {
+        padding: 0 30px;
+        @include fontSize(2);
+      }
+      @include mqSm {
+        @include fontSize(1.4, sp);
+        padding: calcVw(43) calcVw(20);
+        align-items: flex-start;
+        background-size: 110% auto;
+        background-position: center 75%;
+        text-align: center;
+      }
+      &:before {
+        content: '';
+        width: 14px;
+        height: 14px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        right: 20px;
+        top: calc(50% - 7px);
+        @include mqMd {
+          right: calc(50% - 7px);
+          top: auto;
+          bottom: 20px;
+        }
+        @include mqSm {
+          bottom: calcVw(20);
+        }
+      }
+      &:after {
+        content: '';
+        border: solid transparent;
+        border-width: 3px 0 3px 5px;
+        border-left-color: #90a737;
+        position: absolute;
+        right: 24px;
+        top: calc(50% - 3px);
+        @include mqMd {
+          right: calc(50% - 3px);
+          top: auto;
+          bottom: 23px;
+        }
+        @include mqSm {
+          bottom: calcVw(28);
+        }
+      }
+    }
+  }
+  &__access-txt {
+  }
+  &__block {
+    margin-top: 5em;
+    @include mqSm {
+      margin-top: calcVw(100);
+    }
+  }
+  &__block-ttl {
+    margin-bottom: 1.5em;
+  }
+  &__panel {
+    background: #f7fcef;
+    padding: 1.5em 3em;
+    @include mqSm {
+      padding: calcVw(40);
+    }
+  }
+}

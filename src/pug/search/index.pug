@@ -1,0 +1,536 @@
+extend /_template/_two-column
+append variables
+  //- 変更可能
+  - const pageTitle= "葬儀場を選ぶ";
+  - const pageDescription= site.description;
+  //- - const pageKeywords= site.keywords; キーワードは必要なし。
+  //- 任意
+  - const pageOgpTitle= pageTitle;
+  - const pageOgpImage= site.ogpImage;
+  - const pageOgpType= "article";
+
+block header
+  .p-page-mv.js-bgcheck-image
+    .p-page-mv__inner
+      h1.p-page-mv__ttl.js-bgcheck-target 葬儀場を選ぶ
+      
+  nav.p-breadcrumb(aria-label="Breadcrumb")
+    .l-container
+      +breadcrumb([
+        ["信頼の葬儀社セレモア", "/"],
+        ["葬儀場を選ぶ", ""]
+      ])
+
+  +heading-large('葬儀場検索')
+
+block main
+  section.l-main__section
+    h2.p-heading-01 都道府県から葬儀場を選ぶ
+    p 探したい地域を選択すると、葬儀場の候補が表示されます。
+    .p-search-by-map
+      .p-search-by-map__map
+        img(src='/images/dummy_map.png', alt='')
+      .p-search-by-map__btns
+        p
+          a.c-btn.c-btn--color.c-btn--color--tokyo(href='#') 東京都
+        p
+          a.c-btn.c-btn--color.c-btn--color--kanagawa(href='/search/kanagawa/') 神奈川県
+        p
+          a.c-btn.c-btn--color.c-btn--color--chiba(href='#') 千葉県
+        p
+          a.c-btn.c-btn--color.c-btn--color--saitama(href='#') 埼玉県
+        p
+          a.c-btn.c-btn--color.c-btn--color--yamanashi(href='#') 山梨県
+  section.l-main__section
+    h2.p-heading-01 条件を設定して葬儀場を選ぶ
+    p ご希望の条件を設定し、［検索］ボタンを押してください。
+    .p-search-by-conditions
+      .p-search-by-conditions__body
+        .p-form-block
+          p.p-form-block__ttl 都道府県
+          .p-form-block__body
+            label.c-select
+              select.c-select__body
+                option(disabled='', selected='') 都道府県を選択
+                option 1
+                option 2
+        .p-form-block
+          p.p-form-block__ttl 市区町村
+          .p-form-block__body
+            label.c-select
+              select.c-select__body
+                option(disabled='', selected='') 市区町村を選択
+                option 1
+                option 2
+        .p-form-block.p-form-block--sm-vertical
+          p.p-form-block__ttl 条件
+          .p-form-block__body
+            ul.c-checkbox-list
+              li
+                input#hoge(type='checkbox')
+                label.c-checkbox(for='hoge') 民営斎場
+              li
+                input(type='checkbox', id='')
+                label.c-checkbox(for='') セレモア直営斎場
+              li
+                input(type='checkbox', id='')
+                label.c-checkbox(for='') 駐車場あり
+              li
+                input(type='checkbox', id='')
+                label.c-checkbox(for='') 仮眠施設あり
+              li
+                input(type='checkbox', id='')
+                label.c-checkbox(for='') バリアフリー対応
+        ul.c-checkbox-list
+          li
+            input(type='checkbox', id='')
+            label.c-checkbox(for='') 公営斎場
+          li
+            input(type='checkbox', id='')
+            label.c-checkbox(for='') 火葬場併設
+          li
+            input(type='checkbox', id='')
+            label.c-checkbox(for='') 故人の安置可能
+          li
+            input(type='checkbox', id='')
+            label.c-checkbox(for='') 駅に近い
+          li
+            input(type='checkbox', id='')
+            label.c-checkbox(for='') 社葬対応
+      p.p-search-by-conditions__btn
+        a.c-btn.c-btn--primary(href='#') 検索する
+  section.l-main__section
+    h2.p-heading-01 エリア名から葬儀場を選ぶ
+    p ご希望のエリア名を選択すると、当該エリアの葬儀場一覧が表示されます。
+    .p-search-by-area
+      section.p-search-by-area__block.p-search-by-area__block--tokyo
+        h3.p-search-by-area__ttl.js-accordion-btn(data-accordion='#accordion-01', data-mq='sm')
+          span 東京都
+          | の葬儀場
+          span.p-search-by-area__toggle
+        #accordion-01.js-accordion-body(data-mq='sm')
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 東京都・23区内
+            ul.p-search-by-area__list
+              li
+                a(href='') 荒川区
+              li
+                a(href='') 足立区
+              li
+                a(href='') 板橋区
+              li
+                a(href='') 江戸川区
+              li
+                a(href='') 大田区
+              li
+                a(href='') 葛飾区
+              li
+                a(href='') 北区
+              li
+                a(href='') 江東区
+              li
+                a(href='') 品川区
+              li
+                a(href='') 新宿区
+              li
+                a(href='') 渋谷区
+              li
+                a(href='') 墨田区
+              li
+                a(href='') 杉並区
+              li
+                a(href='') 世田谷区
+              li
+                a(href='') 台東区
+              li
+                a(href='') 中央区
+              li
+                a(href='') 千代田区
+              li
+                a(href='') 豊島区
+              li
+                a(href='') 中野区
+              li
+                a(href='') 練馬区
+              li
+                a(href='') 文京区
+              li
+                a(href='') 港区
+              li
+                a(href='') 目黒区
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 東京都・市町村
+            ul.p-search-by-area__list
+              li
+                a(href='') あきる野市
+              li
+                a(href='') 昭島市
+              li
+                a(href='') 稲城市
+              li
+                a(href='') 青梅市
+              li
+                a(href='') 清瀬市
+              li
+                a(href='') 国分寺市
+              li
+                a(href='') 国立市
+              li
+                a(href='') 小平市
+              li
+                a(href='') 小金井市
+              li
+                a(href='') 狛江市
+              li
+                a(href='') 多摩市
+              li
+                a(href='') 立川市
+              li
+                a(href='') 調布市
+              li
+                a(href='') 西東京市
+              li
+                a(href='') 八王子市
+              li
+                a(href='') 羽村市
+              li
+                a(href='') 日の出町
+              li
+                a(href='') 日野市
+              li
+                a(href='') 三鷹市
+              li
+                a(href='') 瑞穂町
+              li
+                a(href='') 武蔵村山市
+              li
+                a(href='') 武蔵野市
+              li
+                a(href='') 町田市
+              li
+                a(href='') 東久留米市
+              li
+                a(href='') 東村山市
+              li
+                a(href='') 東大和市
+              li
+                a(href='') 府中市
+              li
+                a(href='') 福生市
+      section.p-search-by-area__block.p-search-by-area__block--saitama
+        h3.p-search-by-area__ttl.js-accordion-btn(data-accordion='#accordion-02', data-mq='sm')
+          span 埼玉県
+          | の葬儀場
+          span.p-search-by-area__toggle
+        #accordion-02.js-accordion-body(data-mq='sm')
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 埼玉県・さいたま市
+            ul.p-search-by-area__list
+              li
+                a(href='') 大宮区
+              li
+                a(href='') 見沼区
+              li
+                a(href='') 中央区
+              li
+                a(href='') 桜区
+              li
+                a(href='') 浦和区
+              li
+                a(href='') 岩槻区
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 埼玉県・その他の市区郡
+            ul.p-search-by-area__list
+              li
+                a(href='') 上尾市
+              li
+                a(href='') 朝霞市
+              li
+                a(href='') 入間市
+              li
+                a(href='') 桶川市
+              li
+                a(href='') 春日部市
+              li
+                a(href='') 加須市
+              li
+                a(href='') 川口市
+              li
+                a(href='') 川越市
+              li
+                a(href='') 北本市
+              li
+                a(href='') 行田市
+              li
+                a(href='') 熊谷市
+              li
+                a(href='') 鴻巣市
+              li
+                a(href='') 越谷市
+              li
+                a(href='') 坂戸市
+              li
+                a(href='') 狭山市
+              li
+                a(href='') 志木市
+              li
+                a(href='') 草加市
+              li
+                a(href='') 鶴ヶ島市
+              li
+                a(href='') 所沢市
+              li
+                a(href='') 新座市
+              li
+                a(href='') 飯能市
+              li
+                a(href='') 東松山市
+              li
+                a(href='') 日高市
+              li
+                a(href='') 深谷市
+              li
+                a(href='') 富士見市
+              li
+                a(href='') ふじみ野市
+              li
+                a(href='') 三郷市
+              li
+                a(href='') 蕨市
+              li
+                a(href='') 入間郡
+              li
+                a(href='') 北葛飾郡
+              li
+                a(href='') 戸田市
+              li
+                a(href='') 久喜市
+              li
+                a(href='') 滑川町
+              li
+                a(href='') 嵐山町
+              li
+                a(href='') 小川町
+              li
+                a(href='') 川島町
+              li
+                a(href='') 吉見町
+              li
+                a(href='') ときがわ町
+              li
+                a(href='') 東秩父村
+              li
+                a(href='') 蓮田市
+              li
+                a(href='') 白岡市
+              li
+                a(href='') 杉戸町
+      section.p-search-by-area__block.p-search-by-area__block--kanagawa
+        h3.p-search-by-area__ttl.js-accordion-btn(data-accordion='#accordion-03', data-mq='sm')
+          span 神奈川県
+          | の葬儀場
+          span.p-search-by-area__toggle
+        #accordion-03.js-accordion-body(data-mq='sm')
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 神奈川県・横浜市
+            ul.p-search-by-area__list
+              li
+                a(href='') 旭区
+              li
+                a(href='') 青葉区
+              li
+                a(href='') 泉区
+              li
+                a(href='') 磯子区
+              li
+                a(href='') 神奈川区
+              li
+                a(href='') 金沢区
+              li
+                a(href='') 港北区
+              li
+                a(href='') 港南区
+              li
+                a(href='') 都筑区
+              li
+                a(href='') 鶴見区
+              li
+                a(href='') 戸塚区
+              li
+                a(href='') 西区
+              li
+                a(href='') 南区
+              li
+                a(href='') 緑区
+              li
+                a(href='') 中区
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 神奈川県・川崎市
+            ul.p-search-by-area__list
+              li
+                a(href='') 麻生区
+              li
+                a(href='') 川崎区
+              li
+                a(href='') 幸区
+              li
+                a(href='') 多摩区
+              li
+                a(href='') 高津区
+              li
+                a(href='') 中原区
+              li
+                a(href='') 宮前区
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 神奈川県・その他の市区郡
+            ul.p-search-by-area__list
+              li
+                a(href='') 厚木市
+              li
+                a(href='') 愛甲郡
+              li
+                a(href='') 伊勢原市
+              li
+                a(href='') 海老名市
+              li
+                a(href='') 鎌倉市
+              li
+                a(href='') 座間市
+              li
+                a(href='') 相模原市
+              li
+                a(href='') 逗子市
+              li
+                a(href='') 茅ヶ崎市
+              li
+                a(href='') 中郡
+              li
+                a(href='') 平塚市
+              li
+                a(href='') 藤沢市
+              li
+                a(href='') 大和市
+              li
+                a(href='') 横須賀市
+              li
+                a(href='') 小田原市
+              li
+                a(href='') 秦野市
+      section.p-search-by-area__block.p-search-by-area__block--chiba
+        h3.p-search-by-area__ttl.js-accordion-btn(data-accordion='#accordion-04', data-mq='sm')
+          span 千葉県
+          | の葬儀場
+          span.p-search-by-area__toggle
+        #accordion-04.js-accordion-body(data-mq='sm')
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 千葉県・千葉市
+            ul.p-search-by-area__list
+              li
+                a(href='') 稲毛区
+              li
+                a(href='') 中央区
+              li
+                a(href='') 花見川区
+              li
+                a(href='') 緑区
+              li
+                a(href='') 美浜区
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 千葉県・その他の市区郡
+            ul.p-search-by-area__list
+              li
+                a(href='') 印西市
+              li
+                a(href='') 市川市
+              li
+                a(href='') 浦安市
+              li
+                a(href='') 柏市
+              li
+                a(href='') 佐倉市
+              li
+                a(href='') 匝瑳市
+              li
+                a(href='') 長生郡
+              li
+                a(href='') 成田市
+              li
+                a(href='') 流山市
+              li
+                a(href='') 野田市
+              li
+                a(href='') 東金市
+              li
+                a(href='') 船橋市
+              li
+                a(href='') 松戸市
+              li
+                a(href='') 八千代市
+              li
+                a(href='') 八街市
+              li
+                a(href='') 四街道市
+              li
+                a(href='') 酒々井町
+              li
+                a(href='') 習志野市
+              li
+                a(href='') 鎌ヶ谷市
+      section.p-search-by-area__block.p-search-by-area__block--yamanashi
+        h3.p-search-by-area__ttl.js-accordion-btn(data-accordion='#accordion-05', data-mq='sm')
+          span 山梨県
+          | の葬儀場
+          span.p-search-by-area__toggle
+        #accordion-05.js-accordion-body(data-mq='sm')
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child 山梨県・市区郡
+            ul.p-search-by-area__list
+              li
+                a(href='') 上野原市
+              li
+                a(href='') 大月市
+      section.p-search-by-area__block.p-search-by-area__block--others
+        h3.p-search-by-area__ttl.js-accordion-btn(data-accordion='#accordion-06', data-mq='sm')
+          span その他
+          | の葬儀場
+          span.p-search-by-area__toggle
+        #accordion-06.js-accordion-body(data-mq='sm')
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child セレモアの直営式場
+            ul.p-search-by-area__list
+              li
+                a(href='') 直営式場一覧
+          section.p-search-by-area__block-child
+            h4.p-search-by-area__ttl-child ご安置所
+            ul.p-search-by-area__list
+              li
+                a(href='') ご安置所一覧
+
+  aside.l-main__section.p-common-content-area
+
+    +common-content-counter('葬儀場に関するご相談窓口', '葬儀場に関するご質問・ご相談は下記の窓口よりお気軽にお問合せください。', 'center')
+
+    +common-content-contact()
+
+    +common-content-plan(2)
+
+block side
+  .p-side-area
+    include /_partial/_side-search-by-condition
+    include /_partial/_side-search-by-area
+    section.p-side-area__block
+      h2.p-side-area__ttl.js-accordion-btn(data-accordion='#side-links-sm', data-mq='sm') 葬儀場を選ぶ
+      #side-links-sm.js-accordion-body.p-side-area__accordion(data-mq='sm')
+        .p-side-area-links
+          ul.p-side-area-links__list
+            li
+              a(href='') 葬儀場検索
+            li
+              a(href='') セレモアの直営式場一覧
+            li
+              a(href='') ご安置所の一覧
+          section.p-side-area-links__block
+            h3.p-side-area-links__ttl よくあるご質問
+            ul.p-side-area-links__list
+              li
+                a(href='') 式場についてのご質問

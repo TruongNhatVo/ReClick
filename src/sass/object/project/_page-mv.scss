@@ -1,0 +1,41 @@
+.p-page-mv {
+  height: 240px;
+  background-image: url(/images/mv.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 80px;
+  @include mqSm {
+    height: calcVw(280);
+    padding-top: 0;
+  }
+  &__inner {
+    @include maxWidth($width-default);
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__ttl {
+    @include mincho;
+    @include fontSize(3);
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    @include mqSm {
+      @include fontSize(2.5, sp);
+      letter-spacing: 0.08em;
+    }
+    &.background--dark {
+      color: #fff;
+    }
+  }
+}
+
+.p-page-mv--kanagawa {
+  background-image: url(/images/mv_02.jpg);
+}
+
+.p-page-mv--example {
+  background-image: url(https://placehold.jp/1600x240.png);
+}

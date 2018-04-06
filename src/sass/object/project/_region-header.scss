@@ -1,0 +1,87 @@
+.p-region-header {
+  position: relative;
+  height: 292px;
+  background-color: #fff;
+  border-top: double 3px rgba($color-yellow-green, 0.5);
+  border-bottom: double 3px rgba($color-yellow-green, 0.5);
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60% center;
+  @include mqSm {
+    padding: calcVw(40);
+    height: calcVw(470);
+    justify-content: flex-start;
+  }
+
+  &__ttl {
+    @include mincho;
+    color: $color-yellow-green;
+    @include fontSize(2.6);
+    line-height: 1.8;
+    font-weight: bold;
+    span {
+      color: #fff;
+      @include fontSize(4);
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      background: $color-yellow-green;
+      padding: 0.25em 0.3em 0.18em;
+      margin-right: 0.2em;
+      line-height: 1;
+      display: inline-block;
+      margin-bottom: 0.2em;
+      _::-webkit-full-page-media,
+      _:future {
+        padding: 0;
+      }
+    }
+    @include mqSm {
+      @include fontSize(1.5, sp);
+      span {
+        @include fontSize(1.8, sp);
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+  &__lead {
+    padding-right: 48%;
+    margin-top: 0.5em;
+    span {
+      color: $color-red;
+      @include fontSize(2);
+      font-weight: bold;
+    }
+    @include mqSm {
+      padding-right: calcVw(190);
+      text-align: justify;
+      text-justify: inter-ideograph;
+      span {
+        @include fontSize(1.5, sp);
+      }
+    }
+  }
+  &__medal {
+    position: absolute;
+    top: -35px;
+    right: -25px;
+    @include mqSm {
+      width: calcVw(202);
+      height: calcVw(202);
+      top: -5vw;
+      right: -4vw;
+    }
+  }
+}
+
+.p-region-header--kanagawa {
+  background-image: url(/images/search/region_img_kanagawa.jpg);
+}
+_::-webkit-full-page-media,
+_:future,
+:root .p-region-header__ttl span {
+  padding: 0.2em 0.3em;
+}

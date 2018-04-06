@@ -1,0 +1,21 @@
+.p-footer-copy {
+  text-align: center;
+  padding-bottom: 3em;
+  @include mqSm {
+    background: #1a5d3e;
+    color: #fff;
+    padding: 1em;
+  }
+  &__en {
+    @include fontSize(1.2);
+    @include mqSm {
+      @include fontSize(1, sp);
+    }
+  }
+  &__jp {
+    @include fontSize(1);
+    @include mqSm {
+      display: none;
+    }
+  }
+}

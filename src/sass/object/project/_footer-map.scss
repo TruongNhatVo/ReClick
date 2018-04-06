@@ -1,0 +1,280 @@
+.p-footer-map {
+  background: url(/images/common/bg_paper_beige.jpg);
+  padding: 4em 0 0;
+  @include mqSm {
+    padding: calcVw(62) 0 0;
+  }
+  &__ttl {
+    color: $color-theme;
+    @include mincho;
+    @include fontSize(3.8);
+    letter-spacing: 0.15em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1.2em;
+    @include mqMd {
+      @include fontSize(3.4);
+    }
+    @include mqSm {
+      @include fontSize(2, sp);
+      letter-spacing: 0.06em;
+    }
+  }
+  &__inner {
+    display: flex;
+    @include mqSm {
+      display: block;
+    }
+  }
+  &__col {
+    flex: 1;
+    padding-right: 1em;
+    @include mqSm {
+      padding-right: 0;
+    }
+    > * ~ * {
+      margin-top: 1.5em;
+      @include mqSm {
+        margin-top: 0;
+      }
+    }
+  }
+  &__item {
+  }
+  &__lead {
+    font-weight: bold;
+    line-height: $lineHeight-default;
+    a {
+      color: $color-theme;
+    }
+    @include mqSm {
+      background: #f5f4f0;
+      border-top: 1px solid #fff;
+      margin-left: -#{$gutter-default-sm};
+      margin-right: -#{$gutter-default-sm};
+      padding: 1em $gutter-default-sm;
+    }
+    &.js-accordion-btn {
+      position: relative;
+      @include mqSm {
+        cursor: pointer;
+      }
+      .js-accordion-btn__toggle {
+        display: none;
+        @include mqSm {
+          display: block;
+          width: calcVw(54);
+          height: calcVw(54);
+          background: #fff;
+          position: absolute;
+          right: $gutter-default-sm;
+          top: calc(50% - (#{calcVw(54)} / 2));
+          border-radius: 5px;
+          &:before,
+          &:after {
+            content: '';
+            width: 14px;
+            height: 2px;
+            background: $color-theme;
+            position: absolute;
+            right: calc(50% - 7px);
+            top: calc(50% - 1px);
+            @include mqSm {
+              width: calcVw(23);
+              height: calcVw(4);
+              right: calc(50% - (#{calcVw(23)} / 2));
+              top: calc(50% - (#{calcVw(4)} / 2));
+            }
+          }
+          &:after {
+            width: 2px;
+            height: 14px;
+            right: calc(50% - 1px);
+            top: calc(50% - 7px);
+            @include transition(transform);
+            @include mqSm {
+              width: calcVw(4);
+              height: calcVw(23);
+              right: calc(50% - (#{calcVw(4)} / 2));
+              top: calc(50% - (#{calcVw(23)} / 2));
+            }
+          }
+        }
+      }
+      &.is-active {
+        .js-accordion-btn__toggle {
+          &:after {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+    &-child {
+      @include mqSm {
+        width: 100% !important;
+      }
+    }
+  }
+  &__body {
+    padding: 0.5em 0;
+    @include mqSm {
+      background: #fff;
+      margin-left: -#{$gutter-default-sm};
+      margin-right: -#{$gutter-default-sm};
+      padding: $gutter-default-sm;
+    }
+  }
+  &__list {
+    @include mqSm {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -0.5em;
+    }
+    li {
+      @include fontSize(1.4);
+      text-indent: -1em;
+      padding-left: 1em;
+      line-height: 1.5;
+      &:before {
+        content: '>';
+      }
+      @include mqSm {
+        @include fontSize(1.4, sp);
+        width: 50%;
+        // padding-right: 1em;
+        margin-bottom: 0.5em;
+      }
+    }
+    li ~ li {
+      margin-top: 0.5em;
+      @include mqSm {
+        margin-top: 0;
+      }
+    }
+    &-child {
+      padding: 0.5em 0;
+      margin-left: -0.5em;
+      // color: $font-color-light;
+      @include mqSm {
+        margin-left: -0.8em;
+      }
+      // a {
+      //   color: $font-color-light;
+      // }
+    }
+  }
+  &__bottom {
+    background: #1a5d3e;
+    color: #fff;
+    margin-top: 5em;
+    padding: 1.1em $gutter-default;
+    text-align: center;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    @include mqSm {
+      margin-top: 0;
+      text-align: left;
+      display: block;
+      background: #fff;
+      padding: 0;
+    }
+    a {
+      color: #fff;
+      &:hover {
+        color: $font-color;
+      }
+      @include mqSm {
+        color: $font-color;
+      }
+    }
+    &-ttl {
+      position: relative;
+      @include mqSm {
+        background: #d3e0d6;
+        // margin-left: -#{$gutter-default-sm};
+        // margin-right: -#{$gutter-default-sm};
+        padding: 1em $gutter-default-sm;
+        font-weight: bold;
+        a {
+          color: $color-theme;
+          &:hover {
+            color: $color-theme;
+          }
+        }
+      }
+      .js-accordion-btn__toggle {
+        display: none;
+        @include mqSm {
+          display: block;
+          width: calcVw(54);
+          height: calcVw(54);
+          background: #fff;
+          position: absolute;
+          right: $gutter-default-sm;
+          top: calc(50% - (#{calcVw(54)} / 2));
+          border-radius: 5px;
+          &:before,
+          &:after {
+            content: '';
+            width: 14px;
+            height: 2px;
+            background: $color-theme;
+            position: absolute;
+            right: calc(50% - 7px);
+            top: calc(50% - 1px);
+            @include mqSm {
+              width: calcVw(23);
+              height: calcVw(4);
+              right: calc(50% - (#{calcVw(23)} / 2));
+              top: calc(50% - (#{calcVw(4)} / 2));
+            }
+          }
+          &:after {
+            width: 2px;
+            height: 14px;
+            right: calc(50% - 1px);
+            top: calc(50% - 7px);
+            @include transition(transform);
+            @include mqSm {
+              width: calcVw(4);
+              height: calcVw(23);
+              right: calc(50% - (#{calcVw(4)} / 2));
+              top: calc(50% - (#{calcVw(23)} / 2));
+            }
+          }
+        }
+      }
+      &.is-active {
+        .js-accordion-btn__toggle {
+          &:after {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+    &-body {
+      display: flex;
+      justify-content: center;
+      @include mqSm {
+        display: block;
+        padding: $gutter-default-sm;
+      }
+      > li {
+        &:before {
+          content: '|';
+          margin: 0 0.2em;
+          @include mqSm {
+            color: $font-color;
+            content: '>';
+          }
+        }
+      }
+      > li ~ li {
+        @include mqSm {
+          margin-top: 0.5em;
+        }
+      }
+    }
+  }
+}
