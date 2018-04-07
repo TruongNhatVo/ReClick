@@ -1,0 +1,176 @@
+.p-plan {
+	&-top {
+		&__heading {
+			font-weight: bold;
+			@include fontSize(1.6);
+		 	line-height: 2.25;
+		 	font-family: "HiraginoSans";
+		 	padding-bottom: 10px;	
+		}
+		&__content {
+			font-weight: bold;
+			line-height: 1.846;
+			@include fontSize(1.3);
+		}
+	}
+	&-group {
+		background: #fff;
+		padding: 40px 0;
+	}
+	&-item {
+		display: flex;
+		padding: 0 40px;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			background: url('/images/common/bg_paper_purple.jpg') left 0 repeat-y;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 10px;
+			height: 100%;
+		}
+		&__description {
+			width: 70%;
+			padding-right: 25px;
+			h3 {
+				@include fontSize(1.8);
+			}
+			h4 {
+				@include fontSize(4);
+			}
+		}
+	}
+}
+
+.p-plan-news {
+	background: #fff;
+	margin-top: 60px;
+	padding: 40px 0;
+	&_paper_yellow {
+		.top-content:after {
+			background: url('/images/common/bg_paper_yellow.jpg') left 0 repeat-y;
+		}
+		.body-content-top {
+			background: url('/images/common/bg_paper_yellow.jpg');
+		}
+		.body-content-main {
+			background: #fbf3de;
+			padding: 20px;
+		}
+	}
+	&_paper_red {
+		.top-content:after {
+			background: url('/images/common/bg_paper_red.jpg') left 0 repeat-y;
+		}
+		.body-content-top {
+			background: url('/images/common/bg_paper_red.jpg');
+		}
+		.body-content-main {
+			background: #fbeff1;
+			padding: 30px;
+		}
+	}
+	.group-top {
+		padding: 0 40px;
+		display: flex;
+		position: relative;
+		.top-content {
+			width: 70%;
+			padding-right: 25px;
+			&:after {
+				content: '';
+				display: block;
+				height: 100%;
+				width: 10px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+		}
+		h3 {
+			@include fontSize(1.8);
+		}
+		h4 {
+			@include fontSize(4);
+		}
+		p {
+			@include fontSize(1.6);
+  			line-height: 1.625;
+		}
+	}
+	.group-body {
+		margin-top: 30px;
+		padding: 0 40px;
+		.body-content-top {
+			border-radius: 1.2rem 1.2rem 0 0;
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			padding: 20px;
+			align-items: center;
+			.price {
+				display: flex;
+			}
+			h3 {
+				@include fontSize(2.6);
+			}
+			p {
+				@include fontSize(1.8);
+			}
+			span {
+				margin-left: 5px;
+				@include fontSize(2.7);
+				&:after {
+					content: '円〜';
+					margin-left: 10px;
+					@include fontSize(2.2);
+				}
+			}
+		}
+		.p-basic-plan__btn {
+			margin-top: 10px;
+			a {
+				max-width: 100%;
+			}
+		}
+		.all-price {
+			.price-item {
+				max-width: 200px;
+			}
+			padding-top: 30px;
+			justify-content: space-between;
+			display: flex;
+			h4 {
+				background: url('/images/common/bg_paper_red.jpg');
+				border-radius: 1.3rem;
+				color: #fff;
+				@include fontSize(2.0);
+				text-align: center;
+				line-height: 1;
+				padding: 15px 0;
+				margin-bottom: 15px;
+			}
+			p {
+				padding-left: 10px;
+				@include fontSize(1.3);
+				&.detail {
+					font-weight: bold;
+					@include fontSize(2.7);
+					color: #de475b;
+					.large {
+						@include fontSize(2.0);
+					}
+					.small {
+						@include fontSize(1.4);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

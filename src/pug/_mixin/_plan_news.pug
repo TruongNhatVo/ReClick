@@ -1,0 +1,19 @@
+mixin plan_news(bgColor,subTitle,bigTitle,topContent,thumbSrc,bodyTitle,price,bodyContent)
+	section.p-plan-news.plan-news-- bgColor
+		.group-top
+			.top-content
+				h3= subTitle
+				h4= bigTitle
+				p= topContent
+			.thumbs
+				img(src=thumbSrc, alt="")
+		.group-body
+			.body-content-top
+				h3= bodyTitle
+				p= price
+			.body-content-main
+				p= bodyContent
+
+			
+
+h1 click

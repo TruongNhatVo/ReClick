@@ -1,0 +1,51 @@
+.p-plan {
+  &-notify {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 47px 0;
+    background: url('/images/plan_and_price/bg_top_01_pc.png') center center no-repeat;
+    background-position: cover;
+    &--border {
+      background: #fff;
+      border: 10px solid #cec09f;
+      padding: 27px 60px;
+      margin: 60px 0;
+      h2 {
+        font-family: "HiraginoSans";
+        @include fontSize(1.8);
+        font-weight: bold;
+      }
+    }
+    &--arrow {
+      position: relative;
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-left-width: 60px;
+        border-right-width: 60px;
+        border-top: 40px solid #cec09f;
+        top: 100%;
+        position: absolute;
+        left:50%;
+        margin-left: -75px;
+      }
+    }
+  }
+  &-heading {
+    font-weight: bold;
+    @include fontSize(1.6);
+    line-height: 2.25;
+    font-family: "HiraginoSans";
+    padding-bottom: 10px;
+  }
+  &_-content {
+    font-weight: bold;
+    line-height: 1.846;
+    @include fontSize(1.3);
+  }
+}
