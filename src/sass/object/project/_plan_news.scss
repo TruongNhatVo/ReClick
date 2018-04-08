@@ -1,176 +1,239 @@
-.p-plan {
-	&-top {
-		&__heading {
-			font-weight: bold;
-			@include fontSize(1.6);
-		 	line-height: 2.25;
-		 	font-family: "HiraginoSans";
-		 	padding-bottom: 10px;	
-		}
-		&__content {
-			font-weight: bold;
-			line-height: 1.846;
-			@include fontSize(1.3);
-		}
-	}
-	&-group {
-		background: #fff;
-		padding: 40px 0;
-	}
-	&-item {
-		display: flex;
-		padding: 0 40px;
-		position: relative;
-		&:before {
-			content: '';
-			display: block;
-			background: url('/images/common/bg_paper_purple.jpg') left 0 repeat-y;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 10px;
-			height: 100%;
-		}
-		&__description {
-			width: 70%;
-			padding-right: 25px;
-			h3 {
-				@include fontSize(1.8);
-			}
-			h4 {
-				@include fontSize(4);
-			}
-		}
-	}
-}
-
 .p-plan-news {
-	background: #fff;
-	margin-top: 60px;
-	padding: 40px 0;
-	&_paper_yellow {
-		.top-content:after {
-			background: url('/images/common/bg_paper_yellow.jpg') left 0 repeat-y;
-		}
-		.body-content-top {
-			background: url('/images/common/bg_paper_yellow.jpg');
-		}
-		.body-content-main {
-			background: #fbf3de;
-			padding: 20px;
-		}
-	}
-	&_paper_red {
-		.top-content:after {
-			background: url('/images/common/bg_paper_red.jpg') left 0 repeat-y;
-		}
-		.body-content-top {
-			background: url('/images/common/bg_paper_red.jpg');
-		}
-		.body-content-main {
-			background: #fbeff1;
-			padding: 30px;
-		}
-	}
-	.group-top {
-		padding: 0 40px;
-		display: flex;
-		position: relative;
-		.top-content {
-			width: 70%;
-			padding-right: 25px;
-			&:after {
-				content: '';
-				display: block;
-				height: 100%;
-				width: 10px;
-				position: absolute;
-				left: 0;
-				top: 0;
-			}
-			
-		}
-		h3 {
-			@include fontSize(1.8);
-		}
-		h4 {
-			@include fontSize(4);
-		}
-		p {
-			@include fontSize(1.6);
-  			line-height: 1.625;
-		}
-	}
-	.group-body {
-		margin-top: 30px;
-		padding: 0 40px;
-		.body-content-top {
-			border-radius: 1.2rem 1.2rem 0 0;
-			color: #fff;
-			display: flex;
-			justify-content: space-between;
-			padding: 20px;
-			align-items: center;
-			.price {
-				display: flex;
-			}
-			h3 {
-				@include fontSize(2.6);
-			}
-			p {
-				@include fontSize(1.8);
-			}
-			span {
-				margin-left: 5px;
-				@include fontSize(2.7);
-				&:after {
-					content: '円〜';
-					margin-left: 10px;
-					@include fontSize(2.2);
-				}
-			}
-		}
-		.p-basic-plan__btn {
-			margin-top: 10px;
-			a {
-				max-width: 100%;
-			}
-		}
-		.all-price {
-			.price-item {
-				max-width: 200px;
-			}
-			padding-top: 30px;
-			justify-content: space-between;
-			display: flex;
-			h4 {
-				background: url('/images/common/bg_paper_red.jpg');
-				border-radius: 1.3rem;
-				color: #fff;
-				@include fontSize(2.0);
-				text-align: center;
-				line-height: 1;
-				padding: 15px 0;
-				margin-bottom: 15px;
-			}
-			p {
-				padding-left: 10px;
-				@include fontSize(1.3);
-				&.detail {
-					font-weight: bold;
-					@include fontSize(2.7);
-					color: #de475b;
-					.large {
-						@include fontSize(2.0);
-					}
-					.small {
-						@include fontSize(1.4);
-					}
-				}
-			}
-		}
-	}
+  background: #fff;
+  margin-top: 60px;
+  padding: 40px 0;
+  
+  @each $type in $olors-list {
+    &_paper_#{nth($type, 1)} {
+      .top-content:after {
+        background: url('/images/common/bg_paper_#{nth($type, 1)}.jpg') left 0 repeat-y;
+      }
+      .body-content-top {
+        background: url('/images/common/bg_paper_#{nth($type, 1)}.jpg');
+      }
+      .body-content-main {
+        background: #{nth($type, 2)};
+        padding: 20px;
+      }
+    }
+  }
+  &_paper_yellow {
+    .top-content:after {
+      background: url('/images/common/bg_paper_yellow.jpg') left 0 repeat-y;
+    }
+    .body-content-top {
+      background: url('/images/common/bg_paper_yellow.jpg');
+    }
+  } 
+  .group-top {
+    padding: 0 40px;
+    display: flex;
+    position: relative;
+    .top-content {
+      width: 70%;
+      padding-right: 25px;
+      &:after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 10px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    h3 {
+      @include fontSize(1.8);
+    }
+    h4 {
+      @include mincho;
+      @include fontSize(4);
+    }
+    p {
+      @include fontSize(1.6);
+      line-height: 1.625;
+    }
+  }
+
+  .group-body {
+    margin-top: 30px;
+    padding: 0 40px;
+    .body-content-top {
+      border-radius: 1.2rem 1.2rem 0 0;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      align-items: center;
+      .price {
+        display: flex;
+        br {
+          display: none;
+        }
+      }
+      h3 {
+        @include fontSize(2.6);
+      }
+      p {
+        @include fontSize(1.8);
+      }
+      span {
+        margin-left: 5px;
+        @include fontSize(2.4);
+        &:nth-child(2):after {
+          content: '円〜';
+          margin-left: 10px;
+          @include fontSize(2.2);
+        }
+        &:nth-child(3):after {
+          content: '円';
+        }
+      }
+    }
+    .p-basic-plan__btn {
+      margin-top: 10px;
+      a {
+        max-width: 100%;
+      }
+    }
+    .all-price {
+      .price-item {
+        max-width: 200px;
+        padding-top: 30px;
+      }
+      justify-content: space-between;
+      display: flex;
+      h4 {
+        background: url('/images/common/bg_paper_red.jpg');
+        border-radius: 1.3rem;
+        color: #fff;
+        @include fontSize(2.0);
+        text-align: center;
+        line-height: 1;
+        padding: 15px 0;
+        margin-bottom: 15px;
+      }
+      p {
+        padding-left: 10px;
+        @include fontSize(1.3);
+        &:nth-child(2) { font-weight: bold;}
+        &.detail {
+          font-weight: bold;
+          @include fontSize(2.7);
+          color: #de475b;
+          .large {
+            @include fontSize(2.0);
+          }
+          .small {
+            @include fontSize(1.4);
+          }
+        }
+      }
+    }
+  }
 }
 
-
-
+@include mqMd {
+  .p-plan-news {
+    margin-top: calcVw(50);
+    padding: calcVw(30) 0;
+    .group-top {
+      padding: 0 calcVw(30);
+      .top-content {
+        padding-right: calcVw(40);
+        &:after {
+          width: calcVw(14);
+        }
+      }
+      h3 {
+        font-size: calcVw(28);
+      }
+      h4 {
+        font-size: calcVw(58);
+      }
+      p {
+        @include fontSize(1.6);
+        line-height: 1.625;
+      }
+    }
+    .contentSp {
+      padding: calcVw(30);
+      font-size: calcVw(28);
+    }
+    .group-body {
+      margin-top: calcVw(45);
+      padding: 0 calcVw(30);
+      .body-content-top {
+        padding: calcVw(30);
+        .price {
+          br {
+            display: block;
+          }
+        }
+        h3 {
+          font-size: calcVw(35);
+        }
+        p {
+          font-size: calcVw(22);
+        }
+        span {
+          font-size: calcVw(28);
+          &:after {
+            margin-left: 5px;
+            @include fontSize(1.4,'sp');
+          }
+        }
+      }
+      .body-content-main {
+        font-size: calcVw(26);
+        padding: calcVw(30);
+      }
+      .p-basic-plan__btn {
+        margin-top: 10px;
+        a {
+          max-width: 100%;
+        }
+      }
+      .all-price {
+        display: flex;
+        flex-direction: column;
+        .price-item {
+          min-width: 100%;
+          display: grid;
+          padding-top: calcVw(10);
+          grid-template-areas: 
+          'l l l l l tr'
+          'l l l l l mr'
+          'l l l l l br'
+        }
+        h4 {
+          margin-bottom: calcVw(5);
+          border-radius: 0;
+          padding: calcVw(25) 0;
+          grid-area: l;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: calcVw(30);
+        }
+        p {
+          padding-left: calcVw(25);
+          @include fontSize(1.3);
+          font-size: calcVw(20);
+          &:nth-child(1) {
+            grid-area: br;
+            font-size: calcVw(20); 
+          }
+          &:nth-child(2) {
+            grid-area: tr;
+            font-size: calcVw(24);
+          }
+          &:nth-child(3) {
+            grid-area: mr;
+            font-size: calcVw(35);
+          }
+        }
+      }
+    }
+  }
+};

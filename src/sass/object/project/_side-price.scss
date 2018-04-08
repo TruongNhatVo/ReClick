@@ -3,9 +3,6 @@
     margin-left: -#{$gutter-default-sm};
     margin-right: -#{$gutter-default-sm};
   }
-  &:first-child {
-    margin-bottom: 20px;
-  }
   &__block {
     background: #fff;
     box-shadow: 0 2px 3px rgba(#000, 0.15);
@@ -204,6 +201,16 @@
       &:before {
         content: '>';
       }
+    }
+  }
+}
+
+.p_side_contact-banner {
+  margin-top: 20px;
+  @media screen and (max-width: 750px) {
+    & {
+      margin-top: 0;
+      margin: 0 - calcVw(50);
     }
   }
 }

@@ -1,7 +1,7 @@
 extend /_template/_two-column
 append variables
   //- 変更可能
-  - const pageTitle= "葬儀場を選ぶ";
+  - const pageTitle= "セレモアの葬儀プラン";
   - const pageDescription= site.description;
   //- - const pageKeywords= site.keywords; キーワードは必要なし。
   //- 任意
@@ -12,45 +12,184 @@ append variables
 block header
   .p-page-mv.js-bgcheck-image
     .p-page-mv__inner
-      h1.p-page-mv__ttl.js-bgcheck-target 葬儀場を選ぶ
+      h1.p-page-mv__ttl.js-bgcheck-target セレモアの葬儀プラン
       
   nav.p-breadcrumb(aria-label="Breadcrumb")
     .l-container
       +breadcrumb([
-        ["信頼の葬儀社セレモア", "/"],
-        ["葬儀場を選ぶ", ""]
+        ["お葬儀基本プラン一覧", "/"],
+        ["セレモアの葬儀プラン", ""]
       ])
 
   +heading-large('お葬儀基本プラン一覧')
 
 block main
   section.l-main__section
-    .p-plan-top__notify
-      h2.p-plan-top__heading 基本プランとして以下のお葬儀をご用意しております。
+    .p-plan-notify
+      h2.p-plan-heading 基本プランとして以下のお葬儀をご用意しております。
         br
         | ご希望の条件に応じた、自由なお葬儀の形にすることも可能です。  
       p.p-plan-top-content ※表示価格は全て税抜となります。
         br
         | ※「会員価格」の表記がある場合、事前のお申込みによる会員特別価格となります。
+  
+  section.p-plan-news.p-plan-news_paper_purple
+    .group-top
+      .top-content
+        h3 共に過ごした方々と。
+        h4 一般葬
+        p.js-ins-sp  人生の時間を共に過ごした方々でお見送りするお葬儀です。
+          br 
+          | 数多くの方々と故人様との思い出をゆっくりと語り合う場をご提供します。 12313
+      .thumbs
+        img(src='/images/plan_and_price/thumb_01.png', alt="")
+    .group-body
+      .body-content-top
+        h3 基本プラン
+        .price
+          p 一般価格:
+            br
+            span 500,000
+            span 500,000
+      .body-content-main
+        p ご家族・親戚をはじめ、ご関係のある方をお迎えする、一般的な葬儀の形式です。 
+          br 
+          | 会葬者の人数は主に故人様の生前のご縁の広さで変動しますので、それに見合ったお葬儀の規模や葬儀場をご提案します。
+      .p-basic-plan__btn
+        a(href="#").c-btn.u-blink プラン一覧を見る
+
+  section.p-plan-news.p-plan-news_paper_yellow
+    .group-top
+      .top-content
+        h3 共に過ごした方々と。
+        h4 一般葬
+        p.js-ins-sp  人生の時間を共に過ごした方々でお見送りするお葬儀です。
+          br 
+          | 数多くの方々と故人様との思い出をゆっくりと語り合う場をご提供します。 12313
+      .thumbs
+        img(src='/images/plan_and_price/thumb_02.png', alt="")
+    .group-body
+      .body-content-top
+        h3 基本プラン
+        .price
+          p 一般価格:
+            br
+            span 500,000
+            span 500,000
+      .body-content-main
+        p ご家族・親戚をはじめ、ご関係のある方をお迎えする、一般的な葬儀の形式です。 
+          br 
+          | 会葬者の人数は主に故人様の生前のご縁の広さで変動しますので、それに見合ったお葬儀の規模や葬儀場をご提案します。
+      .p-basic-plan__btn
+        a(href="#").c-btn.u-blink プラン一覧を見る
         
+  section.p-plan-news.p-plan-news_paper_red
+    .group-top
+      .top-content
+        h3 共に過ごした方々と。
+        h4 一般葬
+        p.js-ins-sp 人生の時間を共に過ごした方々でお見送りするお葬儀です。
+          br 
+          | 数多くの方々と故人様との思い出をゆっくりと語り合う場をご提供します。
+      .thumbs
+        img(src='/images/plan_and_price/thumb_03.png', alt="")
+    .group-body
+      .body-content-top
+        h3 基本プラン
+        .price
+          p 一般価格:
+            br
+            span 500,000
+            span 500,000
+      .body-content-main
+        p ご家族・親戚をはじめ、ご関係のある方をお迎えする、一般的な葬儀の形式です。 
+          br 
+          | 会葬者の人数は主に故人様の生前のご縁の広さで変動しますので、それに見合ったお葬儀の規模や葬儀場をご提案します。
+        .all-price
+          .price-item
+            h4 シンプル
+            p 会員割引価格：
+            p.detail 336,000
+              span.large 円 
+              span.small （税抜）
+            p 一般価格：346,000円（税込）
+          .price-item
+            h4 シンプル
+            p 会員割引価格：
+            p.detail 336,000
+              span.large 円 
+              span.small （税抜）
+            p 一般価格：346,000円（税込）
+          .price-item
+            h4 シンプル
+            p 会員割引価格：
+            p.detail 336,000
+              span.large 円 
+              span.small （税抜）
+            p 一般価格：346,000円（税込）
+      .p-basic-plan__btn.icon
+        a(href="#").c-btn.u-blink プラン一覧を見る
+  
+  section.p-plan-news.p-plan-news_paper_blue
+    .group-top
+      .top-content
+        h3 共に過ごした方々と。
+        h4 一般葬
+        p.js-ins-sp  人生の時間を共に過ごした方々でお見送りするお葬儀です。
+          br 
+          | 数多くの方々と故人様との思い出をゆっくりと語り合う場をご提供します。 12313
+      .thumbs
+        img(src='/images/plan_and_price/thumb_04.png', alt="")
+    .group-body
+      .body-content-top
+        h3 基本プラン
+        .price
+          p 一般価格:
+            br
+            span 500,000
+            span 500,000
+      .body-content-main
+        p ご家族・親戚をはじめ、ご関係のある方をお迎えする、一般的な葬儀の形式です。 
+          br 
+          | 会葬者の人数は主に故人様の生前のご縁の広さで変動しますので、それに見合ったお葬儀の規模や葬儀場をご提案します。
+      .p-basic-plan__btn
+        a(href="#").c-btn.u-blink プラン一覧を見る
+
+  section.p-plan-notify--border
+    h2 上記プランのほか、ご希望の条件に応じた自由なお葬儀の形にすることも可能です。
+  
   section.l-main__section
-    .p-plan-group
-      figure.p-plan-item
-        figcaption.p-plan-item__description
-          h3 ご家族様でお見送り。
-          h4 家族葬
-          p 故人様と縁の深かった方のみでお見送りするお葬儀です。
-            br 
-            | セレモアではご家族の思いを形にし、その人らしさを大切にした家族葬をご提案します。
-        .p-plan-item__thumb
-          img(src="/images/plan_and_price/thumb_01.png", alt="")
-        .p-plan-news
+    h2.p-heading-01 上記プランのほか、ご希望の条
+    p ご希望のエリアの近隣にある葬儀場です。
+  
+  section.l-main__section
+    ul.p-steps-group
+      li
+        .items-title
+          h3 上記プランのほか、ご希望の条件に応じた
+        .items-content
+          p 上記プランのほか、ご希望の条件に応じた自由なお葬儀の形にすることも可能です。
+      li
+        .items-title
+          h3 上記プランのほか、ご希望の条件に応じた
+        .items-content
+          p 上記プランのほか、ご希望の条件に応じた自由なお葬儀の形にすることも可能です。
+      li
+        .items-title
+          h3 上記プランのほか、ご希望の条件に応じた
+        .items-content
+          p 上記プランのほか、ご希望の条件に応じた自由なお葬儀の形にすることも可能です。
+
+  section.p-plan-notify--border.p-plan-notify--arrow
+    h2 上記プランのほか、ご希望の条件に応じた自由なお葬儀の形にすることも可能です。
+
 
 block side
   .p-side-price
     include /_partial/_side_search_by_price.pug
   .p_side_price
-    .p_side_price_block
-      a(href="#",tel="tel:0120-470-470")
-        img(src="/images/plan_and_price/number_contact.png", alt="0120-470-470") 
+    .p_side_contact-banner
+      a(href="tel:0120-470-470")
+        img.u-hide-sp(src="/images/plan_and_price/banner_contact_pc.png", alt="0120-470-470") 
+        img.u-hide-pc(src="/images/plan_and_price/banner_contact_sp.png", alt="0120-470-470") 
     
