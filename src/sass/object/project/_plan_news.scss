@@ -65,6 +65,9 @@
       justify-content: space-between;
       padding: 20px;
       align-items: center;
+      small {
+        font-size: 60%;
+      } 
       .price {
         display: flex;
         br {
