@@ -45,6 +45,7 @@
 @import 'object/project/header-urgent'; // ヘッダーのお急ぎの方エリア（SP幅のみ表示）
 @import 'object/project/gnavi'; //グローバルナビ
 @import 'object/project/megamenu'; // メガメニュー
+@import 'object/project/notify'; // メガメニュー
 @import 'object/project/form'; // フォーム関連（input等を収めるボックス）
 @import 'object/project/footer-contact'; // フッターの相談窓口エリア
 @import 'object/project/footer-quality'; // フッターのセレモア品質
@@ -62,14 +63,15 @@
 @import 'object/project/side-area'; // sideエリア関連
 @import 'object/project/side-price'; // sideエリア関連
 @import 'object/project/pagination'; // ページネーション
+@import 'object/project/plan_news'; // 葬儀プラン
 @import 'object/project/chapel-list'; // 葬儀場の履歴等で使っているリスト
 @import 'object/project/basic-plan'; // 葬儀プラン
-@import 'object/project/plan-price'; // 葬儀プラン
 
 // 葬儀場を探す
 @import 'object/project/search-by-map'; // 都道府県から葬儀場を選ぶ
 @import 'object/project/search-by-conditions'; // 条件を設定して葬儀場を選ぶ
 @import 'object/project/search-by-area'; // エリア名から葬儀場を選ぶ
+@import 'object/project/steps-group'; // エリア名から葬儀場を選ぶ
 @import 'object/project/region-header'; // ○○区のお葬儀はのヘッダー（背景地図とタイトルの部分）
 @import 'object/project/search-result'; // 検索結果一覧
 @import 'object/project/chapel-card'; // 検索結果一覧の葬儀場カード
