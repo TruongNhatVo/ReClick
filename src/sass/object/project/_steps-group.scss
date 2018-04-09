@@ -3,7 +3,10 @@
   justify-content: space-between;
   counter-reset: section;
   li {
-    max-width: 240px;
+    margin-top: 30px;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
   }
   .items {
     &-title,
@@ -16,6 +19,8 @@
       color: #fff;
       border-radius: 1rem 1rem 0 0;
       &:before {
+        @include mincho;
+        font-weight: bold;
         display: block;
         margin: 0 auto;
         margin-bottom: 20px;
@@ -28,22 +33,24 @@
         border-radius: 50%;
         line-height: 40px;
         color: black;
+        @include fontSize(2.3);
       }
     	h3 {font-weight: bold;}
     }
     &-content {
       background: #fff;
       @include fontSize(1.5);
+      flex: 1 0 auto;
     }
   }
 }
 
-@include mqMd {
+@media only screen and (max-width: 750px) {
   .p-steps-group {
   	flex-direction: column;
     li {
     	margin-top: calcVw(25);
-    	max-width: 100%;
+    	width: 100%;
     }
     .items {
       &-title,
@@ -75,7 +82,7 @@
       }
       &-content {
         background: #fff;
-        @include fontSize(1.5);
+        @include fontSize(1.5,'sp');
       }
     }
   }

@@ -45,7 +45,7 @@
 @import 'object/project/header-urgent'; // ヘッダーのお急ぎの方エリア（SP幅のみ表示）
 @import 'object/project/gnavi'; //グローバルナビ
 @import 'object/project/megamenu'; // メガメニュー
-@import 'object/project/notify'; // メガメニュー
+@import 'object/project/notify'; // sougi セレモアの葬儀プラン
 @import 'object/project/form'; // フォーム関連（input等を収めるボックス）
 @import 'object/project/footer-contact'; // フッターの相談窓口エリア
 @import 'object/project/footer-quality'; // フッターのセレモア品質
@@ -61,9 +61,10 @@
 @import 'object/project/headings'; // 見出し
 @import 'object/project/common-content-area'; // mainエリア下部の共通コンテンツ関連
 @import 'object/project/side-area'; // sideエリア関連
-@import 'object/project/side-price'; // sideエリア関連
+@import 'object/project/side-price'; // sougi セレモアの葬儀プラン
+@import 'object/project/side-funeral'; // funeral セレモアの葬儀プラン
 @import 'object/project/pagination'; // ページネーション
-@import 'object/project/plan_news'; // 葬儀プラン
+@import 'object/project/plan-news'; // sougi セレモアの葬儀プラン
 @import 'object/project/chapel-list'; // 葬儀場の履歴等で使っているリスト
 @import 'object/project/basic-plan'; // 葬儀プラン
 
@@ -76,6 +77,7 @@
 @import 'object/project/search-result'; // 検索結果一覧
 @import 'object/project/chapel-card'; // 検索結果一覧の葬儀場カード
 @import 'object/project/chapel-tag'; // 葬儀場の特徴タグ
+@import 'object/project/contact-banner'; // 葬儀場の特徴タグ
 
 // 葬儀場詳細
 @import 'object/project/chapel-detail-header'; // 葬儀場詳細ページのヘッダー

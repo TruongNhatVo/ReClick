@@ -1,10 +1,10 @@
-.u-hide-sm{
+.u-hide-sm {
   @include mqSm{
     display: none;
   }
 }
 
-.u-hide-md{
+.u-hide-md {
   @include mqMd{
     display: none;
   }

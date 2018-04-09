@@ -1,0 +1,12 @@
+.p-side-contact-banner {
+ 	margin-top: 20px;
+	@include mqMd {
+		display: none;
+	}
+	&__sp {
+		display: none;
+		@include mqMd {
+			display: block!important;
+		}
+	}
+}
