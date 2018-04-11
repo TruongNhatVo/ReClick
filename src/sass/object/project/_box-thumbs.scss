@@ -1,0 +1,198 @@
+.p-box-thumbs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    &.push-top {
+        margin-top: 30px;
+    }
+    &-inner {
+        padding: 30px 0;
+        background: #f3eddf;
+        max-width: 380px;
+        width: 100%;
+        &>h3,
+        &>p {
+            padding: 0 20px;
+        }
+        h3 {
+            border-left: 5px solid $color-yellow-green;
+            @include fontSize(2.0);
+            padding-left: 25px;
+            font-weight: bold;
+        }
+    }
+    &-all-images {
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 20px;
+        &>p {
+            padding: 25px 0;
+            width: 100%;
+        }
+    }
+    &-item {
+        max-width: 160px;
+        width: 100%;
+    }
+    &-one-column-image {
+        width: 100%;
+        padding: 20px;
+    }
+    &-detail {
+        .name,
+        .price {
+            text-align: center;
+        }
+        .name {
+            background: #afb466;
+            padding: 5px 0;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+    }
+}
+
+.p-box-gift {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    &-items {
+        width: 240px;
+        p {
+            padding-top: 5px;
+        }
+    }
+}
+
+.box-note {
+    text-align: center;
+}
+
+@include mqMd {
+    .p-box-thumbs {
+        flex-direction: column;
+        &-inner {
+            background: #f3eddf;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        &-item {
+            max-width: 49%;
+            width: 100%;
+            text-align: center;
+        }
+        &-one-column-image {
+            text-align: center;
+        }
+        &-detail {
+            .name,
+            .price {
+                text-align: center;
+            }
+            .name {
+                background: #afb466;
+                padding: 5px 0;
+                margin-bottom: 5px;
+                color: #fff;
+            }
+        }
+        &-merge-column {
+            display: block;
+            &:after {
+                clear: both;
+                display: block;
+                content: '';
+            }
+            .p-box-thumbs-inner {
+                width: 50%;
+                float: left;
+                &:nth-child(2) {
+                    h3 {
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .p-box-gift {
+        &-items {
+            width: 50%;
+            text-align: center;
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 960px), (min-width: 400) {
+    .p-box-thumbs {
+        .name {
+            margin: 0 auto;
+        }
+    }
+}
+
+@include mqSm {
+    .p-box-thumbs {
+        &.push-top {
+            margin-top: calcVw(40);
+        }
+        &-inner {
+            padding: calcVw(30) 0 calcVw(40);
+            &>h3,
+            &>p {
+                padding: 0 calcVw(30);
+            }
+            h3 {
+                border-left: calcVw(7) solid $color-yellow-green;
+                @include fontSize(1.5,'sp');
+                padding-left: calcVw(30);
+            }
+        }
+        &-all-images {
+            padding: 0 calcVw(30);
+            &>p {
+                padding: calcVw(25) 0;
+            }
+        }
+        &-detail {
+            .name {
+                padding: calcVw(5) 0;
+                margin-bottom:calcVw(5);
+            }
+        }
+        &-merge-column {
+            .p-box-thumbs-one-column-image {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .p-box-thumbs-inner:nth-child(1) {
+                .p-box-thumbs-one-column-image {
+                    padding-left: calcVw(30);
+                    padding-right: calcVw(15);
+                }
+            }
+            .p-box-thumbs-inner:nth-child(2) {
+                .p-box-thumbs-one-column-image {
+                    padding-right: calcVw(30);
+                    padding-left: calcVw(15);
+                }
+            }
+        }
+    }
+
+    .p-box-gift {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        &-items {
+            width: calcVw(310);
+            p {
+                padding-top: 5px;
+            }
+        }
+    }
+}

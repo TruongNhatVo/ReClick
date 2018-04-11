@@ -7,6 +7,7 @@
     width: 32%;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
   }
   .items {
     &-title,
@@ -17,7 +18,7 @@
     &-title {
       background: #cec09f;
       color: #fff;
-      border-radius: 1rem 1rem 0 0;
+      flex: 1 0 auto;
       &:before {
         @include mincho;
         font-weight: bold;
@@ -28,12 +29,12 @@
         counter-increment: section;
         content: counter(section);
         background: #fff;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
-        line-height: 40px;
+        line-height: 50px;
         color: black;
-        @include fontSize(2.3);
+        @include fontSize(2.8);
       }
     	h3 {font-weight: bold;}
     }
@@ -49,80 +50,56 @@
   .p-steps-group {
   	flex-direction: column;
     li {
-    	margin-top: calcVw(25);
     	width: 100%;
+      border-radius: 5px;
     }
     .items {
       &-title,
       &-content {
+        padding: 20px;
       }
-      &-title {
-        border-radius: 0;
+      &-title {        
         display: flex;
         align-items: center;
         h3 { 
         	width: 83%;
-					// font-size: calcVw(28);
-        }
-        p {
-        	// font-size: calcVw(20);
+          padding-left: 3vw;
         }
         &:before {
-        	// width: 17%;
-          // display: block;
-          // margin: 0 auto;
+        	width: 17%;
+          display: block;
+          margin: 0 auto;
           margin-bottom: 0;
-          // width: 40px;
-          // height: 40px;
-          // line-height: 40px;
-          // color: black;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          color: black;
         }
       }
       &-content {
-        // background: #fff;
-        // @include fontSize(1.5,'sp');
+        background: #fff;
       }
     }
   }
 }
-
 @include mqSm {
   .p-steps-group {
-    // flex-direction: column;
     li {
-      // margin-top: calcVw(25);
-      // width: 100%;
+      margin-top: calcVw(25);
     }
     .items {
-      &-title,
-      &-content {
-        // font-weight: bold;
-        // padding: 20px;
-      }
       &-title {
-        // border-radius: 0;
-        // display: flex;
-        // align-items: center;
         h3 { 
-          // width: 83%;
           font-size: calcVw(28);
         }
         p {
           font-size: calcVw(20);
         }
         &:before {
-          // width: 17%;
-          // display: block;
-          // margin: 0 auto;
-          // margin-bottom: 0;
-          // width: 40px;
-          // height: 40px;
-          // line-height: 40px;
-          // color: black;
+          @include fontSize(2.1,'sp');
         }
       }
       &-content {
-        // background: #fff;
         @include fontSize(1.5,'sp');
       }
     }

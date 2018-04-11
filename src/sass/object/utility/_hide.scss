@@ -1,29 +1,25 @@
-.u-hide-sm {
+.u-hide-sm{
   @include mqSm{
     display: none;
   }
 }
 
-.u-hide-md {
+.u-hide-md{
   @include mqMd{
     display: none;
   }
 }
 
 .u-hide-pc {
-	display: none;
-	@media screen and (max-width: 750px) {
-		& {
-			display: block;
-		}
+ display: none;
+ @include mqMd {
+  	display: block;
 	}
 }
 
 .u-hide-sp {
 	display: block;
-	@media screen and (max-width: 750px) {
-		& {
-			display: none;
-		}
+  @include mqMd {
+  	display: none;
 	}
 }

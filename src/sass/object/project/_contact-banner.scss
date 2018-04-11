@@ -6,7 +6,7 @@
 	&__sp {
 		display: none;
 		@include mqMd {
-			display: block!important;
+			display: block !important;
 		}
 	}
 }

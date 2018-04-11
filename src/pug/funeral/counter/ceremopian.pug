@@ -1,0 +1,182 @@
+extend /_template/_two-column
+append variables
+  //- 変更可能
+  - const pageTitle= "店頭相談［セレモピアン］";
+  - const pageDescription= site.description;
+  //- - const pageKeywords= site.keywords; キーワードは必要なし。
+  //- 任意
+  - const pageOgpTitle= pageTitle;
+  - const pageOgpImage= site.ogpImage;
+  - const pageOgpType= "article";
+
+block header
+  .p-page-mv.js-bgcheck-image.p-page-mv--b
+    .p-page-mv__inner
+      h1.p-page-mv__ttl.js-bgcheck-target 店頭相談［セレモピアン］
+      
+  nav.p-breadcrumb(aria-label="Breadcrumb")
+    .l-container
+      +breadcrumb([
+        ["信頼の葬儀社セレモア", "/"],
+        ["セレモアの葬儀", "/"],
+        ["対面型の無料ご相談窓口", "/"],
+        ["店頭相談［セレモピアン］", ""]
+      ])
+
+  +heading-large('何度でも利用できる無料ご相談窓口')
+
+block main
+  section.l-main__section
+    .p-ceremopian-top
+      img(src='/images/funeral/counter/ceremopian/img_top.jpg', alt='')
+      p セレモアでは、仏事・葬儀のご相談をはじめとした、店舗型の総合ご相談窓口を展開しております。皆様にお気軽に相談に来ていただけるよう、百貨店や駅ビルに窓口を設置し、専門の女性スタッフがご相談を随時承っております。
+      .p-related
+        span 関連サイト：
+        a(href='http://soudan.ceremore.jp/', target="_blank") 葬儀・仏事の総合ご相談窓口「セレモピアン」
+  section.l-main__section
+    h2.p-heading-01 ご相談の例
+    p 困った時はいつでも、お気軽にセレモピアンへお越しください。
+    .p-consultation
+      .p-consultation-left
+        .p-consultation__title.bg01
+          h3 お葬儀のご相談
+          p 「もしも」の前にご準備を。
+        .p-consultation-content
+          ul
+            li
+              p 葬儀の事前相談
+            li
+              p 葬儀費用のお見積り
+            li
+              p 式場・寺院のご案内
+            li
+              p 葬儀・供養のご相談
+            li
+              p 終活・セミナーのご案内
+            li
+              p 葬儀生前信託契約のご案内
+      .p-consultation-right
+        .p-consultation__title.bg02
+          h3 仏事のご相談
+          p お葬儀後のあらゆるご用をお手伝い。
+        .p-consultation-content
+          ul
+            li
+              p ご法要のご相談
+            li
+              p 霊園・墓石のご案内
+            li
+              p 永代供養のご案内
+            li
+              p 引出物・返礼品のご案内
+            li
+              p 墓石・仏壇クリーニングのご案内
+            li
+              p 心のケアのご相談
+    .p-consultation__note
+      p その他、さまざまなご相談にお応えします。
+  section.l-main__section
+    h2.p-heading-01 セレモピアンの店舗所在地
+    p 首都圏内28店舗*のご相談窓口をご利用可能です。（*2018年3月現在）
+    .p-location
+      ul
+        li
+          .p-location__img
+            img(src='/images/funeral/counter/ceremopian/img_location_01.jpg', alt='日本橋三越本店　本館5F')
+          .p-location__title
+            h3 日本橋三越本店　本館5F
+        li
+          .p-location__img
+            img(src='/images/funeral/counter/ceremopian/img_location_02.jpg', alt='')
+          .p-location__title
+            h3
+              | 伊勢丹 新宿店 本館7F
+              br
+              | 伊勢丹 相模原 本館7F
+        li
+          .p-location__img
+            img(src='/images/funeral/counter/ceremopian/img_location_03.jpg', alt='東急百貨店 渋谷本店8F 東急百貨店 吉祥寺店8F')
+          .p-location__title
+            h3
+              | 東急百貨店 渋谷本店8F
+              br
+              | 東急百貨店 吉祥寺店8F
+        li
+          .p-location__img
+            img(src='/images/funeral/counter/ceremopian/img_location_04.jpg', alt='京王百貨店 新宿店6F 京王百貨店 聖蹟桜ヶ丘店7F')
+          .p-location__title
+            h3
+              | 京王百貨店 新宿店6F
+              br
+              | 京王百貨店 聖蹟桜ヶ丘店7F
+        li
+          .p-location__img
+            img(src='/images/funeral/counter/ceremopian/img_location_05.jpg', alt='小田急百貨店 町田店9階')
+          .p-location__title
+            h3 小田急百貨店 町田店9階
+        li
+          .p-location__img
+            img(src='/images/funeral/counter/ceremopian/img_location_06.jpg', alt='ららぽーと立川立飛 3F ららぽーと横浜 3F')
+          .p-location__title
+            h3 
+              | ららぽーと立川立飛 3F
+              br
+              | ららぽーと横浜 3F
+        li
+          .p-location__img
+            img(src='/images/funeral/counter/ceremopian/img_location_07.jpg', alt='セレオ八王子 北館6F セレオ国分寺 8F')
+          .p-location__title
+            h3 
+              | セレオ八王子 北館6F
+              br
+              | セレオ国分寺 8F
+        li
+          .p-location__img
+            img(src='/images/funeral/counter/ceremopian/img_location_08.jpg', alt='八木橋百貨店 5階')
+          .p-location__title
+            h3 八木橋百貨店 5階
+        li
+          .p-location__img
+            img(src='/images/funeral/counter/ceremopian/img_location_09.jpg', alt='イオンモール多摩平の森 3階')
+          .p-location__title
+            h3 イオンモール多摩平の森 3階
+    p.p-location__txt 上記百貨店内のセレモピアン以外にも、首都圏のセレモア支社・仏具店にご相談窓口を展開しております。
+  section.l-main__section
+    h2.p-heading-01 葬儀社を選ぶ際のご注意点
+    p.p-txt-sp
+      | 昨今、インターネットで格安の葬儀のプラン販売を行う葬儀社が増えてきています。このような格安の葬儀を提供する企業の多くは自社で葬儀を執り行うことなく、「葬儀ブローカー」として提携先の葬儀社に委託しています。      
+    p
+      |このようなブローカーによって施行される葬儀においては、事前のご相談内容とお葬儀の本番で提供されるサービスの内容が食い違う等といったトラブルが増えています。
+    ul.p-note
+      li
+        .p-note-top
+          .p-note__number
+            p トラブル事例
+            span 1
+          .p-note__title
+            h3 見積りと違う金額が請求される。
+        .p-note__des
+          p 「追加予算は無い」という広告内容だったが、葬儀社が決まった後でオプションを追加させられてしまい、結局大幅に予算が膨らんでしまった。
+      li
+        .p-note-top
+          .p-note__number
+            p トラブル事例
+            span 2
+          .p-note__title
+            h3 希望した葬儀場が使えないと言われる。
+        .p-note__des
+          p 利用したい葬儀場を伝えたところ、その葬儀社のプランではその式場を利用できない、と掛け合ってもらえなかった。
+      li
+        .p-note-top
+          .p-note__number
+            p トラブル事例
+            span 3
+          .p-note__title
+            h3 最終的な葬儀の施行内容が曖昧。
+        .p-note__des
+          p 事前相談をしても、対応する葬儀社によってサービスの提供内容が異なるので確実な約束ができないと言われてしまい、納得のいく葬儀の予定が立てられなかった。
+    include /_partial/_support
+
+block side
+  .p-side-area
+    include /_partial/_side_funeral_ceremony

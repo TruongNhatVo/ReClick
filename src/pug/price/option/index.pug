@@ -1,0 +1,247 @@
+extend /_template/_two-column
+append variables
+  //- 変更可能
+  - const pageTitle= "セレモアの葬儀プラン";
+  - const pageDescription= site.description;
+  //- - const pageKeywords= site.keywords; キーワードは必要なし。
+  //- 任意
+  - const pageOgpTitle= pageTitle;
+  - const pageOgpImage= site.ogpImage;
+  - const pageOgpType= "article";
+
+block header
+  .p-page-mv.js-bgcheck-image.p-page-mv--c
+    .p-page-mv__inner
+      h1.p-page-mv__ttl.js-bgcheck-target オプション費用
+      
+  nav.p-breadcrumb(aria-label="Breadcrumb")
+    .l-container
+      +breadcrumb([
+        ["信頼の葬儀社セレモア", "/"],
+        ["葬儀プランと費用", "/"],
+        ["オプション費用", ""]
+      ])
+
+  +heading-large('オプション費用について')
+
+block main
+  
+  section.l-main__section
+    .p-ceremopian-top
+        p お葬儀の基本プランに含まれないサービス、またはお客様のご要望に合わせて追加可能なサービスとして、各種のオプションをご用意しております。
+        .p-related
+          span 関連ページ：
+          a(href='') お葬儀費用
+      
+  section.l-main__section
+    h2.p-heading-01 お料理
+    p 通夜ぶるまい・精進落しとして様々なお料理をご用意しております。また、ご法要のお席に、専門店のおもてなし料理をお届けすることも可能です。
+      br
+      | 料金は種類と会葬者数によるお見積となります。
+
+    article.p-box-thumbs.push-top
+      .p-box-thumbs-inner
+        h3 セット料理
+        .p-box-thumbs-all-images
+          p 種類豊富なオードブルなど、参列者の人数に合わせたお料理をご用意しております。
+          .p-box-thumbs-item
+            img(src="/images/price/option/img_food_01.jpg", alt="")
+          .p-box-thumbs-item
+            img(src="/images/price/option/img_food_02.jpg", alt="")
+
+      .p-box-thumbs-inner
+        h3 御膳
+        .p-box-thumbs-all-images
+          p 四季折々の食材の味を最大限に引き出した御膳で会葬者をおもてなしいたします。
+          .p-box-thumbs-item
+            img(src="/images/price/option/img_food_03.jpg", alt="")
+          .p-box-thumbs-item
+            img(src="/images/price/option/img_food_04.jpg", alt="")
+
+    article.p-box-thumbs
+      .p-box-thumbs-inner
+        h3 特選寿司
+        .p-box-thumbs-all-images
+          p おもてなしの気持ちを伝えるため、こだわりのお寿司もご用意しております。
+          .p-box-thumbs-item
+            img(src="/images/price/option/img_food_05.jpg", alt="")
+          .p-box-thumbs-item
+            img(src="/images/price/option/img_food_06.jpg", alt="")
+
+      .p-box-thumbs-inner
+        h3 単品・折詰
+        .p-box-thumbs-all-images
+          p 参列者の方へお渡しするお持ち帰り用のお料理や、デザート等もご用意しております。
+          .p-box-thumbs-item
+            img(src="/images/price/option/img_food_07.jpg", alt="")
+          .p-box-thumbs-item
+            img(src="/images/price/option/img_food_08.jpg", alt="")
+
+    .box-note
+      p ※写真はイメージです。
+  
+  section.l-main__section
+    h2.p-heading-01 お別れの花・供花
+
+    article.p-box-thumbs
+      .p-box-thumbs-inner
+        h3 お別れの花
+        
+        .p-box-thumbs-all-images
+          p 最後のお別れに際し、故人様のお体の周りにお納めするお花です。
+          .p-box-thumbs-item
+            img(src="/images/price/option/img_thumb_01.jpg", alt="")
+            .p-box-thumbs-detail
+              p.name 菊
+              p.price 5,000円（税抜）
+          .p-box-thumbs-item
+            img(src="/images/price/option/img_thumb_02.jpg", alt="")
+            .p-box-thumbs-detail
+              p.name 洋花
+              p.price 10,000円（税抜）
+
+      .p-box-thumbs-inner
+        h3 特選供花
+        
+        .p-box-thumbs-all-images
+          p 故人様を偲ぶ、ご供花は清楚に。
+            br
+            | 花束のアレンジメントも承ります。
+          .p-box-thumbs-item
+            img(src="/images/price/option/img_thumb_03.jpg", alt="")
+            .p-box-thumbs-detail
+              p.name ミックス
+              p.price 15,000円（税抜）
+          .p-box-thumbs-item
+            img(src="/images/price/option/img_thumb_03.jpg", alt="")
+            .p-box-thumbs-detail
+              p.name 洋花
+              p.price 15,000円（税抜）
+  
+  section.l-main__section    
+    h2.p-heading-01 創作骨壷 ～悠久の壺～
+    p 骨壷、それは故人様の永遠の安らぎの場所。ご家族の想いをかたちに。
+      br
+      | 日本各地の有名窯元による作品から人間国宝の逸品まで多数取り揃えております。
+    .p-related.u-push-top
+      span 関連サイト：
+      a(href='') 創作骨壷専門店 壺ギャラリー沙羅（外部サイト）
+
+    article.p-box-thumbs.push-top.p-box-thumbs-merge-column
+      .p-box-thumbs-inner
+        h3 有田焼
+        .p-box-thumbs-one-column-image
+          img(src="/images/price/option/img_thumb_04.jpg", alt="")
+          .p-box-thumbs-detail
+            p.name 青耀
+            p.price 70,000円（税抜）
+
+      .p-box-thumbs-inner
+        h3 有田焼
+        .p-box-thumbs-one-column-image
+          img(src="/images/price/option/img_thumb_05.jpg", alt="")
+          .p-box-thumbs-detail
+            p.name 夢見草
+            p.price 70,000円（税抜）
+
+  section.l-main__section    
+    h2.p-heading-01 遺影写真
+    p お好きな額縁の色をお選びいただけます。
+      br
+      | 価格は故人様のお写真のデータ加工代を含みます。
+    .p-related.u-push-top
+      span 関連サイト：
+      a(href='') 創作骨壷専門店 壺ギャラリー沙羅（外部サイト）
+
+    article.p-box-thumbs.push-top
+      .p-box-thumbs-inner
+        h3 六つ切りサイズ
+        p 六つ切り（203mm×254mm）のお写真が入る大きさの額縁になります。
+        .p-box-thumbs-one-column-image
+          img(src="/images/price/option/img_portrait_01.jpg", alt="")
+          .p-box-thumbs-detail
+            p.name パール額
+            p.price 20,000円（税抜）
+
+      .p-box-thumbs-inner
+        h3 手札サイズ
+        p 手札サイズ（80mm×120mm）のお写真が入る大きさの額縁になります。
+        .p-box-thumbs-one-column-image
+          img(src="/images/price/option/img_portrait_02.jpg", alt="")
+          .p-box-thumbs-detail
+            p.name パール額
+            p.price 8,800円（税抜）
+      
+  section.l-main__section    
+    h2.p-heading-01 湯灌（ゆかん）
+    p 湯灌は、故人様のお体と煩悩を洗い清め、身支度を整える儀式です。
+      br
+      | また、この湯灌には産湯の意味もあるといわれ、「来世でまた生まれ変わって欲しい」という願いも込められています。
+      br
+      | ご遺族の皆様で逆さ水を行い、専門スタッフにより故人様のお体の洗い清めとお化粧を施します。
+  
+  section.l-main__section    
+    h2.p-heading-01 返礼品
+    p 会葬御礼品・通夜返し・香典返しとして、選りすぐりの返礼品をご用意します。
+
+    article.p-box-gift
+      .p-box-gift-items
+        img(src="/images/price/option/img_gift_01.jpg", alt="")
+        p イメージ1キャプション
+
+      .p-box-gift-items
+        img(src="/images/price/option/img_gift_02.jpg", alt="")
+        p イメージ2キャプション
+
+      .p-box-gift-items
+        img(src="/images/price/option/img_thumb_06.jpg", alt="")
+        p 
+
+  section.l-main__section    
+    h2.p-heading-01 お葬儀費用の会員制割引制度
+    p セレモアの会員制度にご加入いただくと、当社で執り行うお葬儀の諸費用に対し、特別割引を受けることができます。※一部のプランを除きます。
+    .p-plan-notify__sale
+      .banner
+        img(src="/images/price/option/img_sale.png", alt="")
+      p ファミリーライフクラブは葬儀基本費用が最大50%OFFになる、入会金のみの会員制度です。葬儀後の各種手続き代行費用、お墓やお仏壇等も特別割引されます。
+      .group-border
+        h3 葬儀基本価格を
+          b 葬儀基
+            span 50%
+            | 本価格を
+    .p-related
+      span 関連サイト：
+      a(href='') 創作骨壷専門店 壺ギャラリー沙羅（外部サイト）
+  
+  section.l-main__section
+    h2.p-heading-01 葬儀社を選ぶ3つの重要ポイント
+    p  一度きりのお葬儀を成功に導くため、葬儀社を選ぶ際には下記の事を念頭にご検討を進めていくことをおすすめします。
+    article.p-plan-news__article    
+      ul.p-steps-group
+        li
+          .items-title
+            h3 見積書の内容が詳しく書かれているか？
+          .items-content
+            p お葬儀費用の総額は、様々なサービスを組み合わせた合計金額となります。見積書の中に必要なサービス項目が「全て」書かれているかを葬儀社に確認すると良いでしょう。
+              br
+              | 曖昧な見積書の場合、後から追加費用を要求される場合があります。
+        li
+          .items-title
+            h3 葬儀の全行程を、同じ葬儀社で担当しているか？
+          .items-content
+            p 葬儀インターネットでよく見られる格安の葬儀サービスの場合、その多くが、複数の葬儀関連会社に業務を委託する形で葬儀全体が組み立てられています。
+              br
+              | このような形式の場合、担当会社同士の連携が取り切れず、トラブルが起こるケースも見られます。
+        li
+          .items-title
+            h3 葬儀後のサポートが用意されているか？
+          .items-content
+            p 葬儀は執り行って終わりではなく、その後も関係各方面への手続きや、会葬された方々への御礼、法要の準備など、さまざまな処理を行う必要があります。
+              br
+              | 葬儀後のサポートが用意されている葬儀社を選ぶ事で、ご遺族様の心的な負担を和らげられます。
+
+  section.l-main__section    
+    include /_partial/_support
+    
+block side
+  include /_partial/_side_search_by_price.pug

@@ -1,7 +1,7 @@
 extend /_template/_two-column
 append variables
   //- 変更可能
-  - const pageTitle= "セレモアの葬儀プラン";
+  - const pageTitle= "葬儀プランと費用";
   - const pageDescription= site.description;
   //- - const pageKeywords= site.keywords; キーワードは必要なし。
   //- 任意
@@ -10,20 +10,167 @@ append variables
   - const pageOgpType= "article";
 
 block header
-  .p-page-mv.js-bgcheck-image
+  .p-page-mv.js-bgcheck-image.p-page-mv--c
     .p-page-mv__inner
-      h1.p-page-mv__ttl.js-bgcheck-target セレモアの葬儀プラン
+      h1.p-page-mv__ttl.js-bgcheck-target 葬儀プランと費用
       
   nav.p-breadcrumb(aria-label="Breadcrumb")
     .l-container
       +breadcrumb([
-        ["お葬儀基本プラン一覧", "/"],
-        ["セレモアの葬儀プラン", ""]
+        ["信頼の葬儀社セレモア", "/"],
+        ["葬儀プランと費用", ""]
       ])
 
-  +heading-large('お葬儀基本プラン一覧')
+  +heading-large('葬儀プランと費用の概要')
 
 block main
 
+  section.l-main__section
+    article.p-plan-notify
+      .p-plan-notify-content
+        p.p-plan-notify__heading 
+          |お一人お一人が違う人生を歩まれるのと同じで、お別れの形も人それぞれです。
+          br
+          |セレモアは皆様のご希望に応じた葬儀の形を、弊社プランナーよりご提案します。
+          br
+          |また、様々なニーズにお答えするため、経済的なパック葬プランもご用意しております。
+  section.l-main__section
+    h2.p-heading-01 セレモアのお葬儀基本プラン
+    p 
+      |基本プランとして以下のお葬儀をご用意しております。
+      br
+      |ご希望の条件に応じた、自由なお葬儀の形にすることも可能です。
+    .p-plan
+      ul
+        li
+          a.p-boder-purple(href='')
+            .p-plan__title
+              p ご家族様でお見送り。
+              h3 家族葬
+            .p-plan__img
+              img(src='/images/plan_and_price/img_plan01.jpg', alt='家族葬')
+        li
+          a.p-boder-yellow(href='')
+            .p-plan__title
+              p 共に過ごした方々と。
+              h3 一般葬
+            .p-plan__img
+              img(src='/images/plan_and_price/img_plan02.jpg', alt='一般葬')
+        li
+          a.p-boder-red(href='')
+            .p-plan__title
+              p 葬儀と告別式を。
+              h3 一日葬
+            .p-plan__img
+              img(src='/images/plan_and_price/img_plan03.jpg', alt='一日葬')
+        li
+          a.p-boder-blue(href='')
+            .p-plan__title
+              p ご出棺～火葬まで。
+              h3 火葬式
+            .p-plan__img
+              img(src='/images/plan_and_price/img_plan04.jpg', alt='火葬式')
+        li
+          a.p-boder-yellow-green(href='')
+            .p-plan__title
+              p 企業様・ご家族様で。
+              h3.p-link__icon
+                |社葬
+                br
+                span.p__dot ・
+                |合同葬
+            .p-plan__img
+              img(src='/images/plan_and_price/img_plan05.jpg', alt='社葬合同葬')
+        li
+          a.p-boder-yellow-green(href='')
+            .p-plan__title
+              p 自由な形のお葬儀を。
+              h3
+                |その他の
+                br
+                |お葬儀
+            .p-plan__img
+              img(src='/images/plan_and_price/img_plan06.jpg', alt='お葬儀')
+        li
+          a.p-boder-yellow-green(href='')
+            .p-plan__title
+              p お葬儀後に、皆様で。
+              h3
+                |お別れの会
+                br
+                span.p__dot ・
+                |偲ぶ会
+            .p-plan__img
+              img(src='/images/plan_and_price/img_plan07.jpg', alt='お別れの会偲ぶ会')
+        li
+          a.p-boder-yellow-green(href='')
+            .p-plan__title
+              p 自然に還る葬送の儀式。
+              h3
+                |海への
+                br                
+                |葬送
+            .p-plan__img
+              img(src='/images/plan_and_price/img_plan08.jpg', alt='海への葬送')
+    p.p-basic-plan__btn
+      a.c-btn.u-blink.p-wfull(href='#') プラン一覧を見る
+  section.l-main__section
+    h2.p-heading-01 お葬儀費用
+    p  葬儀費用は条件やご要望次第で大きく変動する場合があります。セレモアはお客様が費用面で不安を感じることが無いよう、お葬儀にかかる正確な費用を、ご契約が成立する前に提示します。
+    .p-expenses
+      ul
+        li
+          .p-expenses-top            
+            .p-expenses__img
+              img(src='/images/plan_and_price/img_expenses01.jpg', alt='お見積もりについて')
+            h3 お見積もりについて
+          .p-expenses-des
+            p 葬儀費用は事前に正確なお見積もりをご提示しますので安心してご利用になれます。
+          .p-expenses-detail
+            a(href='') お見積もりの詳細
+        li
+          .p-expenses-top            
+            .p-expenses__img
+              img(src='/images/plan_and_price/img_expenses02.jpg', alt='オプションについて')
+            h3 オプションについて
+          .p-expenses-des
+            p お葬儀をご希望通りの形とするために、様々なオプションをご用意しております。
+          .p-expenses-detail
+            a(href='') オプションの詳細
+      .p-expenses-note
+        img.u-hide-sp(src='/images/plan_and_price/img_plan09_pc.jpg', alt='セレモアは、お葬儀にかかる正確な費用を、ご契約前に提示します。')
+        img.u-hide-pc(src='/images/plan_and_price/img_plan09_sp.jpg', alt='セレモアは、お葬儀にかかる正確な費用を、ご契約前に提示します。')
+      p.p-basic-plan__btn
+        a.c-btn.u-blink.p-wfull(href='#') 費用の詳細を見る
+  section.l-main__section
+    h2.p-heading-01 葬儀社を選ぶ3つの重要ポイント
+    p  一度きりのお葬儀を成功に導くため、葬儀社を選ぶ際には下記の事を念頭にご検討を進めていくことをおすすめします。
+    article.p-plan-news__article    
+      ul.p-steps-group
+        li
+          .items-title
+            h3 見積書の内容が詳しく書かれているか？
+          .items-content
+            p お葬儀費用の総額は、様々なサービスを組み合わせた合計金額となります。見積書の中に必要なサービス項目が「全て」書かれているかを葬儀社に確認すると良いでしょう。
+              br
+              | 曖昧な見積書の場合、後から追加費用を要求される場合があります。
+        li
+          .items-title
+            h3 葬儀の全行程を、同じ葬儀社で担当しているか？
+          .items-content
+            p 葬儀インターネットでよく見られる格安の葬儀サービスの場合、その多くが、複数の葬儀関連会社に業務を委託する形で葬儀全体が組み立てられています。
+              br
+              | このような形式の場合、担当会社同士の連携が取り切れず、トラブルが起こるケースも見られます。
+        li
+          .items-title
+            h3 葬儀後のサポートが用意されているか？
+          .items-content
+            p 葬儀は執り行って終わりではなく、その後も関係各方面への手続きや、会葬された方々への御礼、法要の準備など、さまざまな処理を行う必要があります。
+              br
+              | 葬儀後のサポートが用意されている葬儀社を選ぶ事で、ご遺族様の心的な負担を和らげられます。
+  section.l-main__section    
+    include /_partial/_support
+
 block side
-  include /_partial/_side_funeral_ceremony.pug
+  .p-side-area
+    include /_partial/_side_search_by_price

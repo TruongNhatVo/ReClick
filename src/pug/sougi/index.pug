@@ -10,7 +10,7 @@ append variables
   - const pageOgpType= "article";
 
 block header
-  .p-page-mv.js-bgcheck-image
+  .p-page-mv.js-bgcheck-image.p-page-mv--c
     .p-page-mv__inner
       h1.p-page-mv__ttl.js-bgcheck-target セレモアの葬儀プラン
       
@@ -24,34 +24,35 @@ block header
   +heading-large('お葬儀基本プラン一覧')
 
 block main
-  section.p-group-notify
+  section.l-main__section
     article.p-plan-notify
-      h2.p-plan-heading 基本プランとして以下のお葬儀をご用意しております。
-        br
-        | ご希望の条件に応じた、自由なお葬儀の形にすることも可能です。  
-      p.p-plan-top-content ※表示価格は全て税抜となります。
-        br
-        | ※「会員価格」の表記がある場合、事前のお申込みによる会員特別価格となります。
+      .p-plan-notify-content
+        p.p-plan-notify__heading 基本プランとして以下のお葬儀をご用意しております。
+          br
+          | ご希望の条件に応じた、自由なお葬儀の形にすることも可能です。  
+        p.p-plan-notify__txt ※表示価格は全て税抜となります。
+        p.p-plan-notify__txt02 ※「会員価格」の表記がある場合、事前のお申込みによる会員特別価格となります。
   
-  section.p-list-plans
+  section.l-main__section
     article.p-plan-news.p-plan-news_paper_purple
-      .group-top
-        .top-content
+      .p-plan-news-top
+        .p-plan-news-top-content
           h3 ご家族様でお見送り。
-          h4 家族葬
-          p.js-ins-sp  故人様と縁の深かった方のみでお見送りするお葬儀です。
+          h4 家族葬          
+        .p-plan-news-top__thumbs
+          img(src='/images/sougi/thumb_01.jpg', alt="")
+        .p-plan-news-top__txt
+          p 故人様と縁の深かった方のみでお見送りするお葬儀です。
             br 
             |セレモアではご家族の思いを形にし、その人らしさを大切にした家族葬をご提案します。
-        .thumbs
-          img(src='/images/sougi/thumb_01.jpg', alt="")
-      .group-body
-        .body-content-top
+      .p-plan-news-body        
+        .p-plan-news-body-top
           h3 基本プラン
-          .price
+          .p-plan-news-body-top__price
             p 一般価格:
               br
               span 500,000
-        .body-content-main
+        .p-plan-news-body-main
           p 祭壇・参列者数・葬儀場等、ご要望に合わせてお葬儀の形を作り上げる、家族葬の基本プランです。 
             br 
             | 少人数の葬儀となり、会葬者対応の労力が軽減されるので、故人や家族の思いを反映しやすく、ゆっくりと落ち着いたお別れができます。
@@ -59,24 +60,25 @@ block main
           a(href="#").c-btn.u-blink プランの詳細を見る
 
     article.p-plan-news.p-plan-news_paper_yellow
-      .group-top
-        .top-content
+      .p-plan-news-top
+        .p-plan-news-top-content
           h3 共に過ごした方々と。
-          h4 一般葬
-          p.js-ins-sp  人生の時間を共に過ごした方々でお見送りするお葬儀です。
+          h4 一般葬          
+        .p-plan-news-top__thumbs
+          img(src='/images/sougi/thumb_02.jpg', alt="")
+        .p-plan-news-top__txt
+          p 人生の時間を共に過ごした方々でお見送りするお葬儀です。
             br 
             | 数多くの方々と故人様との思い出をゆっくりと語り合う場をご提供します。
-        .thumbs
-          img(src='/images/sougi/thumb_02.jpg', alt="")
-      .group-body
-        .body-content-top
+      .p-plan-news-body        
+        .p-plan-news-body-top
           h3 基本プラン
-          .price
+          .p-plan-news-body-top__price
             p 一般価格:
               br
               span 500,000
               span 600,000
-        .body-content-main
+        .p-plan-news-body-main
           p ご家族・親戚をはじめ、ご関係のある方をお迎えする、一般的な葬儀の形式です。  
             br 
             | 会葬者の人数は主に故人様の生前のご縁の広さで変動しますので、それに見合ったお葬儀の規模や葬儀場をご提案します。
@@ -84,98 +86,104 @@ block main
           a(href="#").c-btn.u-blink プランの詳細を見る
           
     article.p-plan-news.p-plan-news_paper_red
-      .group-top
-        .top-content
+      .p-plan-news-top
+        .p-plan-news-top-content
           h3 葬儀と告別式を。
-          h4 一日葬
-          p.js-ins-sp 通夜は行わず、葬儀・告別式を行うプランです。
+          h4 一日葬         
+        .p-plan-news-top__thumbs
+          img(src='/images/sougi/thumb_03.jpg', alt="")
+        .p-plan-news-top__txt
+          p 通夜は行わず、葬儀・告別式を行うプランです。
             br 
             | ご遺族様の負担も少なく、参列する皆様のご都合も合わせやすいお葬儀となります。
-        .thumbs
-          img(src='/images/sougi/thumb_03.jpg', alt="")
-      .group-body
-        .body-content-top
+      .p-plan-news-body        
+        .p-plan-news-body-top
           h3 一日葬
             br.u-hide-pc 
             |
             small ［セレモアパック葬］
-          .price
+          .p-plan-news-body-top__price
             p 会員価格:
               br
               span 336,000
               span 538,000
-        .body-content-main
+        .p-plan-news-body-main
           p 親しい方々にお集まりいただき、火葬と同日に告別式を行います。 
             br 
             | お通夜を行わない形式であるため、ご遺族様の心身や費用面のご負担を軽減できます。
-          .all-price
-            .price-item
+          .p-plan-news-body__price
+            .p-plan-news-body__price-item
               h4 シンプル
               p 会員割引価格：
               p.detail 336,000
-                span.large 円 
-                span.small （税抜）
-              p 一般価格：346,000円（税込）
-            .price-item
+                span.large 円
+                span.small (税抜)
+              p 一般価格：346,000円(税込)
+            .p-plan-news-body__price-item
               h4 スタンダード
               p 会員割引価格：
               p.detail 448,000
-                span.large 円 
-                span.small （税抜）
-              p 一般価格：458,000円（税込）
-            .price-item
-              h4 スタンダードプラス
+                span.large 円
+                span.small (税抜)
+              p 一般価格：458,000円(税込)
+            .p-plan-news-body__price-item
+              h4 スタンダード
+                br
+                | プラス
               p 会員割引価格：
               p.detail 538,000
-                span.large 円 
-                span.small （税抜）
-              p 一般価格：548,000円（税込）
+                span.large 円
+                span.small (税抜)
+              p 一般価格：548,000円(税込)
         .p-basic-plan__btn
           a(href="#").c-btn.u-blink プランの詳細を見る
     
     article.p-plan-news.p-plan-news_paper_blue
-      .group-top
-        .top-content
+      .p-plan-news-top
+        .p-plan-news-top-content
           h3 ご出棺から火葬まで。
-          h4 火葬式
-          p.js-ins-sp  ご出棺し、火葬のみを行うプランです。
+          h4 火葬式          
+        .p-plan-news-top__thumbs
+          img(src='/images/sougi/thumb_04.jpg', alt="")
+        .p-plan-news-top__txt
+          p  ご出棺し、火葬のみを行うプランです。
             br 
             | ご要望にあわせて供花のご用意等も承ります。
-        .thumbs
-          img(src='/images/sougi/thumb_04.jpg', alt="")
-      .group-body
-        .body-content-top
+      .p-plan-news-body
+        
+        .p-plan-news-body-top
           h3 火葬式
             br.u-hide-pc
             |
             small ［セレモアパック葬］
-          .price
+          .p-plan-news-body-top__price
             p 会員価格:
               br
               span 186,000
-        .body-content-main
+        .p-plan-news-body-main
           p ご自宅、もしくはご安置場所から出棺し、ご家族やご親族がお集まりの上で、火葬場にてお別れを行います。 
         .p-basic-plan__btn
           a(href="#").c-btn.u-blink プランの詳細を見る
 
     article.p-plan-news.p-plan-news_paper_yellow_green
-      .group-top
-        .top-content
+      .p-plan-news-top
+        .p-plan-news-top-content
           h3 企業様・ご家族様で。
-          h4.icon 社葬・合同葬
-          p.js-ins-sp  ご出棺し、火葬のみを行うプランです。
+          h4.icon 社葬・合同葬          
+        .p-plan-news-top__thumbs
+          img(src='/images/sougi/thumb_05.jpg', alt="")
+        .p-plan-news-top__txt
+          p  ご出棺し、火葬のみを行うプランです。
             br 
             | ご要望にあわせて供花のご用意等も承ります。
-        .thumbs
-          img(src='/images/sougi/thumb_05.jpg', alt="")
-      .group-body
-        .body-content-top
+      .p-plan-news-body        
+        .p-plan-news-body-top
           h3 社葬・合同葬
-          .price
+          .p-plan-news-body-top__price
             p 価格は都度お見積り
               br.u-hide-pc
               | となります。
-        .body-content-main
+        .p-plan-news-body-main
           p 関連企業への連絡や日程の告知、ご遺族様のご意向の反映等、社葬の進行を一手にお引き受けし、社葬の成功で企業の信頼性を高めます。 
             br
             | セレモアでは100人～4万人規模の社葬・合同葬の実績がございます。
@@ -183,71 +191,78 @@ block main
           a(href="#").c-btn.u-blink 公式サイトを見る
 
     article.p-plan-news.p-plan-news_paper_yellow_green
-      .group-top
-        .top-content
+      .p-plan-news-top
+        .p-plan-news-top-content
           h3 自由な形のお葬儀を。
-          h4 その他のお葬儀
-          p.js-ins-sp  宗教的儀礼を行わず、自由な式次第で行うお葬儀のプランです。故人様、ご家族の皆さまの思いを反映したオリジナルのお葬儀が可能です。
+          h4 その他のお葬儀          
+        .p-plan-news-top__thumbs
+          img(src='/images/sougi/thumb_06.jpg', alt="")
+        .p-plan-news-top__txt
+          p  宗教的儀礼を行わず、自由な式次第で行うお葬儀のプランです。故人様、ご家族の皆さまの思いを反映したオリジナルのお葬儀が可能です。
             br 
             | ご要望にあわせて供花のご用意等も承ります。
-        .thumbs
-          img(src='/images/sougi/thumb_06.jpg', alt="")
-      .group-body
-        .body-content-top
+      .p-plan-news-body        
+        .p-plan-news-body-top
           h3 その他のお葬儀
-          .price
+          .p-plan-news-body-top__price
             p 価格は都度お見積り
               br.u-hide-pc
               | となります。
-        .body-content-main
+        .p-plan-news-body-main
           p 特定の信仰をもたない方やお寺様とお付き合いが無い方に選ばれています。宗教による制限がないため、故人のお人柄を中心に内容を決めて進行することができます。 
         .p-basic-plan__btn
-          a(href="#").c-btn.u-blink プランの詳細を見る
+          a.c-btn.u-blink(href="#") プランの詳細を見る
 
     article.p-plan-news.p-plan-news_paper_yellow_green
-      .group-top
-        .top-content
+      .p-plan-news-top
+        .p-plan-news-top-content
           h3 お葬儀後に、皆様で。
-          h4 お別れの会・偲ぶ会
-          p.js-ins-sp  お葬儀後に行うお別れの会のプランです。故人のお人柄を伝えるセレモニーとして最適です。
-        .thumbs
+          h4 お別れの会・
+            br
+            | 偲ぶ会         
+        .p-plan-news-top__thumbs
           img(src='/images/sougi/thumb_07.jpg', alt="")
-      .group-body
-        .body-content-top
-          h3 お別れの会・偲ぶ会
-          .price
+        .p-plan-news-top__txt
+          p  お葬儀後に行うお別れの会のプランです。故人のお人柄を伝えるセレモニーとして最適です。
+      .p-plan-news-body        
+        .p-plan-news-body-top
+          h3 お別れの会・
+            br
+            | 偲ぶ会
+          .p-plan-news-body-top__price
             p 価格は都度お見積り
               br.u-hide-pc
               | となります。
-        .body-content-main
+        .p-plan-news-body-main
           p ご家族や近親者で執り行うお葬儀の後日に、改めて親交のある方、友人・知人、会社や団体の関係者など、広く招いて故人とのお別れをしていただく式です。 
         .p-basic-plan__btn
           a(href="#").c-btn.u-blink プランの詳細を見る
 
     article.p-plan-news.p-plan-news_paper_yellow_green
-      .group-top
-        .top-content
+      .p-plan-news-top
+        .p-plan-news-top-content
           h3 自然に還る葬送の儀式。
-          h4 海への葬送
-          p.js-ins-sp  故人様のご遺骨を自然に還す海への葬送のプランです。故人様のご希望で、お葬儀後施行後の納骨・分骨の方法の一つとして選ばれます。
-        .thumbs
+          h4 海への葬送          
+        .p-plan-news-top__thumbs
           img(src='/images/sougi/thumb_08.jpg', alt="")
-      .group-body
-        .body-content-top
+        .p-plan-news-top__txt
+          p  故人様のご遺骨を自然に還す海への葬送のプランです。故人様のご希望で、お葬儀後施行後の納骨・分骨の方法の一つとして選ばれます。
+      .p-plan-news-body        
+        .p-plan-news-body-top
           h3 海への葬送
-          .price
+          .p-plan-news-body-top__price
             p 価格はセレモア担当者まで
               br
               | ご相談ください。
-        .body-content-main
+        .p-plan-news-body-main
           p 故人様のご遺骨を自然に還す「海洋散骨」をお手伝いしております。お葬儀の施行後に故人様を弔うため、社会的風習や宗教的感情を重んじて執り行います。 
         .p-basic-plan__btn
           a(href="#").c-btn.u-blink プランの詳細を見る
 
     article.p-plan-notify__border
-      h2 上記プランのほか、ご希望の条件に応じた自由なお葬儀の形にすることも可能です。
+      p 上記プランのほか、ご希望の条件に応じた自由なお葬儀の形にすることも可能です。
   
-  section.p-group-bottom
+  section.l-main__section
     article.p-plan-news__article
       h2.p-heading-01 葬儀社を選ぶ 3 つの重要ポイント
       p 一度きりのお葬儀を成功に導くため、葬儀社を選ぶ際には下記の事を念頭にご検討を進めていくことを
@@ -278,11 +293,24 @@ block main
             p 葬儀は執り行って終わりではなく、その後も関係各方面への手続きや、会葬された方々への御礼、法要の準備など、さまざまな処理を行う必要があります。
               br
               | 葬儀後のサポートが用意されている葬儀社を選ぶ事で、ご遺族様の心的な負担を和らげられます。
-  
-  section.p-group-notify
-    article.p-plan-notify__border.p-plan-notify__arrow
-      h2 上記プランのほか、ご希望の条件に応じた自由なお葬儀の形にすることも可能です。
 
-
+  section.l-main__section    
+    .p-support
+      .p-support__des
+        p 悔いのないお葬儀にするためには、事前相談を行った上で、最終的な選択をする事が重要です。
+      .p-support-content
+        .p-support-content__title
+          p 『お葬儀に関してご不明な点はございませんか？』
+        ul
+          li
+            img(src='/images/common/support.png', alt='')
+            span.p-support-content__icon
+              img(src='/images/common/support_icon.png', alt='')
+          li
+            p セレモアでは、お葬儀に関する様々なご相談に対し、総合ご相談窓口“セレモピアン“で経験豊富な女性スタッフがお応えさせていただきます。
+            .p-support-content__note
+              p ご相談無料・ご予約も不要ですので、ぜひお立ち寄りください。 
+        p.p-basic-plan__btn
+          a.c-btn.u-blinka(href='http://soudan.ceremore.jp/', target="_blank") セレモピアンに相談する
 block side
-  include /_partial/_side_search_by_price.pug
+  include /_partial/_side_search_by_price

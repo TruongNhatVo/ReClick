@@ -33,9 +33,6 @@ megamenu()
 import gnavi from './modules/gnavi'
 gnavi()
 
-import insertPlanContent from './modules/insert-plan-content'
-insertPlanContent()
-
 import floatingArea from './modules/floating-area'
 floatingArea()
 
@@ -47,3 +44,9 @@ window.onload = function() {
   backgroundCheck()
 }
 
+
+
+
+/************** MEMBER 1 ****************/ 
+import equalWidth from './modules/equal-width'
+equalWidth()

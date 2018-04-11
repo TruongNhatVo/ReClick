@@ -1,0 +1,370 @@
+.p-ceremopian-top {
+	p {
+		margin:  3rem 0;
+	}
+}
+.p-related {
+	background: #f3eddf;
+	border: 2px dotted #b6c676;
+	padding: 1.5rem;
+	span {
+		color: #000000;
+	}
+	a {
+		color: #009157;
+		position: relative;
+		&:after {
+			content: '';
+			height: 13px;
+			width: 14px;
+			background: url(/images/funeral/counter/ceremopian/img_icon_link.png); 
+			background-repeat: no-repeat;
+			position: absolute;
+			right: -15px;
+			bottom: 5px;
+		}
+		
+	}
+}
+.p-consultation {
+	margin-top: 3rem;
+	&-left {
+		width: 48%;
+		float: left;
+		margin-right: 4%;
+	}
+	&-right {
+		width: 48%;
+		float: left;
+	}
+	&__title {
+	  background: url(/images/funeral/counter/ceremopian/img_consultation_bg.png); 
+	  background-repeat: no-repeat;
+	  background-size: 100% 100%;	  
+		color: $color-white;
+		padding: 3rem 2rem;
+		border-radius: 5px 5px 0 0;
+		font-weight: bold;
+		position: relative;
+		h3 {
+			@include mincho;
+			@include fontSize(3);
+			line-height: 1.3;
+		}
+		&.bg01 {
+			padding-left: 8rem;
+			&:before {
+				content: "";
+		    height: 48px;
+		    left: 15px;
+		    margin-top: -24px;
+		    position: absolute;
+		    top: 50%;
+		    width: 64px;
+				background: url(/images/funeral/counter/ceremopian/img_consultation_01.png); 
+				background-repeat: no-repeat;
+			}
+		}
+		&.bg02 {
+			padding-left: 7rem;
+			&:before {
+				content: "";
+		    height: 70px;
+		    left: 10px;
+		    margin-top: -35px;
+		    position: absolute;
+		    top: 50%;
+		    width: 60px;
+				background: url(/images/funeral/counter/ceremopian/img_consultation_02.png); 
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	&-content {
+		ul {
+			li {
+				text-align: center;
+				background: #f3eddf;
+				border-radius: 3px 3px 0 0;
+				margin-bottom: 2px;
+				p {
+					@include fontSize(1.8);
+					line-height: 2.8;
+					color: #313131;
+				}
+			}
+		}
+	}
+	&__note {
+		background: #f0f3c1;
+		color: #313131;
+		text-align: center;
+		padding: 1.5rem;
+		margin-top: 2rem;
+		display: inline-block;
+		width: 100%;
+		p {
+			@include fontSize(1.8);
+			line-height: 1.4;
+		}
+	}
+}
+.p-location {
+	margin-top: 2rem;
+	ul {
+		display: flex;
+    flex-wrap: wrap;
+		li {
+			width: 31%;
+			padding: 15px;			
+			background: #ffffff;
+			margin: 10px 0;
+			text-align: center;
+			&:nth-child(3n+2) {
+				margin: 10px 3.5%;
+			}
+			h3 {
+				@include fontSize(1.6);
+				line-height: 1.5;
+				color: #313131;
+				padding: 2rem 0 0 0;
+			}
+		}
+	}
+	&__title {
+		align-items: center;    
+    display: flex;
+    justify-content: center;
+	}
+	&__txt {
+		margin-top: 2rem;
+	}
+}
+.p-note {
+	display: flex;
+	margin-top: 3rem;
+	li {
+		width: 31%;
+		-moz-box-flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 5px;
+		&:nth-child(2) {
+			margin: 0 3.5%;
+		}
+	}
+	&__number {
+		background: #c2af83;
+		color: $color-white;
+		text-align: center;
+		padding: 20px;
+		border-radius: 5px 5px 0 0;
+		p {
+			@include fontSize(1.8);
+			line-height: 1;
+			margin-bottom: 15px;
+			font-weight: bold;
+		}
+		span {
+			background: #ffffff;
+			border-radius: 50%;
+			color: #313131;
+			display: inline-block;
+			font-size: 2.8rem;
+			font-weight: bold;
+			height: 55px;
+			padding-top: 14px;
+			width: 55px;
+		}
+	}
+	&__title {
+		background: #cec09f;
+		color: $color-white;
+		padding: 20px;
+		h3 {
+			@include fontSize(1.8);
+			line-height: 1.4;
+		}
+	}
+	&__des {
+		padding: 20px;
+		background: #ffffff;
+		p {
+			line-height: 1.75;
+		}
+	}
+}
+
+
+@include mqMd {
+	.p-related {
+		span {
+			display: inherit;
+			margin-bottom: 10px;
+		}
+	}
+	.p-consultation {
+		margin-top: 3rem;
+		&-left {
+			width: 100%;
+			margin-right: 0%;
+		}
+		&-right {
+			width: 100%;
+			margin-top: 3rem;
+		}
+		&__title {
+		  text-align: center;
+		}
+	}
+
+	.p-location {		
+		ul {
+			display: table;
+			width: 100%;
+			li {
+				width: 100%;
+				text-align: left;
+				margin: 2px 0;
+				display: table;
+				&:nth-child(3n+2) {
+					margin: 2px 0;
+				}				
+				h3 {					
+					padding: 0;
+				}
+
+			}
+		}
+		&__img {
+			display: table-cell;
+			vertical-align: middle;
+			width: 41%;
+			text-align: center;
+		}
+		&__title { 
+	    display: table-cell;
+	    vertical-align: middle;
+		}
+		
+	}
+	.p-note {
+		display: block;
+		li {
+			width: 100%;
+	    display: table;
+	    margin-bottom: 2rem;
+			&:nth-child(2) {
+				margin: 0 0 2rem 0;
+			}
+		}
+		&-top {
+			display: table;
+			width: 100%;
+		}
+		&__number {
+			display: table-cell;
+			border-radius: 5px 0 0 0;
+			vertical-align: middle;
+			position: relative;
+			width: 150px;
+			span {
+				float: right;
+				background: #ffffff;
+				height: 40px;
+				padding-top: 7px;
+				width: 40px;
+			}
+			p {
+				position: absolute;
+				right: 65px;
+				text-align: left;
+				left: 20px;
+				line-height: 1.2;
+		    padding: 0;
+		    top: 50%;
+		    transform: translateY(-50%);
+			}
+		}
+		&__title {
+			display: table-cell;
+			border-radius: 0 5px 0 0;
+			vertical-align: middle;
+		}
+	}
+
+}
+
+@include mqSm {
+	.p-txt-sp {
+		margin-bottom: calcVw(40);
+	}
+	.p-ceremopian-top {
+		p {
+			margin: calcVw(40) 0;
+		}
+	}
+	.p-related {
+		line-height: 1.5;
+		@include fontSize(1.3, sp);
+		margin-bottom: 0;
+	}
+	.p-consultation {
+		margin-top: calcVw(40);
+		&__title {
+			h3 {
+				@include fontSize(2, sp);
+			}
+			p {
+				@include fontSize(1.3, sp);
+			}
+			&.bg02 {
+				padding-left: 5em;
+			}
+		}
+		&-content {
+			ul {
+				li {					
+					p {
+						@include fontSize(1.4, sp);
+					}
+				}
+			}
+		}
+		&__note {
+			margin-top: calcVw(40);
+			p {
+				@include fontSize(1.4, sp);
+			}
+		}
+	}
+	.p-location {
+		margin-top: calcVw(40);
+		ul {			
+			li {
+				h3 {
+					@include fontSize(1.4, sp);
+				}
+			}
+		}
+		&__txt {
+			margin-top: calcVw(40);
+		}
+	}
+	.p-note {
+		margin-top: calcVw(40);		
+		&__number {			
+			p {
+				@include fontSize(1.4, sp);	
+			}
+		}
+		&__title {			
+			h3 {
+				@include fontSize(1.5, sp);	
+			}
+		}		
+	}
+	
+
+}

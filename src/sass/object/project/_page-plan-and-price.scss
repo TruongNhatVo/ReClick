@@ -1,0 +1,248 @@
+.p-plan {
+	margin-top: 3rem;
+	ul {
+		width: 100%;
+		display: flex;
+    flex-wrap: wrap;
+		li {
+			width: 49%;
+			padding: 2.5rem;
+			position: relative;
+			background: $color-white;
+			margin-bottom: 2rem;
+			border-radius: 5px;
+			&:nth-child(2n+1) {
+				margin-right: 2%;
+			}			
+			a {
+				text-decoration: none;
+				display: table;
+				position: relative;
+				&:before {
+					content: "";
+					height: 100%;
+					left: -2.5rem;
+					position: absolute;
+					top: 0;
+					width: 10px;
+				}
+				&.p-boder-purple {
+					&:before {
+						background: url(/images/common/bg_paper_purple.jpg);			
+					}
+				}
+				&.p-boder-yellow {
+					&:before {
+						background: url(/images/common/bg_paper_yellow.jpg);			
+					}
+				}
+				&.p-boder-red {
+					&:before {
+						background: url(/images/common/bg_paper_red.jpg);			
+					}
+				}
+				&.p-boder-blue {
+					&:before {
+						background: url(/images/common/bg_paper_blue.jpg);			
+					}
+				}
+				&.p-boder-yellow-green {
+					&:before {
+						background: url(/images/common/bg_paper_yellow_green.jpg);			
+					}
+				}
+			}
+		}
+	}
+	&__title {
+		display: table-cell;
+		vertical-align: middle;
+		width: 57%;
+		position: relative;
+		p {			
+			@include fontSize(1.6);
+			@include mincho;
+			font-weight: bold;
+			line-height: 1.3;
+			color: #1b1b1b;
+		}
+		h3 {
+			@include mincho;
+			@include fontSize(3.6);
+			font-weight: bold;
+			line-height: 1.2;
+			color: #1b1b1b;
+			margin-top: 2rem;
+			position: relative;
+			.p__dot {
+				display: none;
+			}
+			&.p-link__icon {
+				&:after {
+					content: url(/images/common/icon_arrow_01.png);
+    			margin-left: 15px;
+    		}				
+			}
+		}
+	}
+	&__img {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: right;
+	}
+}
+.p-expenses {
+	margin-top: 3rem;
+	ul {
+		display: flex;
+		li {
+			width: 49%;
+			position: relative;
+			background: $color-white;
+			padding: 30px 30px 80px 30px;
+			&:nth-child(1) {
+				margin-right: 2%;
+			}
+		}
+	}
+	&-top {
+		text-align: center;
+		h3 {
+			@include fontSize(2.6);
+			@include mincho;
+			font-weight: bold;
+			line-height: 1.3;
+			color: #1b1b1b;
+			margin-bottom: 2rem;
+		}
+	}
+	&-detail {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 15px;
+		text-align: center;
+		background: #f3eddf;
+		a {
+			color: $color-green;
+			position: relative;
+			&:after {
+				content: ">";
+				position: absolute;
+				right: -15px;
+			}
+		}
+	}
+	&-note {
+		margin-top: 3rem;
+		p {
+			background: #ffffb5;
+			text-align: center;
+			padding: 20px;
+			@include mincho;
+			@include fontSize(2.4);
+			font-weight: bold;
+			line-height: 1.3;
+			color: #1b1b1b;
+			span {
+				@include fontSize(2.2);
+			}
+		}
+	}
+}
+
+@include mqMd {
+	.p-plan {
+		ul {
+			li {
+				width: 100%;
+				&:nth-child(2n+1) {
+					margin-right: 0;
+				}
+				a {
+					width: 100%;
+				}
+			}
+		}
+		&__title {
+			h3 {
+				br {
+					display: none;
+				}
+				.p__dot {
+					display: inline;
+				}
+			}
+		}
+	}
+	.p-expenses {
+		ul {
+			display: inline-block;
+			li {
+				width: 100%;
+				&:nth-child(1) {
+					margin-right: 0;
+				}
+			}
+		}
+		&-top {
+			display: inline-block;
+			position: relative;
+			width: 100%;
+			text-align: right;
+		}
+		h3 {			
+			left: 0;
+	    padding: 0;
+	    position: absolute;
+	    text-align: left;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    width: calc(100% - 175px);
+		}
+		&-note {
+			p {
+				span {
+					display: inherit;
+				}
+			}
+		}
+	}
+}
+
+@include mqSm {
+	.p-plan {
+		margin-top: calcVw(40);
+		&__title {			
+			p {			
+				@include fontSize(1.4, sp);
+			}
+			h3 {
+				@include fontSize(2.9, sp);
+			}
+		}
+	}
+	.p-expenses {
+		margin-top: calcVw(40);
+		&-top {
+			h3 {
+				@include fontSize(1.9, sp);
+				width: 65%;
+			}
+		}
+		&-note { 
+			margin-top: calcVw(40);
+			p {
+				@include fontSize(1.8, sp);
+				span {
+					@include fontSize(1.8, sp);
+				}
+			}
+		}
+		&__img {
+			max-width: 35%;
+			float: right;
+		}
+	}
+}

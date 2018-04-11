@@ -130,6 +130,9 @@
       // @include mqMd {
       //   width: 100%;
       // }
+      &.p-wfull {
+        max-width: 100%;
+      }
       @include mqSm {
         @include fontSize(1.5, sp);
         height: auto;
